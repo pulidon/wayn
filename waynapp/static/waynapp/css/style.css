@@ -21,7 +21,7 @@ p{
 /******HOME********/
 /*****************/
 .header {
-    background: url(../imagenes/wine_img.jpg) right bottom no-repeat;
+    background: url(/static/waynapp/imagenes/wine_img.jpg) right bottom no-repeat;
     background-size: 80vh;
     height: 100vh;    
 }
