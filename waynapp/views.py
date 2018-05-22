@@ -7,6 +7,7 @@ from django.shortcuts import render
 # Vista del Home
 def index(request):
 	return render(request, 'waynapp/index.html')
+	
 #Vistal del test
 def test(request):
 	return render(request, 'waynapp/test.html')
