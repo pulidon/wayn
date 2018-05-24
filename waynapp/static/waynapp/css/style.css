@@ -21,7 +21,7 @@ p{
 /******HOME********/
 /*****************/
 .header {
-    background: url(/static/waynapp/imagenes/wine_img.jpg) right bottom no-repeat;
+    background: url(../imagenes/wine_img.jpg) right bottom no-repeat;
     background-size: 80vh;
     height: 100vh;    
 }
@@ -44,63 +44,17 @@ p{
 	color: #3D3D3D;
 	width: 80%
 }
-.texto_principal .tour{
-	position: absolute;
-	bottom: 0;
-	font-size: 20px;
-	margin-bottom: auto;
-  font-size: 19px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #5F5F5F;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s
-}
-.texto_principal .tour i {
-    font-size: 20px;
-    padding-left: 5px;
-    color: #7A19F1;
-    -webkit-animation: 1.6s ease infinite angle-up-down;
-    -moz-animation: 1.6s ease infinite angle-up-down;
-    animation: 1.6s ease infinite angle-up-down
-}
-@-webkit-keyframes angle-up-down {
-    0%,
-    100% {
-        opacity: 0
-    }
-    30% {
-        opacity: 1
-    }
-}
 
-@-moz-keyframes angle-up-down {
-    0%,
-    100% {
-        opacity: 0
-    }
-    30% {
-        opacity: 1
-    }
-}
-
-@keyframes angle-up-down {
-    0%,
-    100% {
-        opacity: 0
-    }
-    30% {
-        opacity: 1
-    }
-}
 .navbar{
-	/*background: #fff;*/
+	background-color: transparent!important;
+  padding-bottom: 10px;
+  }
+.navbar-collapse{
+  margin-top: 30px;
 }
 .navbar-brand img {
-        max-width: 80%
-    }
+  max-width: 80%
+}
 .nav-item a{
 	margin-left: 50px !important;
 	color: #333 !important;
@@ -436,8 +390,8 @@ p{
 	}
  .redes .iconos{
  	display: flex;
- 	justify-content: center;
- }
+  justify-content: center;
+}
 
  .redes .iconos a {
  	color: #fff;
@@ -457,122 +411,7 @@ p{
 	font-size: 12px;
 }
 
-/****    MEDIA QUERIES     ****/
-/*****************************/		 
-@media (max-width:1500px) {
- 	.header {
-    background-size: 70vh;
-    }
- 	.algoritmo img{
-	max-width: 130%
-	}
-	.instrucciones img{
-	width: 60%;
-	}
-	.proposito img{
-	max-width: 100%
-	}
-}
 
-@media (max-width:990px) {
-	.header {
-    	background-size: 40vh;
-    }
-    .navbar-brand img {
-        position: absolute;
-        max-width: 60%
-    }
-    .btn_empieza {
-	padding: 20px 40px;
-	}
-    .texto_principal{
-	margin-top: 15vh;
-	}
-	.texto_principal p{	
-	margin-top: 30px;
-	width: 100%
-	}
-	.como_funciona p{
-	font-size: 16px;
-	}
-	.algoritmo h2{
-	margin-top: 0;
-	}
-	.algoritmo p{
-	font-size: 16px;
-	}
-	.instrucciones .num_grande{
-	font-size: 2em;
-	}
-	.instrucciones img{
-	width: 80%;
-	}
-	.algoritmo img{
-	margin-top: 200px;
-	max-width: 100%
-	}
-	.proposito img{
-	margin-top: 200px;
-	max-width: 100%
-	}
-	.proposito h2{
-		margin-top: 0;
-	}
-	.proposito p{
-		font-size: 16px;
-	}
-}
-
-@media (max-width:500px) {
- 	h1{
-    	font-size: 1.5em;
-    }
-    .texto_principal{
-	margin-top: 15vh;
-	}
-	.texto_principal p{
-	font-size: 16px;
-	margin-top: 30px;
-	width: 100%
-	}	
-  	.btn_empieza {
-  	margin-top: -15px;
-  	padding: 15px 25px;
-	margin-left: 0;
-	}
-	.btn-test {
-	margin-top: 20px;
-	padding: 20px 50px;
-	}
-	.btn-descubre {
-	margin-top: 40px;
-	padding: 20px 50px;
-	}
-	.como_funciona{
-	padding-bottom: 70px;
-	}
-	.instrucciones .num_grande{
-	font-size: 1.8em;
-	}
-	.algoritmo{
-	padding-bottom: 70px;
-	}
-	.instrucciones img{
-	max-width: 50%;
-	}
-	.algoritmo img{
-	margin-top: 30px;
-	margin-bottom: 20px;
-	max-width: 100%
-	}
-	.proposito img{
-	margin-top: 40px;
-	max-width: 100%
-	}
-	.precios p{
-		font-size: 16px;
-	}
-}
 
 
 /******REGISTRO********/
@@ -792,7 +631,10 @@ p{
 .tinto-blanco p{
 	font-size: 20px;
 	color: #333;
-	margin-bottom: 90px;
+	margin-bottom: 0px;
+}
+.tinto-blanco img{
+  margin-top: 30px
 }
 
 
@@ -818,7 +660,7 @@ select {
   background: #2c3e50;
   overflow: hidden;
   border-radius: 5px;
-  margin: -50px auto 50px;
+  margin: 50px auto 50px;
 }
 select {
   width: 100%;
@@ -980,4 +822,249 @@ select::-ms-expand {
 }
 .seleccion h5{
   font-size: 0.9em
+}
+
+
+/*********TEST*************/
+/**************************/
+.test{
+  background-color: #f1f1f1;
+  padding-top: 100px;
+  padding-bottom:50px;
+  min-height: 80vh
+}
+
+
+
+#pregunta_imagen{
+  background-color: #0000FF;
+}
+#carouselArchitecture{
+  border-color: transparent !important;
+  box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.1);
+  background-color: #FAFAFA;
+  color: #333;
+}
+
+.test .btn{
+  border-radius: 5px !important;
+  border-width: 1px !important;
+  /*border-color: #493051 !important;*/
+  color: #333 !important;
+  outline-color: none !important;
+  max-width: 90%;
+  margin: 15px auto !important;
+  padding: 0.7em;
+  background-color: #ddd;
+}
+.test .btn:hover{
+  background-color: #493051;
+  color: #fff !important;
+}
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #493051;
+  transition: width 0.6s ease;
+}
+
+.test img{
+  margin-bottom: 50px;
+  max-width: 90%;
+  margin: 0 auto 50px auto;
+  }
+.test h1{
+  font-size: 2em;
+}
+.test h2{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.test a{
+  text-decoration: none;
+}
+.medios img{
+  max-height: 30px;
+}
+.pago_seguro{
+  border-top: 1px solid #ccc;
+  margin-top: 80px;
+}
+.pago_seguro p{
+  margin-top: 20px;
+  font-size: 1em
+}
+.medios{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/****    MEDIA QUERIES     ****/
+/*****************************/    
+@media (max-width:1500px) {
+  .header {
+    background-size: 70vh;
+    }
+  .algoritmo img{
+  max-width: 130%
+  }
+  .instrucciones img{
+  width: 60%;
+  }
+  .proposito img{
+  max-width: 100%
+  }
+}
+
+@media (max-width:990px) {
+  .header {
+      background-size: 40vh;
+    }
+    .navbar-brand img {
+        position: absolute;
+        top: 10px;
+        max-width: 50%
+    }
+    .navbar{
+  padding-bottom: 80px;
+  }
+    .btn_empieza {
+  padding: 20px 40px;
+  }
+    .texto_principal{
+  margin-top: 15vh;
+  }
+  .texto_principal p{ 
+  margin-top: 30px;
+  width: 100%
+  }
+  .como_funciona p{
+  font-size: 16px;
+  }
+  .algoritmo h2{
+  margin-top: 0;
+  }
+  .algoritmo p{
+  font-size: 16px;
+  }
+  .instrucciones .num_grande{
+  font-size: 2em;
+  }
+  .instrucciones img{
+  width: 80%;
+  }
+  .algoritmo img{
+  margin-top: 200px;
+  max-width: 100%
+  }
+  .proposito img{
+  margin-top: 200px;
+  max-width: 100%
+  }
+  .proposito h2{
+    margin-top: 0;
+  }
+  .proposito p{
+    font-size: 16px;
+  }
+}
+
+@media (max-width:500px) {
+  h1{
+      font-size: 1.5em;
+    }
+        .navbar{
+  padding-bottom: 50px;
+  }
+    .texto_principal{
+  margin-top: 2vh;
+  }
+  .texto_principal p{
+  font-size: 16px;
+  margin-top: 30px;
+  width: 100%
+  } 
+    .btn_empieza {
+    margin-top: -15px;
+    padding: 15px 25px;
+  margin-left: 0;
+  }
+  .btn-test {
+  margin-top: 20px;
+  padding: 20px 50px;
+  }
+  .btn-descubre {
+  margin-top: 40px;
+  padding: 20px 50px;
+  }
+  .como_funciona{
+  padding-bottom: 70px;
+  }
+  .instrucciones .num_grande{
+  font-size: 1.8em;
+  }
+  .algoritmo{
+  padding-bottom: 70px;
+  }
+  .instrucciones img{
+  max-width: 50%;
+  }
+  .algoritmo img{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  max-width: 100%
+  }
+  .proposito img{
+  margin-top: 40px;
+  max-width: 100%
+  }
+  .precios{
+    padding-top: 40px;
+  }
+  .precios p{
+    font-size: 16px;
+  }
+  .test{
+    padding-top: 35px;
+  }
+  .test img{
+  margin-bottom: 10px;
+  margin-left: 0px;
+  max-width: 100%;
+  }
+  .test h1{
+    font-size: 1.5em;
+  }
+  .registro{
+  }
+  .registro h1{
+    padding-top: 35px;
+    padding-bottom: 0px;
+    font-size: 1.4em;
+  }
+  .seleccion{
+    padding-top: 40px
+  }
+  .tinto-blanco{
+  padding-top: 30px;
+  }
+}
+
+.carousel-indicators{
+  display: none;
 }
