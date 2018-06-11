@@ -8,7 +8,7 @@ class Usuario(models.Model):
 #direccion
 #referenciapayu
 
-class Vinos(models.Model):
+class Vino(models.Model):
 #cuerpo-cafe
 #astringencia-te
 #frutos_rojos-frutos_rojos
@@ -18,4 +18,4 @@ class Vinos(models.Model):
 #fruta_tropical
 #aroma
 
-class Subscripciones(models.Model):
+class Subscripcion(models.Model):
