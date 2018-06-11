@@ -38,32 +38,18 @@
 				<nav class="navbar navbar-expand-lg navbar-light ">
 				<div class="container">
 				  <a class="navbar-brand" href="index.html"><img src="imagenes/wayn_logo.png" alt="Logo Wayn"></a>
-				  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-				  </button>-->
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				   <!-- <ul class="navbar-nav mr-auto">
-				 	  <li class="nav-item">
-				        <a class="nav-link" href="#COMO">CÓMO FUNCIONA</a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link" href="#PLANES">PLANES</a>
-				      </li>
-				       <li class="nav-item">
-				        <a class="nav-link" href="#">INICIAR SESION</a>
-				      </li>
-				    </ul>-->
 				   </div>
 				  </div>
 				</nav>
             <div class="container text-center">
-            	
-            	
 
-						
+
+
+
 
             </div>
-        </div>    
+        </div>
     </section>
  <!-- END HEADER SECTION -->
 
@@ -71,7 +57,7 @@
 	<div class="container">
 		<h2>ESCOGE TU PLAN</h2>
 		<p class="text-center">ESCOGE TU PLAN PARA VER TU SELECCION.<br>PODRAS CAMBIARLO EN CUALQUIER MOMENTO.</p>
-		
+
 		<div class="price-table-wrapper">
 		  <div class="pricing-table featured-table">
 		  	<div class="pricing-table__header">
@@ -82,7 +68,7 @@
 		    <h4 class="pricing-table__price">$79.800 <span class="IVA">IVA inc.</span></h4>
 		    <p class="pricing-table__ahorro">Ahorras: $30.200</p>
 		    <p class="pricing-table__supermercado">Precio supermercado: $110.000</p>
-		    <a class="pricing-table__button" href="tinto-blanco.html">
+		    <a class="pricing-table__button" id="2_botellas" href="tinto-blanco.html">
 		     QUIERO ESTE PLAN
 		    </a>
 		    <ul class="pricing-table__list">
@@ -102,7 +88,7 @@
 		    <h4 class="pricing-table__price">$118.700 <span class="IVA">IVA inc.</span></h4>
 		    <p class="pricing-table__ahorro">Ahorras: $46.300</p>
 		    <p class="pricing-table__supermercado">Precio supermercado: $165.000</p>
-		    <a class="pricing-table__button" href="tinto-blanco.html">
+		    <a class="pricing-table__button"  id="3_botellas"href="tinto-blanco.html">
 		     QUIERO ESTE PLAN
 		    </a>
 		    <ul class="pricing-table__list">
@@ -123,7 +109,7 @@
 		    <h4 class="pricing-table__price">$155.700 <span class="IVA">IVA inc.</span></h4>
 		    <p class="pricing-table__ahorro">Ahorras: $64.300</p>
 		    <p class="pricing-table__supermercado">Precio supermercado: $220.000</p>
-		    <a class="pricing-table__button" href="tinto-blanco.html">
+		    <a class="pricing-table__button" id="4_botellas" href="tinto-blanco.html">
 		     QUIERO ESTE PLAN
 		    </a>
 		    <ul class="pricing-table__list">
@@ -134,7 +120,7 @@
 		    </ul>
 		  </div>
 		</div>
-	</div>	
+	</div>
 </section>
 
 
@@ -148,12 +134,25 @@
 			</div>
 	</div>
 </section>
-		
+
 	<!-- =========================
      			SCRIPTS 
 	============================== -->
-	<script src="js/bootstrap.min.js"></script>	
-	<script src="js/jquery.min.js"></script>
-	<script src="js/registro.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var localData = JSON.parse(localStorage.getItem('someData'));
+		var dataToStore;
+		$('.pricing-table__button').click(function(){
+			  	 localData.plan=$(this).attr('id');
+			  	 dataToStore = JSON.stringify(localData);
+				 localStorage.setItem('someData', dataToStore);
+				});
+		//console.log(localData);
+	</script>
+
 </body>
 </html>

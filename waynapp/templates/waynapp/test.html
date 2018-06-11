@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>WAYN | El Vino como debería ser.</title>
-	<meta name="description" content="Wayn es el primer servicio de vino por suscripción de Bogotá.">
+	<title>WAYN | Personaliza tu experiencia.</title>
+	<meta name="description" content="La experiencia de vinos que te encantará, personaliza tu experiencia.">
 	<!-- Google Fonts (Oswald-Roboto)-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,900i|Roboto" rel="stylesheet">
 	 <!-- Font Awesome -->
@@ -37,21 +37,7 @@
         		<nav class="navbar navbar-expand-lg navbar-light ">
 				<div class="container">
 				  <a class="navbar-brand" href="index.html"><img src="../static/waynapp/imagenes/wayn_logo.png" alt="Logo Wayn"></a>
-				  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				    <span class="navbar-toggler-icon"></span>
-				  </button>-->
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				   <!-- <ul class="navbar-nav mr-auto">
-				 	  <li class="nav-item">
-				        <a class="nav-link" href="#COMO">CÓMO FUNCIONA</a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link" href="#PLANES">PLANES</a>
-				      </li>
-				       <li class="nav-item">
-				        <a class="nav-link" href="#">INICIAR SESION</a>
-				      </li>
-				    </ul>-->
 				   </div>
 				  </div>
 				</nav>
@@ -115,8 +101,8 @@
 											<img class="img-fluid d-block" src="../static/waynapp/imagenes/test_cafe.jpg">
 
 										</div>
-										<div class="col-md-6 align-self-center">
-											<div><button type="button" class="btn btn-block rounded" id="respuesta" onclick="Next(1,'expreso')">Expreso</button></div>
+										<div class="col-md-6">
+											<div><button type="button" class="btn btn-block rounded" onclick="Next(1,'expreso')">Expreso</button></div>
 											<div><button type="button" class="btn btn-block rounded" onclick="Next(1,'tinto')">Tinto/Americano</button></div>
 											<div><button type="button" class="btn btn-block rounded" onclick="Next(1,'latte')">Latte</button></div>
 											<div><button type="button" class="btn btn-block rounded" onclick="Next(1,'perico')">Perico</button></div>
@@ -203,6 +189,25 @@
 								<div class="carousel-item">
 									<div class="row">
 										<div class="col-md-12 align-self-center">
+											<h2 class="m-4">¿Con qué frecuencia te gusta comer alimentos como lentejas o champiñones?</h2>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 align-self-center">
+											<img class="img-fluid d-block" src="imagenes/test_tierra.jpg">
+										</div>
+										<div class="col-md-6 align-self-center">
+
+											<div><button type="button" class="btn btn-block rounded" onclick="Next(6,'poco')">Casi nunca</button></div>
+											<div><button type="button" class="btn btn-block rounded" onclick="Next(6,'medio')">De vez en cuando</button></div>
+											<div><button type="button" class="btn btn-block rounded" onclick="Next(6,'mucho')">Casi siempre</button></div>
+											</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="row">
+										<div class="col-md-12 align-self-center">
 											<h2 class="m-4">Cuando vas a tu restaurante favorito:</h2>
 										</div>
 									</div>
@@ -212,14 +217,11 @@
 										</div>
 										<div class="col-md-6 align-self-center">
 
-											<div><a href="registro.html"><button type="button" class="btn btn-block rounded" onclick="Next(6,'conservador')">Siempre pides el mismo plato</button></a></div>
-											<div><a href="registro.html"><button type="button" class="btn btn-block rounded" onclick="Next(6,'aventurero')">Te gusta experimentar con platos nuevos</button></a></div>
+											<div><a href="registro.html"><button type="button" class="btn btn-block rounded" onclick="Next(7,'conservador')">Siempre pides el mismo plato favorito</button></a></div>
+											<div><a href="registro.html"><button type="button" class="btn btn-block rounded" onclick="Next(7,'aventurero')">Te gusta experimentar con platos nuevos</button></a></div>
 											</div>
 									</div>
 								</div>
-
-
-
 							</div>
 						</div>
 					</div>
