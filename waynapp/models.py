@@ -9,6 +9,7 @@ class Usuario(models.Model):
 #referenciapayu
 
 class Vino(models.Model):
+	nombre = models.CharField(max_length=100, null=False)
 #cuerpo-cafe
 #astringencia-te
 #frutos_rojos-frutos_rojos
@@ -18,4 +19,4 @@ class Vino(models.Model):
 #fruta_tropical
 #aroma
 
-class Subscripcion(models.Model):
+#class Subscripcion(models.Model):
