@@ -5,6 +5,7 @@ from django.db import models
 
 # Create your models here.
 class Usuario(models.Model):
+	evaluacion = models.CharField(max_length=100, null=False)
 #direccion
 #referenciapayu
 
