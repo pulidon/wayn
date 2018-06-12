@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario
 
 # Create your views here.
@@ -17,7 +18,7 @@ def test(request):
 # vista del registro
 def registro(request):
 	if request.method == 'POST':
-		usuario = User()
+		usuario = UserCreationForm(request.POST)
 		if usuario.is_valid():
 			usuario.save()
 			return render(request, 'waynapp/match')
