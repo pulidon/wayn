@@ -23,14 +23,17 @@ class Evaluacion(models.Model):
 
 
 class Vino(models.Model):
-	nombre = models.CharField(max_length=100, null=False)
-#cuerpo-cafe
-#astringencia-te
-#frutos_rojos-frutos_rojos
-#frutos_negros-frutos_negros
-#fruta_citrica-fruta_citrica
-#fruta_hueso
-#fruta_tropical
-#aroma
-
-#class Subscripcion(models.Model):
+	nombre = models.CharField(max_length=50, null=True)
+	cepa = models.CharField(max_length=30, null=True)
+	tipo = models.CharField(max_length=30, null=True)
+	origen = models.CharField(max_length=30, null=True)
+	cuerpo = models.IntegerField(null=True)
+	frutos_rojos = models.IntegerField(null=True)
+	frutos_negros = models.IntegerField(null=True)
+	astringencia = models.IntegerField(null=True)
+	citrico = models.IntegerField(null=True)
+	fruta_hueso = models.IntegerField(null=True)
+	fruta_tropical = models.IntegerField(null=True)
+	aroma_floral = models.IntegerField(null=True)
+	aroma_herbal = models.IntegerField(null=True)
+	tierra = models.IntegerField(null=True)
