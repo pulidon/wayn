@@ -23,6 +23,7 @@ def registro(request):
 		usuario.email = request.POST['email']
 		usuario.password = request.POST['password']
 		usuario.save()
+		return render(request, 'waynapp/plan.html')
 	else:
 		return render(request, 'waynapp/registro.html')
 	return render(request, 'waynapp/registro.html')
