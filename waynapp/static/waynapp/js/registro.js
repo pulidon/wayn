@@ -1,4 +1,4 @@
-window.onload = function(){
+$(document).ready(function(){
 	var localData = JSON.parse(localStorage.getItem('someData'));
 	//CUERPO
 	if (localData.cafe=='expreso') {
@@ -72,7 +72,7 @@ window.onload = function(){
 			tierra=90;
 		}
 
-};
+});
 
 
 $('.form').find('input, textarea').on('keyup blur focus', function (e) {
