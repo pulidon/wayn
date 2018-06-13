@@ -79,7 +79,7 @@ def	match(request):
 		puntaje.cepa = vino.cepa
 		puntaje.tipo = vino.tipo
 		puntaje.origen = vino.origen
-		if vino.tipo = "Tinto":
+		if vino.tipo == "Tinto":
 			puntaje.cuerpo = abs(evaluacion.cuerpo - vino.cuerpo)
 			puntaje.frutos_rojos = abs(evaluacion.frutos_rojos - vino.frutos_rojos)
 			puntaje.frutos_negros = abs(evaluacion.frutos_negros - vino.frutos_negros)
@@ -90,7 +90,7 @@ def	match(request):
 			puntaje.aroma_floral = abs(evaluacion.aroma_floral - vino.aroma_floral)
 			puntaje.aroma_herbal = abs(evaluacion.aroma_herbal - vino.aroma_herbal)
 			puntaje.tierra = abs(evaluacion.tierra - vino.tierra)
-		elif vino.tipo = "Blanco":
+		elif vino.tipo == "Blanco":
 			puntaje.cuerpo = abs(evaluacion.cuerpo - vino.cuerpo)
 			puntaje.frutos_rojos = 0
 			puntaje.frutos_negros = 0
