@@ -10,7 +10,7 @@ class Puntaje:
 	nombre = ''
 	cepa = ''
 	tipo = ''
-	origen =
+	origen = 0
 	cuerpo = 0
 	frutos_rojos = 0
 	frutos_negros = 0
