@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	var localData = JSON.parse(localStorage.getItem('someData'));
 	//CUERPO
 	if (localData.cafe=='expreso') {
@@ -17,59 +18,59 @@ $(document).ready(function(){
 	}
 	//FRUTOS ROJOS
 	if (localData.frutos=='rojos') {
-			fRojos=90;
-			fNegros=20;
+			document.getElementById("frutos_rojos").value=90;
+			document.getElementById("frutos_negros").value=20;
 	} else if (localData.frutos=='negros') {
-		 fRojos=20;
-			fNegros=90;
+		 document.getElementById("frutos_rojos").value=20;
+			document.getElementById("frutos_negros").value=90;
 	}
 	else if (localData.frutos=='mixtos') {
-			fRojos=50;
-			fNegros=50;
+			document.getElementById("frutos_rojos").value=50;
+			document.getElementById("frutos_negros").value=50;
 	}
 	//ASTRINGENCIA
 	if (localData.te=='negro') {
-			astringencia=90;
+			document.getElementById("astringencia").value=90;
 	} else if (localData.te=='rojo') {
-		 astringencia=50;
+		 document.getElementById("astringencia").value=50;
 	}
 	else if (localData.te=='verde') {
-			astringencia=25;
+			document.getElementById("astringencia").value=25;
 	 }
 	//FRUTAS
 	if (localData.jugo=='citrico-tropical') { //sauvignon blanc
-			citrico=90;
-			fHueso=25;
-			fTropical=90;
+			document.getElementById("citrico").value=90;
+			document.getElementById("fruta_hueso").value=25;
+			document.getElementById("fruta_tropical").value=90;
 	} else if (localData.jugo=='citrico-hueso') {
-		 citrico=90;
-			fHueso=90;
-			fTropical=25;
+		 document.getElementById("citrico").value=90;
+			document.getElementById("fruta_hueso").value=90;
+			document.getElementById("fruta_tropical").value=25;
 	}
 	else if (localData.jugo=='tropical-hueso') {
-			citrico=25;
-			fHueso=90;
-			fTropical=90;
+			document.getElementById("citrico").value=25;
+			document.getElementById("fruta_hueso").value=90;
+			document.getElementById("fruta_tropical").value=90;
 	 }
 	//AROMA
 	if (localData.olor=='hierba') { //sauvignon blanc
-			herbal=80;
-			floral=20;
+			document.getElementById("aroma_herbal").value=80;
+			document.getElementById("aroma_floral").value=20;
 			} else if (localData.olor=='floral') {
-			herbal=20;
-			floral=80;
+			document.getElementById("aroma_herbal").value=20;
+			document.getElementById("aroma_floral").value=80;
 		} else if (localData.olor=='mixto') {
-			herbal=50;
-			floral=50;
+			document.getElementById("aroma_herbal").value=50;
+			document.getElementById("aroma_floral").value=50;
 	}
 	//TIERRA
 	if (localData.tierra=='poco') { //sauvignon blanc
-			tierra=25;
+			document.getElementById("tierra").value=25;
 			} else if (localData.tierra=='medio') {
-			tierra=50;
+			document.getElementById("tierra").value=50;
 		}
 		else if (localData.tierra=='mucho') {
-			tierra=90;
+			document.getElementById("tierra").value=90;
 		}
 
 });
