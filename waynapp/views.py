@@ -68,7 +68,7 @@ def	match(request):
 		puntaje.tierra = abs(test_tierra - vino.tierra)
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
-	lista_puntajes.sort(key=puntaje.total,reverse=True)
+	lista_puntajes.sort(key=vino.total,reverse=True)
 	context = {
 		'lista_puntajes':lista_puntajes
 	}
