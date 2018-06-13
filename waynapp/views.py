@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from .models import Usuario, Vino
+from .models import Usuario, Evaluacion, Vino
 
 
 class Puntaje:
@@ -36,11 +36,27 @@ def test(request):
 def registro(request):
 	if request.method == 'POST':
 		usuario = User()
+		evaluacion = Evaluacion()
 		usuario.name = request.POST['name']
 		usuario.username = request.POST['email']
 		usuario.email = request.POST['email']
 		usuario.password = request.POST['password']
+		evaluacion.usuario = request.user
+		evaluacion.cepa = request.POST['cepa']
+		evaluacion.tipo = request.POST['tipo']
+		evaluacion.origen = request.POST['origen']
+		evaluacion.cuerpo = request.POST['cuerpo']
+		evaluacion.frutos_rojos = request.POST['frutos_rojos']
+		evaluacion.frutos_negros = request.POST['frutos_negros']
+		evaluacion.astringencia = request.POST['astringencia']
+		evaluacion.citrico = request.POST['citrico']
+		evaluacion.fruta_hueso = request.POST['fruta_hueso']
+		evaluacion.fruta_tropical = request.POST['fruta_tropical']
+		evaluacion.aroma_floral = request.POST['aroma_floral']
+		evaluacion.aroma_herbal = request.POST['aroma_herbal']
+		evaluacion.tierra = request.POST['tierra']
 		usuario.save()
+		evaluacion.save()
 		return render(request, 'waynapp/plan.html')
 	else:
 		return render(request, 'waynapp/registro.html')

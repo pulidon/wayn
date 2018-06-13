@@ -9,69 +9,72 @@ if (localData.cafe=='expreso') {
     cuerpo=100;
 } else if (localData.cafe=='tinto') {
     cuerpo=80;
-} 
+}
 else if (localData.cafe=='latte') {
     cuerpo=60;
-} 
+}
 else if (localData.cafe=='perico') {
     cuerpo=40;
-}  
+}
 else {
     cuerpo = 20;
 }
 //FRUTOS ROJOS
 if (localData.frutos=='rojos') {
     fRojos=90;
-    fNegros=10;
+    fNegros=20;
 } else if (localData.frutos=='negros') {
-   fRojos=10;
+   fRojos=20;
     fNegros=90;
-} 
+}
 else if (localData.frutos=='mixtos') {
     fRojos=50;
     fNegros=50;
-}  
+}
 //ASTRINGENCIA
 if (localData.te=='negro') {
     astringencia=90;
 } else if (localData.te=='rojo') {
    astringencia=50;
-} 
+}
 else if (localData.te=='verde') {
-    astringencia=10;
- } 
+    astringencia=25;
+ }
 //FRUTAS
 if (localData.jugo=='citrico-tropical') { //sauvignon blanc
     citrico=90;
-    fHueso=10;
+    fHueso=25;
     fTropical=90;
 } else if (localData.jugo=='citrico-hueso') {
    citrico=90;
     fHueso=90;
-    fTropical=10;
-} 
+    fTropical=25;
+}
 else if (localData.jugo=='tropical-hueso') {
-    citrico=10;
+    citrico=25;
     fHueso=90;
     fTropical=90;
- } 
+ }
 //AROMA
 if (localData.olor=='hierba') { //sauvignon blanc
-    herbal=90;
-    floral=10;
+    herbal=80;
+    floral=20;
     } else if (localData.olor=='floral') {
-    herbal=10;
-    floral=90;
-  }
+    herbal=20;
+    floral=80;
+	} else if (localData.olor=='mixto') {
+		herbal=50;
+		floral=50;
+}
 //TIERRA
 if (localData.tierra=='poco') { //sauvignon blanc
-    tierra=10;
+    tierra=25;
     } else if (localData.tierra=='medio') {
     tierra=50;
-  } 
+  }
   else if (localData.tierra=='mucho') {
     tierra=90;
-  } 
+  }
 
 
 var color = Chart.helpers.color;
@@ -85,7 +88,7 @@ var config = {
 	borderColor: 'rgba(52,230,165,0.7)',
 	pointBackgroundColor: 'rgba(52,230,165,0.7)',
 	data: [cuerpo,fRojos,fNegros,astringencia,citrico,fHueso,fTropical,herbal,floral,tierra
-		
+
 		]
 	}
 	]
@@ -96,7 +99,7 @@ var config = {
 			labels:{
 				fontSize: 12,
 				fontStyle:'bold',
-				fontColor: 'rgba(0, 0, 0, 0.7)'	
+				fontColor: 'rgba(0, 0, 0, 0.7)'
 			},
 		},
 		title: {
@@ -111,7 +114,7 @@ var config = {
 			gridLines: {
 				color:'rgba(0, 0, 0, .3)',
 			},
-			
+
 			angleLines:{
 			display: true,
 			color:'rgba(0, 0, 0, 0)',//si se ponen parece una telaraña (george)
@@ -123,7 +126,7 @@ var config = {
 				display:false,
 			}
 		},
-		
+
 	}
 };
 
@@ -131,7 +134,7 @@ window.onload = function() {
 	window.myRadar = new Chart(document.getElementById('canvas1'), config);
 };
 
-$(document).ready(function(){ 				
+$(document).ready(function(){
 	if(localData.plan=='2_botellas'){
 		$('select').html('<option value="1">2 TINTOS</option><option value="2">1 TINTO 1 BLANCO</option><option value="3">2 BLANCOS</option>');
 	}else if(localData.plan=='3_botellas'){
@@ -141,7 +144,7 @@ $(document).ready(function(){
 	}
 });
 
-$(document).ready(function(){ 				
+$(document).ready(function(){
 $("select").change(function() {
 	var balance = "";
     $( "select option:selected" ).each(function() {
@@ -149,7 +152,7 @@ $("select").change(function() {
       localData.balance=balance;
       console.log(localData);
       dataToStore = JSON.stringify(localData);
-	  localStorage.setItem('someData', dataToStore);	
+	  localStorage.setItem('someData', dataToStore);
     });
     })
   .trigger( "change" );
