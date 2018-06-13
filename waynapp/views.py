@@ -5,6 +5,24 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from .models import Usuario, Vino
 
+
+class Puntaje:
+	nombre = ''
+	cepa = ''
+	tipo = ''
+	origen =
+	cuerpo = 0
+	frutos_rojos = 0
+	frutos_negros = 0
+	astringencia = 0
+	citrico = 0
+	fruta_hueso = 0
+	fruta_tropical = 0
+	aroma_floral = 0
+	aroma_herbal = 0
+	tierra = 0
+	total = 0
+
 # Create your views here.
 # Vista del Home
 def index(request):
@@ -51,7 +69,7 @@ def	match(request):
 	test_tierra = 50
 	lista_puntajes = []
 	for vino in lista_vinos:
-		puntaje = Vino()
+		puntaje = Puntaje()
 		puntaje.nombre = vino.nombre
 		puntaje.cepa = vino.cepa
 		puntaje.tipo = vino.tipo
@@ -68,7 +86,7 @@ def	match(request):
 		puntaje.tierra = abs(test_tierra - vino.tierra)
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
-	lista_puntajes.sort(key=vino.total,reverse=True)
+	lista_puntajes.sort(key=puntaje.total,reverse=True)
 	context = {
 		'lista_puntajes':lista_puntajes
 	}
