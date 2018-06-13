@@ -66,7 +66,7 @@ def	match(request):
 		puntaje.aroma_floral = abs(test_aroma_floral - vino.aroma_floral)
 		puntaje.aroma_herbal = abs(test_aroma_herbal - vino.aroma_herbal)
 		puntaje.tierra = abs(test_tierra - vino.tierra)
-		puntaje.total = cuerpo + frutos_rojos + frutos_negros + astringencia + citrico + fruta_hueso + fruta_tropical + aroma_floral + aroma_herbal + tierra
+		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
 	lista_puntajes.sort(key=puntaje.total,reverse=True)
 	context = {
