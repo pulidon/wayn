@@ -2,18 +2,18 @@ window.onload = function(){
 	var localData = JSON.parse(localStorage.getItem('someData'));
 	//CUERPO
 	if (localData.cafe=='expreso') {
-			document.forms['registro']['cuerpo'].value=100;
+			document.getElementById("cuerpo").value=100;
 	} else if (localData.cafe=='tinto') {
-			document.forms['registro']['cuerpo'].value=80;
+			document.getElementById("cuerpo").value=80;
 	}
 	else if (localData.cafe=='latte') {
-			document.forms['registro']['cuerpo'].value=60;
+			document.getElementById("cuerpo").value=60;
 	}
 	else if (localData.cafe=='perico') {
-			document.forms['registro']['cuerpo'].value=40;
+			document.getElementById("cuerpo").value=40;
 	}
 	else {
-			document.forms['registro']['cuerpo'].value = 20;
+			document.getElementById("cuerpo").value = 20;
 	}
 	//FRUTOS ROJOS
 	if (localData.frutos=='rojos') {
