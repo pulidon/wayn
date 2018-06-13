@@ -13,9 +13,6 @@ class Usuario(models.Model):
 
 class Evaluacion(models.Model):
 	usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-	cepa = models.CharField(max_length=30, null=True)
-	tipo = models.CharField(max_length=30, null=True)
-	origen = models.CharField(max_length=30, null=True)
 	cuerpo = models.IntegerField(null=True)
 	frutos_rojos = models.IntegerField(null=True)
 	frutos_negros = models.IntegerField(null=True)
