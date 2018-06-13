@@ -10,7 +10,7 @@ class Puntaje:
 	nombre = ''
 	cepa = ''
 	tipo = ''
-	origen = 0
+	origen = ''
 	cuerpo = 0
 	frutos_rojos = 0
 	frutos_negros = 0
@@ -86,7 +86,7 @@ def	match(request):
 		puntaje.tierra = abs(test_tierra - vino.tierra)
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
-	lista_puntajes.sort(key=puntaje.total,reverse=True)
+	#lista_puntajes.sort(key=puntaje.total,reverse=True)
 	context = {
 		'lista_puntajes':lista_puntajes
 	}
