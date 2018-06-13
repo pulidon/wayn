@@ -70,6 +70,10 @@
 	<div class="container">
 		<h2>FELICITACIONES!</h2>
 
+		{% for puntaje in lista_puntajes %}
+			<p>{{puntaje.cepa}} --- {{puntaje.total}}</p>
+		{% endfor %}
+
 		<p class="text-center">TU EXPERIENCIA DE VINOS ESTA LISTA<br>Los siguientes vinos son los que más se ajustan a tu perfil, esperamos que los disfrutes.</p>
 			<div class="seleccion-table-wrapper">
 				  <div class="ficha-individual">
