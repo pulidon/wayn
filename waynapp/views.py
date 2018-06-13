@@ -78,16 +78,16 @@ def	match(request):
 		puntaje.cepa = vino.cepa
 		puntaje.tipo = vino.tipo
 		puntaje.origen = vino.origen
-		puntaje.cuerpo = abs(test_cuerpo - vino.cuerpo)
-		puntaje.frutos_rojos = abs(test_frutos_rojos - vino.frutos_rojos)
-		puntaje.frutos_negros = abs(test_frutos_negros - vino.frutos_negros)
-		puntaje.astringencia = abs(test_astringencia - vino.astringencia)
-		puntaje.citrico = abs(test_citrico - vino.citrico)
-		puntaje.fruta_hueso = abs(test_fruta_hueso - vino.fruta_hueso)
-		puntaje.fruta_tropical = abs(test_fruta_tropical - vino.fruta_tropical)
-		puntaje.aroma_floral = abs(test_aroma_floral - vino.aroma_floral)
-		puntaje.aroma_herbal = abs(test_aroma_herbal - vino.aroma_herbal)
-		puntaje.tierra = abs(test_tierra - vino.tierra)
+		puntaje.cuerpo = abs(evaluacion.cuerpo - vino.cuerpo)
+		puntaje.frutos_rojos = abs(evaluacion.frutos_rojos - vino.frutos_rojos)
+		puntaje.frutos_negros = abs(evaluacion.frutos_negros - vino.frutos_negros)
+		puntaje.astringencia = abs(evaluacion.astringencia - vino.astringencia)
+		puntaje.citrico = abs(evaluacion.citrico - vino.citrico)
+		puntaje.fruta_hueso = abs(evaluacion.fruta_hueso - vino.fruta_hueso)
+		puntaje.fruta_tropical = abs(evaluacion.fruta_tropical - vino.fruta_tropical)
+		puntaje.aroma_floral = abs(evaluacion.aroma_floral - vino.aroma_floral)
+		puntaje.aroma_herbal = abs(evaluacion.aroma_herbal - vino.aroma_herbal)
+		puntaje.tierra = abs(evaluacion.tierra - vino.tierra)
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
 	#lista_puntajes.sort(key=puntaje.total,reverse=True)
