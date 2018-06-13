@@ -41,10 +41,8 @@ def registro(request):
 		usuario.username = request.POST['email']
 		usuario.email = request.POST['email']
 		usuario.password = request.POST['password']
-		evaluacion.usuario = request.user
-		evaluacion.cepa = request.POST['cepa']
-		evaluacion.tipo = request.POST['tipo']
-		evaluacion.origen = request.POST['origen']
+		usuario.save()
+		evaluacion.usuario = usuario
 		evaluacion.cuerpo = request.POST['cuerpo']
 		evaluacion.frutos_rojos = request.POST['frutos_rojos']
 		evaluacion.frutos_negros = request.POST['frutos_negros']

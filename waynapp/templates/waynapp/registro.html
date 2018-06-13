@@ -71,7 +71,7 @@
 		      <div class="tab-content">
 		        <div id="signup">
 		          <h2>Regístrate Gratis</h2>
-		          <form action="/registro" method="post">
+		          <form name="registro" action="/registro" method="post">
 								{% csrf_token%}
 		          <div class="top-row">
 		            <div class="field-wrap">
@@ -99,6 +99,17 @@
 		            </label>
 		            <input type="password"required autocomplete="off" name="password"/>
 		          </div>
+								<input id="cuerpo" type="hidden" name="cuerpo" value=""/>
+								<input id="frutos_rojos" type="hidden" name="frutos_rojos" value=""/>
+								<input id="frutos_negros" type="hidden" name="frutos_negros" value=""/>
+								<input id="astringencia" type="hidden" name="astringencia" value=""/>
+								<input id="citrico" type="hidden" name="citrico" value=""/>
+								<input id="fruta_hueso" type="hidden" name="fruta_hueso" value=""/>
+								<input id="fruta_tropical" type="hidden" name="fruta_tropical" value=""/>
+								<input id="aroma_floral" type="hidden" name="aroma_floral" value=""/>
+								<input id="aroma_herbal" type="hidden" name="aroma_herbal" value=""/>
+								<input id="tierra" type="hidden" name="tierra" value=""/>
+
 		          <button type="submit" class="button button-block"/>CONTINUAR</button>
 		          </form>
 		        </div>
