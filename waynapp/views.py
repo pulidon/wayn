@@ -117,29 +117,29 @@ def	match(request):
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
 	lista_puntajes.sort(key=lambda puntaje: puntaje.total,reverse=False)
-	if plan.balance == '2 TINTOS':
+	if plan.balance == '2 TINTOS ':
 		sugerencia = sugerencias(2,0,lista_puntajes)
-	elif plan.balance == '1 TINTO 1 BLANCO':
+	elif plan.balance == '1 TINTO 1 BLANCO ':
 		sugerencia = sugerencias(1,1,lista_puntajes)
-	elif plan.balance == '2 BLANCOS':
+	elif plan.balance == '2 BLANCOS ':
 		sugerencia = sugerencias(1,2,lista_puntajes)
-	elif plan.balance == '3 TINTOS':
+	elif plan.balance == '3 TINTOS ':
 		sugerencia = sugerencias(3,0,lista_puntajes)
-	elif plan.balance == '2 TINTOS 1 BLANCO':
+	elif plan.balance == '2 TINTOS 1 BLANCO ':
 		sugerencia = sugerencias(2,1,lista_puntajes)
-	elif plan.balance == '1 TINTOS 2 BLANCOS':
+	elif plan.balance == '1 TINTOS 2 BLANCOS ':
 		sugerencia = sugerencias(1,2,lista_puntajes)
-	elif plan.balance == '3 BLANCOS':
+	elif plan.balance == '3 BLANCOS ':
 		sugerencia = sugerencias(0,3,lista_puntajes)
-	elif plan.balance == '4 TINTOS':
+	elif plan.balance == '4 TINTOS ':
 		sugerencia = sugerencias(4,0,lista_puntajes)
-	elif plan.balance == '3 TINTOS 1 BLANCO':
+	elif plan.balance == '3 TINTOS 1 BLANCO ':
 		sugerencia = sugerencias(3,1,lista_puntajes)
-	elif plan.balance == '2 TINTOS 2 BLANCOS':
+	elif plan.balance == '2 TINTOS 2 BLANCOS ':
 		sugerencia = sugerencias(2,2,lista_puntajes)
-	elif plan.balance == '1 TINTOS 3 BLANCOS':
+	elif plan.balance == '1 TINTOS 3 BLANCOS ':
 		sugerencia = sugerencias(1,3,lista_puntajes)
-	elif plan.balance == '4 BLANCOS':
+	elif plan.balance == '4 BLANCOS ':
 		sugerencia = sugerencias(0,4,lista_puntajes)
 	context = {
 		'sugerencia':sugerencia
@@ -164,7 +164,7 @@ def sugerencias(tintos,blancos,lista_puntajes):
 			if len(sugerencias_tinto) < tintos :
 				sugerencias_tinto.append(vino)
 		elif vino.tipo == 'Blanco':
-			if len(sugerencias_blanco) < blanco :
+			if len(sugerencias_blanco) < blancos :
 				sugerencias_blanco.append(vino)
 	sugerencias = sugerencias_tinto + sugerencias_blanco
 	return sugerencias
