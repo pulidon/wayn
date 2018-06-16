@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from .models import Usuario, Evaluacion, Vino
+from .models import Usuario, Evaluacion, Vino, Plan
 
 
 class Puntaje:
@@ -68,6 +68,16 @@ def	plan(request):
 
 # vista del balancevinos
 def	balancevinos(request):
+	if request.method == 'POST'
+		plan = Plan()
+		plan.usuario = request.user
+		plan.plan = request.POST['plan']
+		plan.balance = request.POST['balance']
+		plan.sugerencia = ''
+		plan.save()
+		return redirect('match')
+	else:
+		return render(request, 'waynapp/balancevinos.html')
 	return render(request, 'waynapp/balancevinos.html')
 
 # vista del match
