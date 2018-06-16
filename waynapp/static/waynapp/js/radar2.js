@@ -123,6 +123,9 @@ var config = {
 				fontColor:'rgba(0, 0, 0, .5)'
 			},
 			ticks:{
+				min:0,
+				max:100,
+				stepSize:20,
 				display:false,
 			}
 		},
