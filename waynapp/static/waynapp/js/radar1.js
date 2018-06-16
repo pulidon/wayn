@@ -155,6 +155,9 @@ $("select").change(function() {
 	  localStorage.setItem('someData', dataToStore);
     });
     })
+		var localData = JSON.parse(localStorage.getItem('someData'));
+		document.getElementById("plan").value = localData.plan
+		document.getElementById("balance").value = localData.balance
   .trigger( "change" );
 });
 
