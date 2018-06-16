@@ -134,7 +134,7 @@
 	<script>
 	$(document).ready(function(){
 		{% for puntaje in sugerencia %}
-			myRadar{{ forloop.counter }}.data.datasets[1].data = [{{puntaje.cuerpo}}, {{puntaje.frutos_rojos}}, {{puntaje.frutos_negros}}, {{puntaje.astringencia}}, {{puntaje.citrico}}, {{puntaje.fruta_hueso}}, {{puntaje.fruta_tropical}}, {{puntaje.aroma_floral}}, {{puntaje.aroma_herbal}}, {{puntaje.tierra}}, {{puntaje.total}}];
+			myRadar{{ forloop.counter }}.data.datasets[1].data = [{{puntaje.cuerpo}}, {{puntaje.frutos_rojos}}, {{puntaje.frutos_negros}}, {{puntaje.astringencia}}, {{puntaje.citrico}}, {{puntaje.fruta_hueso}}, {{puntaje.fruta_tropical}}, {{puntaje.aroma_floral}}, {{puntaje.aroma_herbal}}, {{puntaje.tierra}}];
 			myRadar{{ forloop.counter }}.update();
 		{% endfor %}
 })
