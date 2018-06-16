@@ -142,7 +142,7 @@ def	match(request):
 	elif plan.balance == '4 BLANCOS':
 		sugerencia = sugerencias(0,4,lista_puntajes)
 	context = {
-		'sugerencia':lista_puntajes
+		'sugerencia':sugerencia
 	}
 	return render(request, 'waynapp/match.html', context)
 
