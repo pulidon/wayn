@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 from .models import Usuario, Evaluacion, Vino
 
 
@@ -55,6 +56,7 @@ def registro(request):
 		evaluacion.tierra = request.POST['tierra']
 		usuario.save()
 		evaluacion.save()
+		login(request,usuario)
 		return render(request, 'waynapp/plan.html')
 	else:
 		return render(request, 'waynapp/registro.html')
