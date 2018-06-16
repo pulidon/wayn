@@ -130,6 +130,7 @@
 
 	<script>
 	{% for puntaje in sugerencia %}
+		window.myRadar{{ forloop.counter }} = new Chart(document.getElementById('canvas{{ forloop.counter }}'), config);
 		myRadar{{ forloop.counter }}.data.datasets[1].data = [{{puntaje.cuerpo}}, {{puntaje.frutos_rojos}}, {{puntaje.frutos_negros}}, {{puntaje.astringencia}}, {{puntaje.citrico}}, {{puntaje.fruta_hueso}}, {{puntaje.fruta_tropical}}, {{puntaje.aroma_floral}}, {{puntaje.aroma_herbal}}, {{puntaje.tierra}}, {{puntaje.total}}]
 		myRadar{{ forloop.counter }}.update();
 	{% endfor %}
