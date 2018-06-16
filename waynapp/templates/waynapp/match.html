@@ -73,12 +73,11 @@
 		<p class="text-center">TU EXPERIENCIA DE VINOS ESTA LISTA<br>Los siguientes vinos son los que más se ajustan a tu perfil, esperamos que los disfrutes.</p>
 			<div class="seleccion-table-wrapper">
 				{% for puntaje in sugerencia %}
-					<p>{{puntaje.cepa}} --- {{puntaje.total}}</p>
 					<div class="ficha-individual">
-				  	<h4>88% COINCIDENCIA</h4>
+				  	<h4>{{puntaje.total}} --- 88% COINCIDENCIA</h4>
 					  		<img src="../static/waynapp/imagenes/rioja-bordon-crianza.jpg" alt="botella_wayn">
 					  		<h3>{{puntaje.nombre}}</h3>
-					  		<p>{{puntaje.cepa}}</p>
+					  		<p>{{puntaje.origen}}</p>
 
 					  		 <canvas id="canvas1"></canvas>
 
