@@ -105,7 +105,7 @@ def	match(request):
 			puntaje.tierra = 0
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
-	lista_puntajes.sort(key=lambda puntaje: puntaje.total,reverse=True)
+	lista_puntajes.sort(key=lambda puntaje: puntaje.total,reverse=False)
 	context = {
 		'lista_puntajes':lista_puntajes
 	}
