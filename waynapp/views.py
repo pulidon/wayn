@@ -84,6 +84,7 @@ def	balancevinos(request):
 def	match(request):
 	lista_vinos = Vino.objects.order_by('pk')
 	evaluacion = Evaluacion.objects.get(usuario=request.user)
+	plan = Plan.get(usuario=request.user)
 	lista_puntajes = []
 	for vino in lista_vinos:
 		puntaje = Puntaje()
@@ -116,8 +117,32 @@ def	match(request):
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
 		lista_puntajes.append(puntaje)
 	lista_puntajes.sort(key=lambda puntaje: puntaje.total,reverse=False)
+	if plan.balance == '2 TINTOS':
+		sugerencia = sugerencias(2,0,lista_puntajes)
+	elif plan.balance == '1 TINTO 1 BLANCO':
+		sugerencia = sugerencias(1,1,lista_puntajes)
+	elif plan.balance == '2 BLANCOS':
+		sugerencia = sugerencias(1,2,lista_puntajes)
+	elif plan.balance == '3 TINTOS':
+		sugerencia = sugerencias(3,0,lista_puntajes)
+	elif plan.balance == '2 TINTOS 1 BLANCO':
+		sugerencia = sugerencias(2,1,lista_puntajes)
+	elif plan.balance == '1 TINTOS 2 BLANCOS':
+		sugerencia = sugerencias(1,2,lista_puntajes)
+	elif plan.balance == '3 BLANCOS':
+		sugerencia = sugerencias(0,3,lista_puntajes)
+	elif plan.balance == '4 TINTOS':
+		sugerencia = sugerencias(4,0,lista_puntajes)
+	elif plan.balance == '3 TINTOS 1 BLANCO':
+		sugerencia = sugerencias(3,1,lista_puntajes)
+	elif plan.balance == '2 TINTOS 2 BLANCOS':
+		sugerencia = sugerencias(2,2,lista_puntajes)
+	elif plan.balance == '1 TINTOS 3 BLANCOS':
+		sugerencia = sugerencias(1,3,lista_puntajes)
+	elif plan.balance == '4 BLANCOS':
+		sugerencia = sugerencias(0,4,lista_puntajes)
 	context = {
-		'lista_puntajes':lista_puntajes
+		'sugerencia':lista_puntajes
 	}
 	return render(request, 'waynapp/match.html', context)
 
@@ -128,3 +153,18 @@ def	checkout(request):
 # vista del confirmacion
 def	confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
+
+# funcion para las sugerencias
+def sugerencias(tintos,blancos,lista_puntajes):
+	sugerencias = []
+	sugerencias_tinto = []
+	sugerencias_blanco = []
+	for vino in lista_puntajes:
+		if vino.tipo == 'Tinto':
+			if len(sugerencias_tinto) < tintos :
+				sugerencias_tinto.append(vino)
+		elif vino.tipo == 'Blanco':
+			if len(sugerencias_blanco) < blanco :
+				sugerencias_blanco.append(vino)
+	sugerencias = sugerencias_tinto + sugerencias_blanco
+	return sugerencias
