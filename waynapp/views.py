@@ -84,7 +84,7 @@ def	balancevinos(request):
 def	match(request):
 	lista_vinos = Vino.objects.order_by('pk')
 	evaluacion = Evaluacion.objects.get(usuario=request.user)
-	plan = Plan.get(usuario=request.user)
+	plan = Plan.objects.get(usuario=request.user)
 	lista_puntajes = []
 	for vino in lista_vinos:
 		puntaje = Puntaje()
