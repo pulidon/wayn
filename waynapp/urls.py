@@ -11,7 +11,7 @@ urlpatterns = [
 	url(r'^plan', views.plan, name='plan'),
 	url(r'^balancevinos', views.balancevinos, name='balancevinos'),
 	url(r'^match', views.match, name='match'),
-	url(r'^perfilvino', views.perfilvino, name='perfilvino'),
+	url(r'^perfilvino/(?P<pk>\d+)/$', views.perfilvino, name='perfilvino'),
 	url(r'^checkout', views.checkout, name='checkout'),
 	url(r'^confirmacion', views.confirmacion, name='confirmacion'),
 ]
