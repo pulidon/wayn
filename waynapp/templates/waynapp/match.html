@@ -129,10 +129,13 @@
 	============================== -->
 
 	<script>
-	{% for puntaje in sugerencia %}
-		myRadar{{ forloop.counter }}.data.datasets[1].data = [{{puntaje.cuerpo}}, {{puntaje.frutos_rojos}}, {{puntaje.frutos_negros}}, {{puntaje.astringencia}}, {{puntaje.citrico}}, {{puntaje.fruta_hueso}}, {{puntaje.fruta_tropical}}, {{puntaje.aroma_floral}}, {{puntaje.aroma_herbal}}, {{puntaje.tierra}}, {{puntaje.total}}];
-		myRadar{{ forloop.counter }}.update();
-	{% endfor %}
+	$(document).ready(function(){
+		{% for puntaje in sugerencia %}
+			myRadar{{ forloop.counter }}.data.datasets[1].data = [{{puntaje.cuerpo}}, {{puntaje.frutos_rojos}}, {{puntaje.frutos_negros}}, {{puntaje.astringencia}}, {{puntaje.citrico}}, {{puntaje.fruta_hueso}}, {{puntaje.fruta_tropical}}, {{puntaje.aroma_floral}}, {{puntaje.aroma_herbal}}, {{puntaje.tierra}}, {{puntaje.total}}];
+			myRadar{{ forloop.counter }}.update();
+		{% endfor %}
+})
+
 	</script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
