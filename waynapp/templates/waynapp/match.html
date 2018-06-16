@@ -70,17 +70,15 @@
 	<div class="container">
 		<h2>FELICITACIONES!</h2>
 
-		{% for puntaje in sugerencia %}
-			<p>{{puntaje.cepa}} --- {{puntaje.total}}</p>
-		{% endfor %}
-
 		<p class="text-center">TU EXPERIENCIA DE VINOS ESTA LISTA<br>Los siguientes vinos son los que más se ajustan a tu perfil, esperamos que los disfrutes.</p>
 			<div class="seleccion-table-wrapper">
-				  <div class="ficha-individual">
+				{% for puntaje in sugerencia %}
+					<p>{{puntaje.cepa}} --- {{puntaje.total}}</p>
+					<div class="ficha-individual">
 				  	<h4>88% COINCIDENCIA</h4>
 					  		<img src="../static/waynapp/imagenes/rioja-bordon-crianza.jpg" alt="botella_wayn">
-					  		<h3>Rioja Bordon</h3>
-					  		<p>Crianza</p>
+					  		<h3>{{puntaje.nombre}}</h3>
+					  		<p>{{puntaje.cepa}}</p>
 
 					  		 <canvas id="canvas1"></canvas>
 
@@ -88,29 +86,7 @@
 					     MAS INFORMACIÓN
 					    </a>
 					</div>
-					 <div class="ficha-individual">
-					 	<h4>83% COINCIDENCIA</h4>
-					  		<img src="../static/waynapp/imagenes/rioja-bordon-crianza.jpg" alt="botella_wayn">
-					  		<h3>Rioja Bordon</h3>
-					  		<p>Crianza</p>
-					  		  <canvas id="canvas2"></canvas>
-
-
-					    <a target="_blank" class="pricing-table__button" href="#">
-					     MAS INFORMACIÓN
-					    </a>
-					</div>
-					 <div class="ficha-individual">
-					 	<h4>92% COINCIDENCIA</h4>
-					  		<img src="../static/waynapp/imagenes/rioja-bordon-crianza.jpg" alt="botella_wayn">
-					  		<h3>Rioja Bordon</h3>
-					  		<p>Crianza</p>
-					  		<canvas id="canvas3"></canvas>
-
-					    <a target="_blank" class="pricing-table__button" href="#">
-					     MAS INFORMACIÓN
-					    </a>
-					</div>
+				{% endfor %}
 			</div>
 
 			<div class="text-center">
