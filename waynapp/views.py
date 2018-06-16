@@ -146,6 +146,9 @@ def	match(request):
 	}
 	return render(request, 'waynapp/match.html', context)
 
+# vista perfil del vino
+def perfilvino(request,pk):
+	return render(request, 'waynapp/perfil_vino.html', context)
 # vista del checkout
 def	checkout(request):
 	return render(request, 'waynapp/checkout.html')
