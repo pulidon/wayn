@@ -24,7 +24,6 @@ class Evaluacion(models.Model):
 	aroma_herbal = models.IntegerField(null=True)
 	tierra = models.IntegerField(null=True)
 
-
 class Vino(models.Model):
 	nombre = models.CharField(max_length=50, null=True)
 	cepa = models.CharField(max_length=30, null=True)
@@ -40,3 +39,9 @@ class Vino(models.Model):
 	aroma_floral = models.IntegerField(null=True)
 	aroma_herbal = models.IntegerField(null=True)
 	tierra = models.IntegerField(null=True)
+
+class Plan(models.Model):
+	usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+	plan = models.CharField(max_length=300, null=True)
+	balance = models.CharField(max_length=300, null=True)
+	sugerencia = models.CharField(max_length=300, null=True)
