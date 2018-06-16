@@ -130,7 +130,8 @@
 
 	<script>
 	{% for puntaje in sugerencia %}
-		myradar{{ forloop.counter }}.data.datasets[1].data = [puntaje.cuerpo, frutos_rojos, frutos_negros, astringencia, citrico, fruta_hueso, fruta_tropical, aroma_floral, aroma_herbal, tierra, total]
+		myRadar{{ forloop.counter }}.data.datasets[1].data = [{{puntaje.cuerpo}}, {{puntaje.frutos_rojos}}, {{puntaje.frutos_negros}}, {{puntaje.astringencia}}, {{puntaje.citrico}}, {{puntaje.fruta_hueso}}, {{puntaje.fruta_tropical}}, {{puntaje.aroma_floral}}, {{puntaje.aroma_herbal}}, {{puntaje.tierra}}, {{puntaje.total}}]
+		myRadar{{ forloop.counter }}.update();
 	{% endfor %}
 	</script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

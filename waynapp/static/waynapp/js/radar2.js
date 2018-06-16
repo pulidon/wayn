@@ -134,4 +134,5 @@ window.onload = function() {
 	window.myRadar1 = new Chart(document.getElementById('canvas1'), config);
 	window.myRadar2 = new Chart(document.getElementById('canvas2'), config);
 	window.myRadar3 = new Chart(document.getElementById('canvas3'), config);
+	window.myRadar4 = new Chart(document.getElementById('canvas3'), config);
 };
