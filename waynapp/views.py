@@ -8,6 +8,7 @@ from .models import Usuario, Evaluacion, Vino, Plan
 
 
 class Puntaje:
+	pk = ''
 	nombre = ''
 	cepa = ''
 	tipo = ''
@@ -88,6 +89,7 @@ def	match(request):
 	lista_puntajes = []
 	for vino in lista_vinos:
 		puntaje = Puntaje()
+		puntaje.pk = vino.pk
 		puntaje.nombre = vino.nombre
 		puntaje.cepa = vino.cepa
 		puntaje.tipo = vino.tipo
