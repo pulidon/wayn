@@ -39,6 +39,7 @@ class Vino(models.Model):
 	aroma_floral = models.IntegerField(null=True)
 	aroma_herbal = models.IntegerField(null=True)
 	tierra = models.IntegerField(null=True)
+	imagen = models.FileField(upload_to='static')
 
 class Plan(models.Model):
 	usuario = models.ForeignKey(User, on_delete=models.CASCADE)
