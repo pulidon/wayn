@@ -167,9 +167,9 @@ def sugerencias(tintos,blancos,lista_puntajes):
 	for vino in lista_puntajes:
 		if vino.tipo == 'Tinto':
 			if len(sugerencias_tinto) < tintos :
-				sugerencias_tinto.append(vino)
+				sugerencias_tinto.append(Vino.objects.get(vino.pk))
 		elif vino.tipo == 'Blanco':
 			if len(sugerencias_blanco) < blancos :
-				sugerencias_blanco.append(vino)
+				sugerencias_blanco.append(VIno.objects.get(vino.pk))
 	sugerencias = sugerencias_tinto + sugerencias_blanco
 	return sugerencias

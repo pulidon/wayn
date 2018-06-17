@@ -114,7 +114,6 @@ var config = {
 			gridLines: {
 				color:'rgba(0, 0, 0, .3)',
 			},
-
 			angleLines:{
 			display: false,  //si se ponen parece una telaraña (george)
 			color:'rgba(0, 0, 0, 0.5)',
