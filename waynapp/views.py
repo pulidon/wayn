@@ -145,6 +145,7 @@ def	match(request):
 		sugerencia = sugerencias(0,4,lista_puntajes)
 	context = {
 		'sugerencia':sugerencia
+		'lista_puntajes':puntaje
 	}
 	return render(request, 'waynapp/match.html', context)
 
