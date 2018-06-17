@@ -151,6 +151,10 @@ def	match(request):
 
 # vista perfil del vino
 def perfilvino(request,pk):
+	vino = Vino.objects.get(pk=pk)
+	context = {
+		'vino':vino
+	}
 	return render(request, 'waynapp/perfil_vino.html', context)
 # vista del checkout
 def	checkout(request):

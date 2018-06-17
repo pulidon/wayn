@@ -59,10 +59,10 @@
 				  </div>
 				</nav>
             <div class="container text-center">
-            	
-   
+
+
             </div>
-        </div>    
+        </div>
     </section>
  <!-- END HEADER SECTION -->
 
@@ -70,15 +70,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img src="imagenes/foto_vino.jpg" alt="botella_wayn">
+				<img src="{{vino.imagen}}" alt="botella_wayn">
 			</div>
 			<div class="col-md-4">
-				<h2>2015 DIVINER</h2>
-				
+				<h2>{{vino.nombre}}</h2>
+
 				<table>
 					  <tr>
 					    <th><i class="fa fa-globe" aria-hidden="true"></i></th>
-					    <th>Santa Ynez Valley, California</th>
+					    <th>{{vino.origen}}</th>
 					  </tr>
 					  <tr>
 					    <td></td>
@@ -87,7 +87,7 @@
 				<table>
 					  <tr>
 					    <th><img src="imagenes/cepas.png" alt=""></th>
-					    <th>Cabernet Sauvignon</th>
+					    <th>{{vino.cepa}}</th>
 					  </tr>
 					  <tr>
 					    <td></td>
@@ -106,10 +106,10 @@
 				    <th class="text-center">Carnes Rojas</th>
 				  </tr>
 				</table>
-				
+
 			</div>
 		</div>
-	</div>	
+	</div>
 </section>
 
 <section class="radar_vino">
@@ -137,22 +137,22 @@
 
 <section class="footer">
 	<div class="container">
-		
+
 			<div class="elem_footer text-center">
 				<p>&copy; 2018 WAYN S.A.S. Todos los derechos reservados.</p>
 			</div>
-		
-		
-		
+
+
+
 	</div>
 </section>
-		
+
 	<!-- =========================
-     			SCRIPTS 
+     			SCRIPTS
 	============================== -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/radar_vino.js"></script>	
+	<script src="js/radar_vino.js"></script>
 </body>
 </html>
