@@ -40,9 +40,15 @@ class Vino(models.Model):
 	aroma_herbal = models.IntegerField(null=True)
 	tierra = models.IntegerField(null=True)
 	imagen = models.FileField(upload_to='static')
+	notas_de_cata = models.TextField(null=True)
+	maridaje = models.ForeignKey(Maridaje)
 
 class Plan(models.Model):
 	usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 	plan = models.CharField(max_length=300, null=True)
 	balance = models.CharField(max_length=300, null=True)
 	sugerencia = models.CharField(max_length=300, null=True)
+
+class Maridaje(models.Model):
+	nombre = models.CharField(max_length=100, null=True)
+	imagen = models.FileField(upload_to='static')
