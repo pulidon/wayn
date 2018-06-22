@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import Usuario, Evaluacion, Vino, Plan
+from .models import Usuario, Evaluacion, Vino, Plan, Maridaje
 
 # Modificaciones a las vistas del panel de administracion
 class EvaluacionInline(admin.TabularInline):
