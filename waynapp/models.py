@@ -27,6 +27,7 @@ class Evaluacion(models.Model):
 class Maridaje(models.Model):
 	nombre = models.CharField(max_length=100, null=True)
 	imagen = models.FileField(upload_to='static')
+	pass
 
 class Vino(models.Model):
 	nombre = models.CharField(max_length=50, null=True)
