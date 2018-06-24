@@ -45,7 +45,7 @@ class Vino(models.Model):
 	tierra = models.IntegerField(null=True)
 	imagen = models.FileField(upload_to='static')
 	notas_de_cata = models.TextField(null=True)
-	maridaje = models.ForeignKey(Maridaje, null=True)
+	maridaje = models.ManytoManyField(Maridaje, null=True)
 
 class Plan(models.Model):
 	usuario = models.ForeignKey(User, on_delete=models.CASCADE)
