@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>WAYN | El Vino como debería ser.</title>
+	<title>WAYN | Regístrate gratis.</title>
 	<meta name="description" content="Wayn es el primer servicio de vino por suscripción de Bogotá.">
 	<!-- Google Fonts (Oswald-Roboto)-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:700,900i|Roboto" rel="stylesheet">
@@ -37,22 +37,11 @@
         <div class="section_overlay">
 				<nav class="navbar navbar-expand-lg navbar-light ">
 				<div class="container">
-				  <a class="navbar-brand" href="index.html"><img src="../static/waynapp/imagenes/wayn_logo.png" alt="Logo Wayn"></a>
+				  <a class="navbar-brand" href="https://wayn.com.co"><img src="../static/waynapp/imagenes/wayn_logo.png" alt="Logo Wayn"></a>
 				  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 				  </button>-->
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				   <!-- <ul class="navbar-nav mr-auto">
-				 	  <li class="nav-item">
-				        <a class="nav-link" href="#COMO">CÓMO FUNCIONA</a>
-				      </li>
-				      <li class="nav-item">
-				        <a class="nav-link" href="#PLANES">PLANES</a>
-				      </li>
-				       <li class="nav-item">
-				        <a class="nav-link" href="#">INICIAR SESION</a>
-				      </li>
-				    </ul>-->
 				   </div>
 				  </div>
 				</nav>
@@ -82,39 +71,52 @@
 		      <div class="tab-content">
 		        <div id="signup">
 		          <h2>Regístrate Gratis</h2>
-		          <form action="/" method="post">
+		          <form name="registro" action="/registro" method="post">
+								{% csrf_token%}
 		          <div class="top-row">
 		            <div class="field-wrap">
 		              <label>
 		                Nombre<span class="req">*</span>
 		              </label>
-		              <input type="text" required autocomplete="off" />
-		            </div>
-		          <div class="field-wrap">
+		              <input type="text" required autocomplete="off" name="name" />
+		            </div><div></div>
+		          <!--<div class="field-wrap">
 		              <label>
 		                Apellido<span class="req">*</span>
 		              </label>
 		              <input type="text"required autocomplete="off"/>
-		            </div>
+		            </div>-->
 		          </div>
 		          <div class="field-wrap">
 		            <label>
 		              E-mail<span class="req">*</span>
 		            </label>
-		            <input type="email"required autocomplete="off"/>
+		            <input type="email"required autocomplete="off" name="email"/>
 		          </div>
 		          <div class="field-wrap">
 		            <label>
 		              Contraseña<span class="req">*</span>
 		            </label>
-		            <input type="password"required autocomplete="off"/>
+		            <input type="password"required autocomplete="off" name="password"/>
 		          </div>
+								<input id="cuerpo" type="hidden" name="cuerpo" value=""/>
+								<input id="frutos_rojos" type="hidden" name="frutos_rojos" value=""/>
+								<input id="frutos_negros" type="hidden" name="frutos_negros" value=""/>
+								<input id="astringencia" type="hidden" name="astringencia" value=""/>
+								<input id="citrico" type="hidden" name="citrico" value=""/>
+								<input id="fruta_hueso" type="hidden" name="fruta_hueso" value=""/>
+								<input id="fruta_tropical" type="hidden" name="fruta_tropical" value=""/>
+								<input id="aroma_floral" type="hidden" name="aroma_floral" value=""/>
+								<input id="aroma_herbal" type="hidden" name="aroma_herbal" value=""/>
+								<input id="tierra" type="hidden" name="tierra" value=""/>
+
 		          <button type="submit" class="button button-block"/>CONTINUAR</button>
 		          </form>
 		        </div>
 		        <div id="login">
 		          <h2>Bienvenido de vuelta!</h2>
-		          <form action="/" method="post">
+		          <form action="/login" method="post">
+								{% csrf_token%}
 		            <div class="field-wrap">
 		            <label>
 		              E-mail<span class="req">*</span>
@@ -141,10 +143,8 @@
 			<p>Bogotá - Colombia</p>
 		</div>
 		</div>
-    </div>
+	</div>
 </section>
-
-
 
 
 <section class="footer">
@@ -160,8 +160,12 @@
 	<!-- =========================
      			SCRIPTS
 	============================== -->
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/registro.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="../static/waynapp/js/registro.js"></script>
 </body>
 </html>

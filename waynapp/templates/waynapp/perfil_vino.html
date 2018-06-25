@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>WAYN | El Vino como debería ser.</title>
+	<title>WAYN | perfil vino.</title>
 	<meta name="description" content="Wayn es el primer servicio de vino por suscripción de Bogotá.">
 	<!-- Google Fonts (Oswald-Roboto)-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:700,900i|Roboto" rel="stylesheet">
@@ -39,7 +39,7 @@
         <div class="section_overlay">
 				<nav class="navbar navbar-expand-lg navbar-light ">
 				<div class="container">
-				  <a class="navbar-brand" href="https://wayn.com.co"><img src="/static/waynapp/imagenes/wayn_logo.png" alt="Logo Wayn"></a>
+				  <a class="navbar-brand" href="index.html"><img src="/static/waynapp/imagenes/wayn_logo.png" alt="Logo Wayn"></a>
 				  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 				  </button>-->
@@ -66,47 +66,72 @@
     </section>
  <!-- END HEADER SECTION -->
 
-<section class="seleccion" id="PLANES">
+<section class="perfil_vino">
 	<div class="container">
-		<h2>FELICITACIONES!</h2>
-
-		<p class="text-center">TU EXPERIENCIA DE VINOS ESTA LISTA<br>Los siguientes vinos son los que más se ajustan a tu perfil, esperamos que los disfrutes.</p>
-			<div class="seleccion-table-wrapper">
-				{% for vino in sugerencia %}
-					<div class="ficha-individual">
-				  	<h4><span class="porcentaje_num">90 &percnt;</span><br>COINCIDENCIA</h4>
-					  		<img src="{{vino.imagen}}" alt="botella_wayn">
-					  		<h3>{{vino.nombre}}</h3>
-					  		<p>{{vino.origen}}</p>
-
-					  		 <canvas id="canvas{{ forloop.counter }}"></canvas>
-
-					    <a target="_blank" class="pricing-table__button" href="{% url "perfilvino" vino.pk %}">
-					     MAS INFORMACIÓN
-					    </a>
-					</div>
-				{% endfor %}
+		<div class="row">
+			<div class="col-md-6">
+				<img src="/{{vino.imagen}}" alt="botella_wayn">
 			</div>
+			<div class="col-md-4">
+				<h2>{{vino.nombre}}</h2>
 
-			<div class="text-center">
-				<a href="/checkout"><button type="button" class="btn-pago btn-outline-dark"><i class="fa fa-lock"></i> PROCEDER AL PAGO</button></a>
-				<h5>Pago 100% seguro, procesado por PayU</h5>
-				</div>
-				<div class="text-center">
-					<a href="/plan"><button type="button" class="btn-test btn-outline-dark">CAMBIAR PLAN</button></a>
-				</div>
-	<div class="pago_seguro text-center">
-		<p><i class="fa fa-lock"></i> Compra Segura · Sitio seguro con criptografía (SSL) · Pago 100% seguro, procesado por PayU<br>Medios de Pago:</p>	<div class="medios">
-			<img src="/static/waynapp/imagenes/medios/Visa_PayU.png">
-			<img src="/static/waynapp/imagenes/medios/Master_PayU.png">
-			<img src="/static/waynapp/imagenes/medios/PSE.png">
-			<img src="/static/waynapp/imagenes/medios/efecty-1.png">
-			<img src="/static/waynapp/imagenes/medios/DinersClub_PayU.png">
-			<img src="/static/waynapp/imagenes/medios/viabaloto.png">
-			<img src="/static/waynapp/imagenes/medios/AmericanExpress_PayU.png">
-			<img src="/static/waynapp/imagenes/medios/codensa-1.png">
+				<table>
+					  <tr>
+					    <th><i class="fa fa-globe" aria-hidden="true"></i></th>
+					    <th>{{vino.origen}}</th>
+					  </tr>
+					  <tr>
+					    <td></td>
+					    </tr>
+				</table>
+				<table>
+					  <tr>
+					    <th><img src="/static/cepas.png" alt=""></th>
+					    <th>{{vino.cepa}}</th>
+					  </tr>
+					  <tr>
+					    <td></td>
+					    </tr>
+				<table>
+				  <tr>
+				    <th></th>
+				    <th class="text-center0">MARIDAJE</th>
+				  </tr>
+				  <tr>
+						{% for maridaje in vino.maridajes.all %}
+							<td class="text-center"><img src="/{{maridaje.imagen}}" alt=""></td>
+						{% endfor %}
+				  </tr>
+				 <tr>
+					 {% for maridaje in vino.maridajes.all %}
+						 <th class="text-center">{{maridaje.nombre}}</th>
+					 {% endfor %}
+				  </tr>
+				</table>
+
+			</div>
 		</div>
 	</div>
+</section>
+
+<section class="radar_vino">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>PERFIL VINO</h2>
+				<canvas id="canvas_vino"></canvas>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-5">
+				<h2>NOTAS DE CATA</h2>
+				<p>Pacificana showcases classic California styles for a new generation of wine enthusiasts. It embodies the bold, pioneering spirit of the California landscape and those who call it home. 100% barrel fermented, this 2017 Chardonnay strikes the perfect balance between oaky, buttery richness and fruity elegance.
+
+				A happy planet produces great wine. That's why we teamed up with 1% for the Planet — an international organization that supports a network of eco-conscious businesses committed to donating one percent of their sales toward environmental causes. As a member, 1% of all our Pacificana® sales go toward benefiting and preserving the environment.</p>
+			</div>
+		</div>
+		<div class="text-center">
+				<a href="seleccion.html"><button type="button" class="btn-pago btn-outline-dark"> VOLVER</button></a>
+		</div>
 	</div>
 </section>
 
@@ -130,14 +155,6 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="/static/waynapp/js/radar2.js"></script>
-	<script>
-	$(document).ready(function(){
-		{% for vino in sugerencia %}
-			myRadar{{ forloop.counter }}.data.datasets[1].data = [{{vino.cuerpo}}, {{vino.frutos_rojos}}, {{vino.frutos_negros}}, {{vino.astringencia}}, {{vino.citrico}}, {{vino.fruta_hueso}}, {{vino.fruta_tropical}}, {{vino.aroma_floral}}, {{vino.aroma_herbal}}, {{vino.tierra}}];
-			myRadar{{ forloop.counter }}.update();
-		{% endfor %}
-})
-	</script>
+	<script src="js/radar_vino.js"></script>
 </body>
 </html>

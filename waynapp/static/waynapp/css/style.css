@@ -17,6 +17,17 @@ h1{
 p{
 	font-family: Roboto, sans-serif
 }
+canvas {
+  background:linear-gradient(#30104b, #4b304b);
+  background:#fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  box-shadow: 0 0 5px 5px rgba(0,7,99,0);
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
 
 /******HOME********/
 /*****************/
@@ -559,9 +570,9 @@ p{
   display: table;
   clear: both;
 }
-.registro .top-row > div {
+.registro .top-row > div { 
   float: left;
-  width: 48%;
+  width: 100%;      /*48% si se pone el apellido*/
   margin-right: 4%;
 }
 .registro .top-row > div:last-child {
@@ -633,10 +644,6 @@ p{
 	color: #333;
 	margin-bottom: 0px;
 }
-.tinto-blanco img{
-  margin-top: 30px
-}
-
 
 /* Reset Select */
 select {
@@ -749,10 +756,16 @@ select::-ms-expand {
 }
 .seleccion .seleccion-table-wrapper .ficha-individual h4{
 	margin: auto;
-	padding-top: 30px;
-	font-size: 20px;
-	color: #3D3D3D
-	}
+	padding: 20px;
+	font-size: 18px;
+  background: linear-gradient(#7F659D,#2D223A);
+  border-radius: 5px;
+  color: #fff;
+}
+.seleccion .seleccion-table-wrapper .ficha-individual h4 span{
+  font-size: 40px;
+  font-weight: 800;
+  }
 .seleccion .seleccion-table-wrapper .ficha-individual p{
 	padding-bottom: 15px;
 	width: 80%;
@@ -914,6 +927,81 @@ select::-ms-expand {
   justify-content: space-between;
 }
 
+
+/*********PERFIL VINO*************/
+/*********************************/
+
+.perfil_vino{
+  background-color: #f1f1f1;
+  padding-top: 80px;
+  padding-bottom:80px;
+  }
+
+.perfil_vino h2{
+  position: relative;
+  margin-bottom: 50px;
+  color: #333
+}
+  .perfil_vino h2::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 42%;
+    width: 50px;
+    height: 3px;
+    background-color: #7C4574;
+}
+ .perfil_vino img{
+    max-width: 100%
+  }
+.perfil_vino p{
+  color: #333;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c8c8c8;
+}
+.perfil_vino h4{
+  font-size: 35px;
+  color: #333
+}
+.perfil_vino i{
+  padding-left: 0.1em;
+  font-size: 45px;
+  color: #999;
+}
+.perfil_vino table{
+  margin-bottom: 40px
+}
+.perfil_vino table th{
+  min-width: 100px;
+  color: #333
+}
+.radar_vino{
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+.radar_vino h2{
+  position: relative;
+  color: #808080;
+}
+  .radar_vino h2::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 42%;
+    width: 50px;
+    height: 3px;
+    background-color: #7C4574;
+}
+.radar_vino p{
+  color: #333;
+  margin-top: 50px;
+}
+.radar_vino canvas{
+  color: #fff;
+  padding: 20px;
+}
+
+
 /****    MEDIA QUERIES     ****/
 /*****************************/    
 @media (max-width:1500px) {
@@ -1062,6 +1150,9 @@ select::-ms-expand {
   }
   .tinto-blanco{
   padding-top: 30px;
+  }
+  .perfil_vino h2{
+    margin-top: 50px;
   }
 }
 
