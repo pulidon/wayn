@@ -103,8 +103,9 @@
 						{% endfor %}
 				  </tr>
 				 <tr>
-				    <th class="text-center">Aves</th>
-				    <th class="text-center">Carnes Rojas</th>
+					 {% for maridaje in vino.maridajes.all %}
+						 <th class="text-center">{{maridaje.nombre}}</th>
+					 {% endfor %}
 				  </tr>
 				</table>
 
