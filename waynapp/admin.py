@@ -9,9 +9,10 @@ class EvaluacionInline(admin.TabularInline):
 	model = Evaluacion
 
 class VinoAdmin(admin.ModelAdmin):
-
 	list_display = (
-		'nombre')
+		'nombre',
+		'cepa'
+		)
 
 class MaridajeAdmin(admin.ModelAdmin):
 
