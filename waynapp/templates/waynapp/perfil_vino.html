@@ -98,7 +98,9 @@
 				    <th class="text-center0">MARIDAJE</th>
 				  </tr>
 				  <tr>
-						{{vino.maridajes}}
+						{% for maridaje in vino.maridajes %}
+							{{maridaje.imagen}}
+						{% endfor %}
 				    <td class="text-center"><img src="/static/aves.png" alt=""></td>
 				    <td class="text-center"><img src="/static/carnes.png" alt=""></td>
 				  </tr>
