@@ -29,6 +29,9 @@ class Maridaje(models.Model):
 	imagen = models.FileField(upload_to='static')
 	pass
 
+	def __str__ (self):
+		return self.nombre
+
 class Vino(models.Model):
 	nombre = models.CharField(max_length=50, null=True)
 	cepa = models.CharField(max_length=30, null=True)

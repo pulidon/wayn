@@ -14,14 +14,9 @@ class VinoAdmin(admin.ModelAdmin):
 		'cepa'
 		)
 
-class MaridajeAdmin(admin.ModelAdmin):
-
-	list_display = (
-		'nombre')
-
 # Register your models here.
 admin.site.register(Usuario)
 admin.site.register(Evaluacion)
 admin.site.register(Vino, VinoAdmin)
 admin.site.register(Plan)
-admin.site.register(Maridaje, MaridajeAdmin)
+admin.site.register(Maridaje)
