@@ -22,6 +22,8 @@ canvas {
   background:#fff;
   margin-top: 50px;
   margin-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   width: 100%;
   box-shadow: 0 0 5px 5px rgba(0,7,99,0);
       -moz-user-select: none;
@@ -34,7 +36,7 @@ canvas {
 .header {
     background: url(../imagenes/wine_img.jpg) right bottom no-repeat;
     background-size: 80vh;
-    height: 100vh;    
+    height: 100vh;
 }
 .texto_principal{
 	margin-top: 15vh
@@ -74,7 +76,7 @@ canvas {
 .btn_empieza{
 	padding: 14px 40px;
 	letter-spacing: 1px;
-	font-weight: 500;	
+	font-weight: 500;
 	margin-top: 20px;
 	margin-left: 30%;
 	background-color: #493051;
@@ -133,13 +135,13 @@ canvas {
 	/*margin-left: 45%;*/
 	letter-spacing: 1px;
 	padding: 14px 45px;
-	font-weight: 500;	
+	font-weight: 500;
 	margin-top: 50px;
 	border-radius: 5px;
 	background-color: #493051;
 	border-style: none;
 	color: #fff;
-}	
+}
 .btn-test:hover{
 	cursor: pointer;
 }
@@ -187,12 +189,12 @@ canvas {
 	letter-spacing: 1px;
 	color: #000;
 	padding: 14px 45px;
-	font-weight: 500;	
+	font-weight: 500;
 	margin-top: 60px;
 	border-style: none;
 	border-radius: 5px;
 
-}	
+}
 .btn-descubre:hover{
 	background-color: #493051;
 	color: #fff;
@@ -200,7 +202,7 @@ canvas {
 }
 
 /******PROPOSITO********/
-/***********************/	
+/***********************/
 .proposito{
 	padding-top: 100px;
 	padding-bottom: 100px;
@@ -464,7 +466,7 @@ canvas {
   .registro .frase img{
    max-width: 300px;
    margin-bottom: 20px
-  
+
   }
 .registro .tab-group {
   list-style: none;
@@ -570,7 +572,7 @@ canvas {
   display: table;
   clear: both;
 }
-.registro .top-row > div { 
+.registro .top-row > div {
   float: left;
   width: 100%;      /*48% si se pone el apellido*/
   margin-right: 4%;
@@ -818,13 +820,13 @@ select::-ms-expand {
 	/*margin-left: 45%;*/
 	letter-spacing: 1px;
 	padding: 14px 45px;
-	font-weight: 500;	
+	font-weight: 500;
 	margin-top: 50px;
 	border-radius: 5px;
 	background-color: #179b77;
 	border-style: none;
 	color: #fff;
-}	
+}
 .btn-pago:hover{
 	cursor: pointer;
 	background-color: #21D4A3;
@@ -1003,7 +1005,7 @@ select::-ms-expand {
 
 
 /****    MEDIA QUERIES     ****/
-/*****************************/    
+/*****************************/
 @media (max-width:1500px) {
   .header {
     background-size: 70vh;
@@ -1037,7 +1039,7 @@ select::-ms-expand {
     .texto_principal{
   margin-top: 15vh;
   }
-  .texto_principal p{ 
+  .texto_principal p{
   margin-top: 30px;
   width: 100%
   }
@@ -1086,7 +1088,7 @@ select::-ms-expand {
   font-size: 16px;
   margin-top: 30px;
   width: 100%
-  } 
+  }
     .btn_empieza {
     margin-top: -15px;
     padding: 15px 25px;

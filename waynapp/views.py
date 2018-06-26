@@ -70,13 +70,22 @@ def	plan(request):
 # vista del balancevinos
 def	balancevinos(request):
 	if request.method == 'POST':
-		plan = Plan()
-		plan.usuario = request.user
-		plan.plan = request.POST['plan']
-		plan.balance = request.POST['balance']
-		plan.sugerencia = ''
-		plan.save()
-		return redirect('match')
+		if len(plan.objects.get(usuario=request.user))==0:
+			plan = Plan()
+			plan.usuario = request.user
+			plan.plan = request.POST['plan']
+			plan.balance = request.POST['balance']
+			plan.sugerencia = ''
+			plan.save()
+			return redirect('match')
+		else:
+			plan=plan.objects.get(usuario=request.user)
+			plan.usuario = request.user
+			plan.plan = request.POST['plan']
+			plan.balance = request.POST['balance']
+			plan.sugerencia = ''
+			plan.save()
+			return redirect('match')
 	else:
 		return render(request, 'waynapp/balancevinos.html')
 	return render(request, 'waynapp/balancevinos.html')

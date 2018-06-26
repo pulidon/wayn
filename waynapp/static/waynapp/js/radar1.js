@@ -81,7 +81,7 @@ var color = Chart.helpers.color;
 var config = {
 	type: 'radar',
 	data: {
-	labels: ['Cuerpo', 'Frutos Rojos', 'Frutos Negros','Astringencia','Citrico','Fruta hueso','Fruta tropical', 'herbal','floral','tierra'],
+	labels: ['Cuerpo', 'Frutos Rojos', 'Frutos Negros','Astringencia','Citrico','Fruta hueso','Fruta tropical', 'Herbal','Floral','Tierra'],
 	datasets: [{
 	label: 'Tú',
 	backgroundColor: 'rgba(52,230,165,0.5)',
