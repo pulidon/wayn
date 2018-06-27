@@ -14,9 +14,16 @@ class VinoAdmin(admin.ModelAdmin):
 		'cepa'
 		)
 
+class PlanAdmin(admin.ModelAdmin):
+	list_display = (
+		'usuario',
+		'plan',
+		'balance'
+		)
+
 # Register your models here.
 admin.site.register(Usuario)
 admin.site.register(Evaluacion)
 admin.site.register(Vino, VinoAdmin)
-admin.site.register(Plan)
+admin.site.register(Plan, PlanAdmin)
 admin.site.register(Maridaje)
