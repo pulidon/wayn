@@ -134,7 +134,7 @@
 	<script>
 	$(document).ready(function(){
 		{% for vino in sugerencia %}
-			{% if vino.tipo=='Tinto' %}
+			{% if vino.tipo == "Tinto" %}
 			var color = Chart.helpers.color;
 			var config{{ forloop.counter }} = {
 				type: 'radar',
@@ -185,7 +185,7 @@
 				}
 			};
 			{% endif %}
-			{% if vino.tipo=='Blanco'%}
+			{% if vino.tipo == "Blanco" %}
 			var color = Chart.helpers.color;
 			var config = {
 				type: 'radar',
