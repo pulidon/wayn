@@ -79,7 +79,7 @@ def	balancevinos(request):
 			plan.save()
 			return redirect('match')
 		else:
-			plan=plan.objects.get(usuario=request.user)
+			plan=Plan.objects.get(usuario=request.user)
 			plan.usuario = request.user
 			plan.plan = request.POST['plan']
 			plan.balance = request.POST['balance']
