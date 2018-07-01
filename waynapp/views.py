@@ -70,7 +70,7 @@ def	plan(request):
 # vista del balancevinos
 def	balancevinos(request):
 	if request.method == 'POST':
-		if len(plan.objects.get(usuario=request.user))==0:
+		if len(Plan.objects.get(usuario=request.user))==0:
 			plan = Plan()
 			plan.usuario = request.user
 			plan.plan = request.POST['plan']
