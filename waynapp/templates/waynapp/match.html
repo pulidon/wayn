@@ -204,7 +204,7 @@
 		  else if (localData.tierra=='mucho') {
 		    tierra=90;
 		  }
-			
+
 		{% for vino in sugerencia %}
 			{% if vino.tipo == "Tinto" %}
 			var color = Chart.helpers.color;
@@ -217,7 +217,7 @@
 					backgroundColor: 'rgba(52,230,165,0.6)',
 					borderColor: 'rgba(52,230,165,0.7)',
 					pointBackgroundColor: 'rgba(52,230,165,0.7)',
-					data: [cuerpo,fRojos,fNegros,astringencia,citrico,fHueso,fTropical,herbal,floral,tierra]
+					data: [cuerpo,fRojos,fNegros,astringencia,herbal,floral,tierra]
 				},{
 				label: 'VINO',
 					backgroundColor: 'rgba(158,87,149,0.8)',
