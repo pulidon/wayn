@@ -134,8 +134,112 @@
 	<script>
 	$(document).ready(function(){
 		{% for vino in sugerencia %}
-			myRadar{{ forloop.counter }}.data.datasets[1].data = [{{vino.cuerpo}}, {{vino.frutos_rojos}}, {{vino.frutos_negros}}, {{vino.astringencia}}, {{vino.citrico}}, {{vino.fruta_hueso}}, {{vino.fruta_tropical}}, {{vino.aroma_floral}}, {{vino.aroma_herbal}}, {{vino.tierra}}];
-			myRadar{{ forloop.counter }}.update();
+			{% if vino.tipo=='Tinto' %}
+			var color = Chart.helpers.color;
+			var config{{ forloop.counter }} = {
+				type: 'radar',
+				data: {
+				labels: ['Cuerpo', 'Frutos Rojos', 'Frutos Negros','Astringencia','Herbal','Floral','Tierra'],
+				datasets: [{
+				label: 'VINO',
+					backgroundColor: 'rgba(158,87,149,0.8)',
+					borderColor: 'rgba(158,87,149,0.7)',
+					pointBackgroundColor: 'rgba(158,87,149,0.7)',
+					data: [{{vino.cuerpo}}, {{vino.frutos_rojos}}, {{vino.frutos_negros}}, {{vino.astringencia}}, {{vino.aroma_herbal}}, {{vino.aroma_floral}}, {{vino.tierra}}]
+				}]
+			},
+				options: {
+					legend: {
+						position: 'top',
+						labels:{
+							fontSize: 12,
+							fontStyle:'bold',
+							fontColor: 'rgba(0, 0, 0, 0.7)'
+						},
+					},
+					title: {
+						display: false,
+						fontSize: 20,
+						fontStyle:'bold',
+						fontColor: 'rgba(0, 0, 0, 0.7)'	,
+						text: 'PERFIL DE VINO'
+					},
+					scale: {
+						gridLines: {
+							color:'rgba(0, 0, 0, .3)',
+						},
+						angleLines:{
+						display: false,  //si se ponen parece una telaraña (george)
+						color:'rgba(0, 0, 0, 0.5)',
+						},
+						pointLabels:{
+							fontColor:'rgba(0, 0, 0, .5)'
+						},
+						ticks:{
+							min:0,
+							max:100,
+							stepSize:20,
+							display:false,
+						}
+					},
+				}
+			};
+			{% endif %}
+			{% if vino.tipo=='Blanco'%}
+			var color = Chart.helpers.color;
+			var config = {
+				type: 'radar',
+				data: {
+				labels: ['Cuerpo', 'Fruta Citrica', 'Fruta Hueso','Fruta Tropical','Herbal','Floral'],
+				datasets: [{
+				label: 'VINO',
+					backgroundColor: 'rgba(158,87,149,0.8)',
+					borderColor: 'rgba(158,87,149,0.7)',
+					pointBackgroundColor: 'rgba(158,87,149,0.7)',
+					data: [{{vino.cuerpo}}, {{vino.citrico}}, {{vino.fruta_hueso}}, {{vino.fruta_tropical}}, {{vino.aroma_herbal}}, {{vino.aroma_floral}}]
+				}]
+			},
+				options: {
+					legend: {
+						position: 'top',
+						labels:{
+							fontSize: 12,
+							fontStyle:'bold',
+							fontColor: 'rgba(0, 0, 0, 0.7)'
+						},
+					},
+					title: {
+						display: false,
+						fontSize: 20,
+						fontStyle:'bold',
+						fontColor: 'rgba(0, 0, 0, 0.7)'	,
+						text: 'PERFIL DE VINO'
+					},
+
+					scale: {
+						gridLines: {
+							color:'rgba(0, 0, 0, .3)',
+						},
+
+						angleLines:{
+						display: false,  //si se ponen parece una telaraña (george)
+						color:'rgba(0, 0, 0, 0.5)',
+						},
+						pointLabels:{
+							fontColor:'rgba(0, 0, 0, .5)'
+						},
+						ticks:{
+							min:0,
+							max:100,
+							stepSize:20,
+							display:false,
+						}
+					},
+
+				}
+			};
+			{%endif%}
+			window.myRadar = new Chart(document.getElementById('canvas{{ forloop.counter }}'), config{{ forloop.counter }});
 		{% endfor %}
 })
 	</script>
