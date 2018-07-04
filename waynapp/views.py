@@ -173,6 +173,14 @@ def	checkout(request):
 def	confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
 
+# Vistas campaña de prelanzamiento con referidos
+def lanzamiento(request):
+	return render(request, 'waynapp/lanzamiento.html')
+
+# Vistas campaña de prelanzamiento con referidos
+def referir_amigo(request):
+	return render(request, 'waynapp/referir_amigo.html')
+
 # funcion para las sugerencias
 def sugerencias(tintos,blancos,lista_puntajes):
 	sugerencias = []
