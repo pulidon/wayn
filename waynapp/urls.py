@@ -14,4 +14,7 @@ urlpatterns = [
 	url(r'^perfilvino/(?P<pk>\d+)/$', views.perfilvino, name='perfilvino'),
 	url(r'^checkout', views.checkout, name='checkout'),
 	url(r'^confirmacion', views.confirmacion, name='confirmacion'),
+	#urls para campaña de prelanzamiento
+	url(r'^campaña', views.campaña, name='campaña'),
+	url(r'^referir_amigo', views.referir_amigo, name='referir_amigo'),
 ]
