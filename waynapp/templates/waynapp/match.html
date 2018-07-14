@@ -265,7 +265,7 @@
 			{% endif %}
 			{% if vino.tipo == "Blanco" %}
 			var color = Chart.helpers.color;
-			var config = {
+			var config{{ forloop.counter }} = {
 				type: 'radar',
 				data: {
 				labels: ['Cuerpo', 'Fruta Citrica', 'Fruta Hueso','Fruta Tropical','Herbal','Floral'],
