@@ -78,7 +78,7 @@
 
 							{% for puntaje in lista_puntajes %}
 								{% if vino.pk == puntaje.pk %}
-									{{puntaje.coincidencia}} &percnt;
+									{{puntaje.coincidencia|add:7}} &percnt;
 								{% endif %}
 							{% endfor %}
 							</span><br>COINCIDENCIA</h4>
