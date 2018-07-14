@@ -130,7 +130,7 @@ def	match(request):
 		if vino.tipo == "Tinto":
 			puntaje.coincidencia = 100-((puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra)/7)
 		elif vino.tipo == "Blanco":
-			puntaje.coincidencia = 100-(puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra)/6)
+			puntaje.coincidencia = 100-((puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra)/6)
 		lista_puntajes.append(puntaje)
 	lista_puntajes.sort(key=lambda puntaje: puntaje.total,reverse=False)
 	if plan.balance == '2 TINTOS ':
