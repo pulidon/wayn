@@ -1,4 +1,123 @@
-<html>
-<body>lanzamiento
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WAYN | La experiencia de vinos que nunca has visto.</title>
+	<meta name="description" content="Está a punto de llegar.">
+	<!-- Google Fonts (Oswald-Roboto)-->
+	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+	<!-- Favicones-->
+
+		<!-- Estilos-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link href="css_prelaunch.css" rel="stylesheet">
+
+</head>
+<body>
+	<section class="header">
+       <div class="container texto_principal">
+            	<div class="row">
+            		<div class="col-xm-7 col-lg-7 text-center texto">
+            			<h1><span class="wayn">Wayn</span><br>LA EXPERIENCIA DE VINOS QUE NUNCA HAS VISTO</h1>
+            			<h4><br>ESTA A PUNTO DE LLEGAR!</h4>
+
+            			<div id="clockdiv">
+						  <div>
+						    <span class="days"></span>
+						    <div class="smalltext">Dias</div>
+						  </div>
+						  <div>
+						    <span class="hours"></span>
+						    <div class="smalltext">Horas</div>
+						  </div>
+						  <div>
+						    <span class="minutes"></span>
+						    <div class="smalltext">Minutos</div>
+						  </div>
+						  <div>
+						    <span class="seconds"></span>
+						    <div class="smalltext">Seg.</div>
+						  </div>
+						</div>
+						<p>Se la primera persona en enterarte y recibe premios</p>
+							<form id="form" class="topBefore">
+							  <input id="email" type="text" placeholder="E-MAIL">
+							  <input id="submit" type="submit" value="ENTRA Y DISFRUTA">
+							</form>
+
+            		</div>
+            		<div class="col-xm-5 col-lg-5 text-center">
+            			<img src="botellas.png" alt="">
+            			<div class="fecha">
+            				<h3>1.07.18</h3>
+            			<p>BOGOTA - COLOMBIA</p>
+            			</div>
+
+            		</div>
+            	</div>
+            </div>
+     </section>
+ <!-- END HEADER SECTION -->
+
+
+
+
+	<!-- =========================
+     			SCRIPTS
+	============================== -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			function getTimeRemaining(endtime) {
+			  var t = endtime - new Date().getTime();
+			  var seconds = Math.floor((t / 1000) % 60);
+			  var minutes = Math.floor((t / 1000 / 60) % 60);
+			  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+			  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+			  return {
+			    'total': t,
+			    'days': days,
+			    'hours': hours,
+			    'minutes': minutes,
+			    'seconds': seconds
+			  };
+			}
+
+			function initializeClock(id, endtime) {
+			  var clock = document.getElementById(id);
+			  var daysSpan = clock.querySelector('.days');
+			  var hoursSpan = clock.querySelector('.hours');
+			  var minutesSpan = clock.querySelector('.minutes');
+			  var secondsSpan = clock.querySelector('.seconds');
+
+			  function updateClock() {
+			    var t = getTimeRemaining(endtime);
+
+			    daysSpan.innerHTML = t.days;
+			    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+			    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+			    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+			    if (t.total <= 0) {
+			      clearInterval(timeinterval);
+			    }
+			  }
+
+			  updateClock();
+			  var timeinterval = setInterval(updateClock, 1000);
+			}
+
+			var deadline = Date.parse('Aug 03, 2018');
+			initializeClock('clockdiv', deadline);
+
+});
+	</script>
 </body>
 </html>
