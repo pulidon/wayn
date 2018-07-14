@@ -24,6 +24,7 @@ class Puntaje:
 	aroma_herbal = 0
 	tierra = 0
 	total = 0
+	coincidencia = 0
 
 # Create your views here.
 # Vista del Home
@@ -126,6 +127,10 @@ def	match(request):
 			puntaje.aroma_herbal = abs(evaluacion.aroma_herbal - vino.aroma_herbal)
 			puntaje.tierra = 0
 		puntaje.total = puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra
+		if vino.tipo == "Tinto":
+			puntaje.coincidencia = 100-((puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra)/7)
+		elif vino.tipo == "Blanco":
+			puntaje.coincidencia = 100-(puntaje.cuerpo + puntaje.frutos_rojos + puntaje.frutos_negros + puntaje.astringencia + puntaje.citrico + puntaje.fruta_hueso + puntaje.fruta_tropical + puntaje.aroma_floral + puntaje.aroma_herbal + puntaje.tierra)/6)
 		lista_puntajes.append(puntaje)
 	lista_puntajes.sort(key=lambda puntaje: puntaje.total,reverse=False)
 	if plan.balance == '2 TINTOS ':
