@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from .models import Usuario, Evaluacion, Vino, Plan, Prospectos, Direcciones_ip
+from .models import Usuario, Evaluacion, Vino, Plan, Prospecto, Direcciones_ip
 from core.utils import generate_secret_key
 
 class Puntaje:
