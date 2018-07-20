@@ -161,7 +161,7 @@ def match(request):
 	elif plan.balance == '4 BLANCOS ':
 		sugerencia = sugerencias(0,4,lista_puntajes)
 	# plan.sugerencia = serializers.serialize("json",sugerencia)
-	plan.sugerencia = [item.pk {'pk':vino.pk} for vino in sugerencia]
+	plan.sugerencia = [ {'pk' : vino.pk} for vino in sugerencia ]
 	plan.save()
 	context = {
 		'sugerencia':sugerencia,
