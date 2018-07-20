@@ -183,6 +183,16 @@ def	confirmacion(request):
 # Vistas campaña de prelanzamiento con referidos
 def lanzamiento(request,referral_code):
 	if request.method == 'POST':
+		try:
+			direccion_ip = Direcciones_ip.Object.get(direccion=request.META.get('REMOTE_ADDR'))
+			if direccion_ip.conteo < 3:
+				direccion_ip.conteo += 1
+			else:
+				return render(request, 'waynapp/lanzamiento.html')
+		except Direcciones_ip.DoesNotExist:
+			direccion_ip = Direcciones_ip()
+			direccion_ip.direccion = request.META.get('REMOTE_ADDR')
+			direccion_ip.conteo = 0
 		prospecto = Prospecto()
 		prospecto.email = request.POST.get('email')
 		if referral_code == None :
