@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from .models import Usuario, Evaluacion, Vino, Plan
-
+from .models import Usuario, Evaluacion, Vino, Plan, Prospectos, Direcciones_ip
+from core.utils import generate_secret_key
 
 class Puntaje:
 	pk = ''
@@ -65,11 +65,11 @@ def registro(request):
 	return render(request, 'waynapp/registro.html')
 
 # vista del plan
-def	plan(request):
+def plan(request):
 	return render(request, 'waynapp/plan.html')
 
 # vista del balancevinos
-def	balancevinos(request):
+def balancevinos(request):
 	if request.method == 'POST':
 		try:
 			plan=Plan.objects.get(usuario=request.user)
@@ -92,7 +92,7 @@ def	balancevinos(request):
 	return render(request, 'waynapp/balancevinos.html')
 
 # vista del match
-def	match(request):
+def match(request):
 	lista_vinos = Vino.objects.order_by('pk')
 	evaluacion = Evaluacion.objects.get(usuario=request.user)
 	plan = Plan.objects.get(usuario=request.user)
@@ -170,6 +170,7 @@ def perfilvino(request,pk):
 		'vino':vino
 	}
 	return render(request, 'waynapp/perfil_vino.html', context)
+
 # vista del checkout
 def	checkout(request):
 	return render(request, 'waynapp/checkout.html')
@@ -179,7 +180,19 @@ def	confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
 
 # Vistas campaña de prelanzamiento con referidos
-def lanzamiento(request):
+def lanzamiento(request,referral_code):
+	if request.method == 'POST':
+		prospecto = Prospecto()
+		prospecto.email = request.POST['email']
+		if referral_code == None :
+			prospecto.referrer_code = generate_secret_key()
+			return redirect('referir_amigo')
+		else:
+			prospecto.referrer_code = generate_secret_key()
+			prospecto.referral_code = referral_code
+		return redirect('referir_amigo')
+	else:
+		return render(request, 'waynapp/lanzamiento.html')
 	return render(request, 'waynapp/lanzamiento.html')
 
 # Vistas campaña de prelanzamiento con referidos

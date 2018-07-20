@@ -56,3 +56,13 @@ class Plan(models.Model):
 	plan = models.CharField(max_length=300, null=True)
 	balance = models.CharField(max_length=300, null=True)
 	sugerencia = models.CharField(max_length=300, null=True)
+
+
+class Prospecto():
+	email: = models.CharField(max_length=300, null=False)
+	referrer_code = models.CharField(max_length=6, null=False)
+	referral_code = models.CharField(max_length=6, null=True)
+
+class Direcciones_ip():
+	direcccion = models.CharField(max_length=20, null=False)
+	conteo = models.CharField.CharField(max_length=5, null=False)
