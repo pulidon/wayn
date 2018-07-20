@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from .models import Usuario, Evaluacion, Vino, Plan, Prospecto, Direcciones_ip
-from core.utils import generate_secret_key
+import random
 
 class Puntaje:
 	pk = ''
@@ -185,7 +185,7 @@ def lanzamiento(request,referral_code):
 		prospecto = Prospecto()
 		prospecto.email = request.POST['email']
 		if referral_code == None :
-			prospecto.referrer_code = generate_secret_key()
+			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
 			return redirect('referir_amigo')
 		else:
 			prospecto.referrer_code = generate_secret_key()
