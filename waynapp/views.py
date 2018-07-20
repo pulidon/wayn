@@ -183,7 +183,7 @@ def	confirmacion(request):
 def lanzamiento(request,referral_code):
 	if request.method == 'POST':
 		prospecto = Prospecto()
-		prospecto.email = request.POST['email']
+		prospecto.email = request.POST.get('email', False)
 		if referral_code == None :
 			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
 			referrer_code = prospecto.referrer_code
