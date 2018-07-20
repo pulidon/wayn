@@ -195,14 +195,14 @@ def lanzamiento(request,referral_code):
 			prospecto.referral_code = referral_code
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
-			return redirect('referir_amigo',referrer_code)
+			return redirect('referir_amigo',{'referrer_code':referrer_code})
 	else:
 		return render(request, 'waynapp/lanzamiento.html')
 	return render(request, 'waynapp/lanzamiento.html')
 
 # Vistas campaña de prelanzamiento con referidos
 def referir_amigo(request,referrer_code):
-	return render(request, 'waynapp/referir_amigo.html',referrer_code)
+	return render(request, 'waynapp/referir_amigo.html',{'referrer_code':referrer_code})
 
 # funcion para las sugerencias
 def sugerencias(tintos,blancos,lista_puntajes):
