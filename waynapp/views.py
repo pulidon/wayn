@@ -159,7 +159,7 @@ def match(request):
 		sugerencia = sugerencias(1,3,lista_puntajes)
 	elif plan.balance == '4 BLANCOS ':
 		sugerencia = sugerencias(0,4,lista_puntajes)
-	plan.sugerencia = json.dumps(sugerencia)
+	plan.sugerencia = json.loads(sugerencia)
 	plan.save()
 	context = {
 		'sugerencia':sugerencia,
