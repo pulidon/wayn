@@ -186,17 +186,21 @@ def lanzamiento(request,referral_code):
 		prospecto.email = request.POST['email']
 		if referral_code == None :
 			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
-			return redirect('referir_amigo')
+			referrer_code = prospecto.referrer_code
+			prospecto.save()
+			return redirect('referir_amigo',referrer_code)
 		else:
 			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
 			prospecto.referral_code = referral_code
-		return redirect('referir_amigo')
+			referrer_code = prospecto.referrer_code
+			prospecto.save()
+			return redirect('referir_amigo',referrer_code)
 	else:
 		return render(request, 'waynapp/lanzamiento.html')
 	return render(request, 'waynapp/lanzamiento.html')
 
 # Vistas campaña de prelanzamiento con referidos
-def referir_amigo(request):
+def referir_amigo(request,referrer_code):
 	return render(request, 'waynapp/referir_amigo.html')
 
 # funcion para las sugerencias
