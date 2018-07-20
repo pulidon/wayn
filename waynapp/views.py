@@ -185,10 +185,10 @@ def lanzamiento(request,referral_code):
 		prospecto = Prospecto()
 		prospecto.email = request.POST['email']
 		if referral_code == None :
-			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(N))
+			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
 			return redirect('referir_amigo')
 		else:
-			prospecto.referrer_code = generate_secret_key()
+			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
 			prospecto.referral_code = referral_code
 		return redirect('referir_amigo')
 	else:

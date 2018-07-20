@@ -58,11 +58,11 @@ class Plan(models.Model):
 	sugerencia = models.CharField(max_length=300, null=True)
 
 
-class Prospecto():
+class Prospecto(models.Model):
 	email = models.CharField(max_length=300, null=False)
 	referrer_code = models.CharField(max_length=6, null=False)
 	referral_code = models.CharField(max_length=6, null=True)
 
-class Direcciones_ip():
+class Direcciones_ip(models.Model):
 	direcccion = models.CharField(max_length=20, null=False)
 	conteo = models.CharField(max_length=5, null=False)
