@@ -59,7 +59,7 @@ class Plan(models.Model):
 
 
 class Prospecto():
-	email: = models.CharField(max_length=300, null=False)
+	email = models.CharField(max_length=300, null=False)
 	referrer_code = models.CharField(max_length=6, null=False)
 	referral_code = models.CharField(max_length=6, null=True)
 
