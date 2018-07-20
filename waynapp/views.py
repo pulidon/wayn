@@ -159,6 +159,7 @@ def match(request):
 	elif plan.balance == '4 BLANCOS ':
 		sugerencia = sugerencias(0,4,lista_puntajes)
 	plan.sugerencia = str(sugerencia)
+	plan.save()
 	context = {
 		'sugerencia':sugerencia,
 		'lista_puntajes':lista_puntajes
