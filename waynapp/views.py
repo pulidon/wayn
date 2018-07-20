@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 import random
 import string
 import json
+from django.core import serializers
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
@@ -159,7 +160,7 @@ def match(request):
 		sugerencia = sugerencias(1,3,lista_puntajes)
 	elif plan.balance == '4 BLANCOS ':
 		sugerencia = sugerencias(0,4,lista_puntajes)
-	plan.sugerencia = json.loads(sugerencia)
+	plan.sugerencia = serializers.serialize("json",sugerencia)
 	plan.save()
 	context = {
 		'sugerencia':sugerencia,
