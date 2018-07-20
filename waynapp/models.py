@@ -65,4 +65,4 @@ class Prospecto():
 
 class Direcciones_ip():
 	direcccion = models.CharField(max_length=20, null=False)
-	conteo = models.CharField.CharField(max_length=5, null=False)
+	conteo = models.CharField(max_length=5, null=False)
