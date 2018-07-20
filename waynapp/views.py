@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import random
+import string
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from .models import Usuario, Evaluacion, Vino, Plan, Prospecto, Direcciones_ip
-import random
 
 class Puntaje:
 	pk = ''
