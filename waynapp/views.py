@@ -202,6 +202,7 @@ def lanzamiento(request,referral_code):
 
 # Vistas campaña de prelanzamiento con referidos
 def referir_amigo(request,referrer_code):
+	referrer_code = referrer_code
 	return render(request, 'waynapp/referir_amigo.html',{'referrer_code':referrer_code})
 
 # funcion para las sugerencias
