@@ -17,5 +17,5 @@ urlpatterns = [
 	url(r'^confirmacion', views.confirmacion, name='confirmacion'),
 	#urls para campaña de prelanzamiento
 	url(r'^lanzamiento/(?P<referral_code>\w+)/$', views.lanzamiento, name='lanzamiento'),
-	url(r'^referir_amigo', views.referir_amigo, name='referir_amigo'),
+	url(r'^referir_amigo/(?P<referral_code>\w+)/$', views.referir_amigo, name='referir_amigo'),
 ]
