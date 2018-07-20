@@ -53,75 +53,78 @@
     </section>
  <!-- END HEADER SECTION -->
 
-<section class="precios" id="PLANES">
-	<div class="container">
-		<h2>ESCOGE TU PLAN</h2>
-		<p class="text-center">ESCOGE TU PLAN PARA VER TU SELECCION.<br>PODRAS CAMBIARLO EN CUALQUIER MOMENTO.</p>
+ <section class="precios" id="PLANES">
+ 	<div class="container">
+ 		<h2>ESCOGE TU PLAN</h2>
+ 		<p class="text-center">ESCOGE TU PLAN PARA VER TU SELECCION.<br>PODRAS CAMBIARLO EN CUALQUIER MOMENTO.</p>
 
-		<div class="price-table-wrapper">
-		  <div class="pricing-table featured-table">
-		  	<div class="pricing-table__header">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<h3>2 BOTELLAS AL MES</h3>
-		  	</div>
-		    <h4 class="pricing-table__price">$79.800 <span class="IVA">IVA inc.</span></h4>
-		    <p class="pricing-table__ahorro">Ahorras: $30.200</p>
-		    <p class="pricing-table__supermercado">Precio supermercado: $110.000</p>
-		    <a class="pricing-table__button" id="2_botellas" href="balancevinos">
-		     QUIERO ESTE PLAN
-		    </a>
-		    <ul class="pricing-table__list">
-		      <li class="envios"><div> &emsp;<i class="fa fa-times"> </i> &emsp;&emsp;NO INCLUYE ENVIO</div><div>&emsp;<i class="fa fa-lock"></i> &emsp;&emsp; Pago 100% Seguro</div></li>
-		      <li>Recibes 2 botellas de vino especialmente seleccionados para ti en la puerta de tu casa cada mes.</li>
-		      <li>Te mostraremos la selección antes de realizar el pago, si lo prefieres podrás modificarla.</li>
-		      <li>Puedes cancelar tu suscripción en cualquier momento o saltar una entrega sin ningun costo.</li>
-		    </ul>
-		  </div>
-		  <div class="pricing-table featured-table">
-		    <div class="pricing-table__header">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<h3>3 BOTELLAS AL MES</h3>
-		  	</div>
-		    <h4 class="pricing-table__price">$118.700 <span class="IVA">IVA inc.</span></h4>
-		    <p class="pricing-table__ahorro">Ahorras: $46.300</p>
-		    <p class="pricing-table__supermercado">Precio supermercado: $165.000</p>
-		    <a class="pricing-table__button"  id="3_botellas"href="/balancevinos">
-		     QUIERO ESTE PLAN
-		    </a>
-		    <ul class="pricing-table__list">
-		      <li class="envios"><div>&emsp;<i class="fa fa-truck"> </i> &emsp;&emsp;ENVIO GRATIS</div><div>&emsp;<i class="fa fa-lock"></i> &emsp;&emsp; Pago 100% Seguro</div></li>
-		      <li>Recibes 3 botellas de vino especialmente seleccionados para ti en la puerta de tu casa cada mes.</li>
-		      <li>Te mostraremos la selección antes de realizar el pago, si lo prefieres podrás modificarla.</li>
-		      <li>Puedes cancelar tu suscripción en cualquier momento o saltar una entrega sin ningun costo.</li>
-		    </ul>
-		  </div>
-		  <div class="pricing-table featured-table">
-		    <div class="pricing-table__header">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<img src="../static/waynapp/imagenes/botella.png" alt="botella_wayn">
-		  		<h3>4 BOTELLAS AL MES</h3>
-		  	</div>
-		    <h4 class="pricing-table__price">$155.700 <span class="IVA">IVA inc.</span></h4>
-		    <p class="pricing-table__ahorro">Ahorras: $64.300</p>
-		    <p class="pricing-table__supermercado">Precio supermercado: $220.000</p>
-		    <a class="pricing-table__button" id="4_botellas" href="/balancevinos">
-		     QUIERO ESTE PLAN
-		    </a>
-		    <ul class="pricing-table__list">
-		     <li class="envios"><div>&emsp;<i class="fa fa-truck"> </i> &emsp;&emsp;ENVIO GRATIS</div><div>&emsp;<i class="fa fa-lock"></i> &emsp;&emsp; Pago 100% Seguro</div></li>
-		      <li>Recibes 4 botellas de vino especialmente seleccionados para ti en la puerta de tu casa cada mes.</li>
-		      <li>Te mostraremos la selección antes de realizar el pago, si lo prefieres podrás modificarla.</li>
-		      <li>Puedes cancelar tu suscripción en cualquier momento o saltar una entrega sin ningun costo.</li>
-		    </ul>
-		  </div>
-		</div>
-	</div>
-</section>
+
+ 					<div class="row">
+ 				<!-- PLAN -->
+ 				<div class='col-sm-12 pick-your-plan'>
+ 					<div class='col-sm-12 col-md-12 col-lg-12 plan-family'>
+ 						<div class='signup-box'>
+ 							<div class='plan-header'>
+ 								<h3 class='plan-header__title'>PLANES</h3>
+ 								<p class='plan-header__description'>Elige número de botellas que deseas</p>
+ 							</div>
+ 							<div class='plan-image plan-image--family'></div>
+
+ 								<div class='plan-quantity-selector'>
+ 									<form class='plan-quantity-selector__radio-inputs js-qty-selector'>
+ 										<input class="chk" id='2_botellas' name='plan' type='radio' >
+ 										<label for='2_botellas'>
+ 											<span>2</span>
+ 										</label>
+ 										<input checked class="chk" data-plan_id='3' data-quantity='3' id='3_botellas' name='plan' type='radio'>
+ 										<label for='3_botellas'>
+ 											<span>3</span>
+ 										</label>
+ 										<input class="chk" data-plan_id='3' data-quantity='4' id='4_botellas' name='plan' type='radio'>
+ 										<label for='4_botellas'>
+ 											<span>4</span>
+ 										</label>
+ 									</form>
+ 									<p class='plan-quantity-selector__description'>Botellas al mes</p>
+ 								</div>
+ 								<div class='plan-pricing pricing-columns-family' data-quantity='2'>
+ 									<div class='plan-pricing__price'>
+ 										<p class='plan-pricing__item plan-pricing__item--bold' id="precio_ahorro"><span class="signo_peso">$</span>46.300</p>
+ 										<p class='plan-pricing__description'>ahorras</p>
+ 									</div>
+ 									<div class='plan-pricing__price'>
+ 										<p class='plan-pricing__item' id="precio_envio">Gratis</p>
+ 										<p class='plan-pricing__description'>envío</p>
+ 									</div>
+ 									<div class='plan-pricing__price'>
+ 										<p class='plan-pricing__item' id="precio_total"><span class="signo_peso">$</span>118.700</p>
+ 										<p class='plan-pricing__description'>IVA inc. + envío</p>
+ 									</div>
+ 								</div>
+
+ 								<div>
+ 									   <ul class="pricing-table__list">
+ 									   	<li class="plan-pricing__description text-center" id="precio_super">Precio supermercado: $165.000</li>
+ 									      <li class="envios text-center"><div>&emsp;<i class="fa fa-lock"></i>&emsp; PAGO 100% SEGURO</div></li>
+ 									      <li>Recibes vino especialmente seleccionados para ti en la puerta de tu casa cada mes.</li>
+ 									      <li>Te mostraremos la selección antes de realizar el pago, si lo prefieres podrás modificarla.</li>
+ 									      <li>Puedes cancelar tu suscripción en cualquier momento o saltar una entrega sin ningun costo.</li>
+ 									    </ul>
+ 								</div>
+ 								<div class='plan-button text-center'>
+ 									<a href="tinto-blanco.html"><button class='btn btn--full text-center'>
+ 										Escoger Este Plan
+ 									</button></a>
+ 								</div>
+ 							</div>
+ 					</div>
+ 				</div>
+ 			</div>
+
+
+
+ 	</div>
+ </section>
 
 
 
@@ -144,15 +147,43 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-		var localData = JSON.parse(localStorage.getItem('someData'));
-		var dataToStore;
-		$('.pricing-table__button').click(function(){
-			  	 localData.plan=$(this).attr('id');
-			  	 dataToStore = JSON.stringify(localData);
-				 localStorage.setItem('someData', dataToStore);
-				});
-		//console.log(localData);
-	</script>
+			var localData = JSON.parse(localStorage.getItem('someData'));
+			var dataToStore;
+			$('.btn--full').click(function(){
+				  	 localData.plan=$(".chk:checked").attr('id');
+				  	 dataToStore = JSON.stringify(localData);
+					 localStorage.setItem('someData', dataToStore);
+					 console.log(localData);
+					});
+			//console.log(localData);
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){ //animacion barra progreso
+				$("#2_botellas").on( "click", function() {
+	  $( "#precio_ahorro" ).html("<span class='signo_peso'>$</span>30.200");
+	  $( "#precio_envio" ).html("<span class='signo_peso'>$</span>9.900");
+	  $( "#precio_envio" ).css("color","#333");
+	  $( "#precio_total" ).html("<span class='signo_peso'>$</span>79.800");
+	  $( "#precio_super" ).html("Precio supermercado: $110.000");
+	});
+
+	$("#3_botellas").on( "click", function() {
+	  $( "#precio_ahorro" ).html("<span class='signo_peso'>$</span>46.300");
+	  $( "#precio_envio" ).html("GRATIS");
+	  $( "#precio_envio" ).css("color","#179b77");
+	  $( "#precio_total" ).html("<span class='signo_peso'>$</span>118.700");
+	  $( "#precio_super" ).html("Precio supermercado: $165.000");
+	});
+
+	$("#4_botellas").on( "click", function() {
+	  $( "#precio_ahorro" ).html("<span class='signo_peso'>$</span>64.300");
+	  $( "#precio_envio" ).html("GRATIS");
+	  $( "#precio_envio" ).css("color","#179b77");
+	  $( "#precio_total" ).html("<span class='signo_peso'>$</span>155.700");
+	  $( "#precio_super" ).html("Precio supermercado: $220.000");
+	});
+	});
+		</script>
 
 </body>
 </html>

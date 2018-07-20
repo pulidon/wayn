@@ -231,6 +231,9 @@ canvas {
 	margin-top: 80px;
 	max-width: 100%;
 	}
+
+
+
 /******PLANES********/
 /*******************/
 .precios{
@@ -261,117 +264,219 @@ canvas {
 	color: #333;
 	margin-bottom: 90px;
 }
-.precios h3{
-	font-size: 25px;
-	color: #fff;
+
+label {
+    margin-bottom: 0 !important
 }
-.precios .price-table-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	text-align: center;
-  	}
-.precios .price-table-wrapper .featured-table {
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+
+
+#PLANES .signup-box {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.075)
 }
-.precios .price-table-wrapper .pricing-table {
-  border-radius: 10px;
-  background: linear-gradient(#40324f,#2e263a);
-  background: linear-gradient(#fff,#F7F7F7);
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 80px;
-  max-width: 300px;
-  }
-.precios .price-table-wrapper .pricing-table__header {
-  padding: 10px;
-  border-radius: 10px 10px 0 0;
-  font-size: 20px;
-  color: #333;
-  background: #3B2D4D;
-  background: linear-gradient(#7F659D,#2D223A);
-  position: relative;
-  max-height: 140px;
+
+
+#PLANES .plan-header {
+    padding: 16px 0;
+    text-align: center
+}
+
+#PLANES .plan-header__title {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2;
+    padding: 15px;
+    color: #303236
+}
+
+
+
+#PLANES .plan-header__description {
+    color: #6a6d75;
+    font-size: 14px;
+    margin: 0
+}
+
+#PLANES .plan-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    position: relative
+}
+
+
+
+
+#PLANES .plan-image.plan-image--family {
+    background-image: url("/static/waynapp/imagenes/wine_price.jpg")
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(-min--moz-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3 / 2),
+(-min-device-pixel-ratio: 1.5) {
+
+    #PLANES .plan-image {
+    height: 200px;
+    }
+}
+
+#PLANES .plan-quantity-selector {
+    padding-top: 20px;
+    text-align: center
+}
+
+#PLANES .plan-quantity-selector__radio-inputs {
+    position: relative;
+    border: solid rgba(117, 129, 167, 0.25) 1px;
+    border-radius: 8px;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 0 2px 10px 0 rgba(195, 195, 195, 0.25);
+    }
+
+#PLANES .plan-quantity-selector__radio-inputs label {
+    position: relative;
+    box-sizing: border-box;
+    width: 60px;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1;
+    text-align: center
+}
+
+#PLANES .plan-quantity-selector__radio-inputs input[type="radio"] {
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+#PLANES .plan-quantity-selector__radio-inputs input[type="radio"]:checked+label>span {
+    color: white
+}
+
+#PLANES .plan-quantity-selector__radio-inputs input[type="radio"]:checked+label {
+    background-color: #493051
+}
+
+#PLANES .plan-quantity-selector__description {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #303236;
+    margin: 0
+}
+
+#PLANES .plan-pricing {
+    padding-top: 20px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    text-align: center
+}
+
+#PLANES .plan-pricing--hidden {
+    display: none
+}
+
+#PLANES .plan-pricing__price {
+    box-sizing: border-box;
+    width: 33%;
+    color: #303236;
+    font-size: 22px;
+    position: relative;
+    height: 50px;
+    }
+
+#PLANES .plan-pricing__price--strikethrough {
+    margin-top: -18px
+}
+
+#PLANES .plan-pricing__price:not(:last-child)::after {
+    content: '';
+    width: 1px;
+    background-color: #e4e6eb;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 0
+}
+
+#PLANES .plan-pricing__item {
+  font-size: 1.2em;
+    color:  #179b77;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 4px
+}
+#PLANES .plan-pricing__item .signo_peso{
+  font-size: 0.8em;
+}
+
+#PLANES .plan-pricing__item--strikethrough {
+    text-decoration: line-through;
+    color: #d3d5db;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 2px
+}
+
+#PLANES .plan-pricing__item--discount {
+    color: #00a682
+}
+
+#PLANES .plan-pricing__item--bold {
+    color: red
   }
 
-.precios .price-table-wrapper .pricing-table__header img{
- position: relative;
- bottom: 60px
-  }
-  .precios .price-table-wrapper .pricing-table__header h3{
- position: relative;
- bottom: 30px;
-  }
-.precios .price-table-wrapper .pricing-table__price {
-  color: #333;
+#PLANES .plan-pricing__description {
+    color: #6a6d75;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 4px
+}
+
+#PLANES .plan-button {
+    padding: 20px 16px
+}
+
+#PLANES .plan-button .btn--full{
+  letter-spacing: 1px;
   padding: 20px;
-  margin: auto;
-  font-size: 40px;
   font-weight: 500;
+  border-radius: 5px;
+  background-color: #493051;
+  border-style: none;
+  color: #fff;
 }
-.precios .price-table-wrapper .pricing-table__price .IVA{
-  color: #949494;
-  font-size: 15px;
+
+#PLANES .plan-button .btn--full:hover{
+    background-color: #674472
 }
-.precios .price-table-wrapper .pricing-table__supermercado {
-  color: #949494;
-  margin: auto;
-  font-size: 15px;
-  font-weight: 500;
-}
-.precios .price-table-wrapper .pricing-table__ahorro {
-  color: red;
-  margin: auto;
-  font-size: 15px;
-  font-weight: 500;
-}
-.precios .price-table-wrapper .pricing-table__button {
-  display: block;
-  background: rgba(0,0,0,0.2);
-  text-decoration: none;
-  padding: 20px;
-  color: #000;
-  font-weight: 500;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
-.precios .price-table-wrapper .pricing-table__button:before {
-  position: absolute;
-  left: -20%;
-  top: -10%;
-  content: '';
-  width: 60%;
-  height: 220%;
-  transform: rotate(-30deg);
-  background: rgba(255,255,255,0.4);
-  opacity: 0.3;
-  transition: all 0.3s ease-in-out;
-}
-.precios .price-table-wrapper .pricing-table__button:after {
-  position: absolute;
-  content: '>';
-  top: 0;
-  right: 0;
-  font-size: 25px;
-  padding: 15px;
-  padding-right: 40px;
-  color: white;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-.precios .price-table-wrapper .pricing-table__button:hover {
-	color: #fff;
-  background: #28282e;
-}
-.precios .price-table-wrapper .pricing-table__list {
-  padding: 10px;
+
+
+.precios .pricing-table__list {
+  padding: 10px 10px;
   color: #333;
 }
-.precios .price-table-wrapper .pricing-table__list .envios{
+.precios .pricing-table__list .envios{
   font-weight: 500;
   text-align: left;
 }
-.precios .price-table-wrapper .pricing-table__list li {
+.precios .pricing-table__list li {
   padding: 10px;
   border-bottom: 1px solid #c8c8c8;
   list-style-type: none;
@@ -379,21 +484,17 @@ canvas {
 .precios .price-table-wrapper .pricing-table__list li:last-child {
   border: none;
 }
-.precios .price-table-wrapper .pricing-table:hover {
- box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.2);
-}
-.precios .price-table-wrapper .pricing-table:hover .pricing-table__button {
-  padding-left: 0;
-  padding-right: 35px;
-}
-.precios .price-table-wrapper .pricing-table:hover .pricing-table__button:before {
-  top: -80%;
-  transform: rotate(0deg);
-  width: 100%;
-}
-.precios .price-table-wrapper .pricing-table:hover .pricing-table__button:after {
-  opacity: 1;
-  padding-right: 15px;
+
+
+@media (max-width:500px) {
+  #PLANES .plan-header__title {
+    font-size: 1.5em;
+    line-height: 1;
+    }
+   .precios p{
+    margin-bottom: 50px;
+  }
+
 }
 
 /******REDES********/
@@ -758,16 +859,10 @@ select::-ms-expand {
 }
 .seleccion .seleccion-table-wrapper .ficha-individual h4{
 	margin: auto;
-	padding: 20px;
-	font-size: 18px;
-  background: linear-gradient(#7F659D,#2D223A);
-  border-radius: 5px;
-  color: #fff;
-}
-.seleccion .seleccion-table-wrapper .ficha-individual h4 span{
-  font-size: 40px;
-  font-weight: 800;
-  }
+	padding-top: 30px;
+	font-size: 20px;
+	color: #3D3D3D
+	}
 .seleccion .seleccion-table-wrapper .ficha-individual p{
 	padding-bottom: 15px;
 	width: 80%;
@@ -978,8 +1073,9 @@ select::-ms-expand {
   color: #333
 }
 .radar_vino{
-  padding-bottom: 80px;
   padding-top: 80px;
+  padding-bottom: 80px
+
 }
 .radar_vino h2{
   position: relative;
@@ -997,10 +1093,6 @@ select::-ms-expand {
 .radar_vino p{
   color: #333;
   margin-top: 50px;
-}
-.radar_vino canvas{
-  color: #fff;
-  padding: 20px;
 }
 
 

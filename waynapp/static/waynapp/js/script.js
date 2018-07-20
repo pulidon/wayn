@@ -73,3 +73,28 @@ $('.nav-link').click(function() {
 });
 
 
+$(document).ready(function(){ //animacion barra progreso
+	$("#plan-2").on( "click", function() {
+  $( "#precio_ahorro" ).html("<span class='signo_peso'>$</span>30.200");
+  $( "#precio_envio" ).html("<span class='signo_peso'>$</span>9.900");
+  $( "#precio_envio" ).css("color","#333");
+  $( "#precio_total" ).html("<span class='signo_peso'>$</span>79.800");
+  $( "#precio_super" ).html("Precio supermercado: $110.000");
+});
+
+$("#plan-3").on( "click", function() {
+  $( "#precio_ahorro" ).html("<span class='signo_peso'>$</span>46.300");
+  $( "#precio_envio" ).html("GRATIS");
+  $( "#precio_envio" ).css("color","#179b77");
+  $( "#precio_total" ).html("<span class='signo_peso'>$</span>118.700");
+  $( "#precio_super" ).html("Precio supermercado: $165.000");
+});
+
+$("#plan-4").on( "click", function() {
+  $( "#precio_ahorro" ).html("<span class='signo_peso'>$</span>64.300");
+  $( "#precio_envio" ).html("GRATIS");
+  $( "#precio_envio" ).css("color","#179b77");
+  $( "#precio_total" ).html("<span class='signo_peso'>$</span>155.700");
+  $( "#precio_super" ).html("Precio supermercado: $220.000");
+});
+});
