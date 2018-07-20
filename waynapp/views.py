@@ -195,7 +195,7 @@ def lanzamiento(request,referral_code):
 			prospecto.referral_code = referral_code
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
-			return redirect('referir_amigo',{'referrer_code':referrer_code})
+			return redirect('referir_amigo',referrer_code)
 	else:
 		return render(request, 'waynapp/lanzamiento.html')
 	return render(request, 'waynapp/lanzamiento.html')
