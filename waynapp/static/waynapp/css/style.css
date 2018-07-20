@@ -491,6 +491,9 @@ label {
     font-size: 1.5em;
     line-height: 1;
     }
+    #PLANES .plan-pricing__item {
+  font-size: 0.9em;
+}
    .precios p{
     margin-bottom: 50px;
   }
