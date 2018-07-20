@@ -21,11 +21,18 @@ class PlanAdmin(admin.ModelAdmin):
 		'balance'
 		)
 
+class ProspectoAdmin(admin.ModelAdmin):
+	list_display = (
+		'email',
+		'referrer_code',
+		'referral_code'
+	)
+
 # Register your models here.
 admin.site.register(Usuario)
 admin.site.register(Evaluacion)
 admin.site.register(Vino, VinoAdmin)
 admin.site.register(Plan, PlanAdmin)
 admin.site.register(Maridaje)
-admin.site.register(Prospecto)
+admin.site.register(Prospecto, ProspectoAdmin)
 admin.site.register(Direcciones_ip)
