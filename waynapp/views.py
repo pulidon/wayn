@@ -207,7 +207,21 @@ def checkout(request):
 		context = {'data':data_suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	else:
-		return render(request, 'waynapp/checkout.html')
+		plan = '3 Botellas de vino'
+		planvalue = '155700'
+		discountcode = 'WAYN20'
+		shipping = '9000'
+		discount = '20000'
+		total = '98000'
+		context = {
+			"plan" : plan
+			"planvalue" : planvalue
+			"discountcode" : discountcode
+			"shipping" : shipping
+			"discount" : discount
+			"total" : total
+		}
+		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
 
 # vista del confirmacion
