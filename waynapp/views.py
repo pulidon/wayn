@@ -187,7 +187,7 @@ def checkout(request):
 		# cargos =
 		data_suscripcion = {
 			"plan" : request.POST.get('plancode')
-			"cargos" = request.POST.get('charges')
+			"cargos" : request.POST.get('charges')
 			"firstName" : request.POST.get('firstName')
 			"lastName" : request.POST.get('lastName')
 			"email" : request.POST.get('email')
