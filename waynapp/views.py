@@ -217,10 +217,11 @@ def checkout(request):
 			"plan" : plan,
 			"planvalue" : planvalue,
 			"shipping" : shipping,
-			"discountcode" : discountcode,
 			"discount" : discount,
 			"total" : total
 		}
+		if discountcode :
+			context.update({"discountcode" : discountcode})
 		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
 
