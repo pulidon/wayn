@@ -214,11 +214,11 @@ def checkout(request):
 		discount = '20000'
 		total = '98000'
 		context = {
-			"plan" : plan
-			"planvalue" : planvalue
-			"discountcode" : discountcode
-			"shipping" : shipping
-			"discount" : discount
+			"plan" : plan,
+			"planvalue" : planvalue,
+			"discountcode" : discountcode,
+			"shipping" : shipping,
+			"discount" : discount,
 			"total" : total
 		}
 		return render(request, 'waynapp/checkout.html',context)
