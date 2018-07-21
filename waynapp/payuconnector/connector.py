@@ -14,13 +14,14 @@ APIKey = ''
 accountId = ''
 headers = {'content-type':'application/json', 'accept':'application/json'}
 
-jsondata={
+jsondata = {
+	'test':'true'
 	"language": "es",
 	"command": "SUBMIT_TRANSACTION",
 	"merchant": {
-	"apiLogin": "d7AAkx18XO86E00",
-	"apiKey": "85Ne9Eo4r6C3P973uYd79i5O6O",
-	'test':'true'
+		"apiLogin": "d7AAkx18XO86E00",
+		"apiKey": "85Ne9Eo4r6C3P973uYd79i5O6O"
+	}
 }
 
 
