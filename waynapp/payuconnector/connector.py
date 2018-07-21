@@ -33,7 +33,7 @@ jsondata={
 # accountId
 # headers
 
-class RealizarPago():
+# class RealizarPago():
 
 
 class Plan():
