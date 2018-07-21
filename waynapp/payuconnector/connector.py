@@ -15,7 +15,7 @@ accountId = ''
 headers = {'content-type':'application/json', 'accept':'application/json'}
 
 jsondata = {
-	'test':'true'
+	'test':'true',
 	"language": "es",
 	"command": "SUBMIT_TRANSACTION",
 	"merchant": {
