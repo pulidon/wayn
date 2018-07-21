@@ -17,9 +17,9 @@ headers = {
 	'Host':'sandbox.api.payulatam.com',
 	'Content-Type':'application/json; charset=utf-8',
 	'Accept':'application/json',
-	'Accept-language':'es',
-	'Content-Length':'length',
-	'Authorization': 'Basic ZDdBQWt4MThYTzg2RTAwOjg1TmU5RW80cjZDM1A5NzN1WWQ3OWk1TzZP'
+	# 'Accept-language':'es',
+	'Content-Length':'length'
+	# 'Authorization': 'Basic ZDdBQWt4MThYTzg2RTAwOjg1TmU5RW80cjZDM1A5NzN1WWQ3OWk1TzZP'
 }
 
 jsondata = {
