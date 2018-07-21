@@ -220,7 +220,7 @@ def checkout(request):
 			"discount" : discount,
 			"total" : total
 		}
-		if discountcode :
+		if 'discountcode' in locals() :
 			context.update({"discountcode" : discountcode})
 		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
