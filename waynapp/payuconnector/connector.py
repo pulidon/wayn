@@ -13,15 +13,13 @@ APIlogin = ''
 APIKey = ''
 accountId = ''
 headers = {
-	'POST /payments-api/4.0/service.cgi HTTP/1.1',
+	'POST': '/payments-api/4.0/service.cgi HTTP/1.1',
 	'Host':'sandbox.api.payulatam.com',
 	'Content-Type':'application/json; charset=utf-8',
 	'Accept':'application/json',
 	'Accept-language':'es',
 	'Content-Length':'length',
 	'Authorization': 'Basic ZDdBQWt4MThYTzg2RTAwOjg1TmU5RW80cjZDM1A5NzN1WWQ3OWk1TzZP'
-
-
 }
 
 jsondata = {
