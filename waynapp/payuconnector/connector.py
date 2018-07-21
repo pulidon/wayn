@@ -158,11 +158,11 @@ class Tarjeta:
 
 class Suscripcion:
 
-	def Post():
+	def Post(self):
 		data ={
 				"quantity": "1",
 				"installments": "1",
-				"immediatePayment": true,
+				"immediatePayment": 'true',
 				"extra1": "Extra 1",
 				"extra2": "Extra 2",
 				"customer": {
