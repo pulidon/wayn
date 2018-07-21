@@ -180,16 +180,32 @@ def perfilvino(request,pk):
 # vista del checkout
 def checkout(request):
 	if request.method == 'POST':
-		# usuario =
+		usuario =
 		# plan =
 		# tarjeta =
 		# suscripcion =
 		# cargos =
-
+		data_suscripcion = {
+			"plan" : request.POST.get('plancode')
+			"cargos" = request.POST.get('charges')
+			"firstName" : request.POST.get('firstName')
+			"lastName" : request.POST.get('lastName')
+			"email" : request.POST.get('email')
+			"telephone" : request.POST.get('telephone')
+			"address" : request.POST.get('address')
+			"address2" : request.POST.get('address2')
+			"save-info" : request.POST.get('save-info')
+			"credit" : request.POST.get('credit')
+			"debit" : request.POST.get('debit')
+			"cc-name" : request.POST.get('cc-name')
+			"cc-number" : request.POST.get('cc-number')
+			"cc-expiration" : request.POST.get('cc-expiration')
+			"cc-cvv" : request.POST.get('cc-cvv')
+		}
 		# realizar suscripcion en PayU
-		suscripcion = Suscripcion()
-		datasuscripcion = suscripcion.Post()
-		context = {'data':datasuscripcion}
+		# suscripcion = Suscripcion()
+		# datasuscripcion = suscripcion.Post()
+		context = {'data':data_suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	else:
 		return render(request, 'waynapp/checkout.html')

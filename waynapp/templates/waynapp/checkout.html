@@ -68,19 +68,23 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 order-md-2">
-          <h4 class="d-flex justify-content-between mb-3"> <span class="text-muted"><b>Orden</b></span> <span class="badge badge-secondary badge-pill">1</span> </h4>
+          <h4 class="d-flex justify-content-between mb-3"><span class="text-muted"><b>Orden</b></span></h4>
           <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between">
               <div>
-                <h6 class="my-0"><b>Plan Seleccionado</b></h6> <small class="text-muted">3 Botellas al mes</small></div> <span class="text-muted">$118.700</span> </li>
+                <h6 class="my-0"><b>Plan Seleccionado</b></h6><small class="text-muted">{{plan}}</small></div> <span class="text-muted">{{planvalue}}</span>
+						</li>
             <li class="list-group-item d-flex justify-content-between">
               <div>
-                <h6 class="my-0"><b>Envío</b></h6> <small class="text-muted">Envío a Bogotá</small> </div> <span class="text-muted">$0</span> </li>
-
-            <li class="list-group-item d-flex justify-content-between bg-light">
+                <h6 class="my-0"><b>Envío</b></h6> <small class="text-muted">Envío a Bogotá</small> </div> <span class="text-muted">{{shipping}}</span>
+						</li>
+						{% if discountcode %}
+						<li class="list-group-item d-flex justify-content-between bg-light">
               <div class="text-success">
-                <h6 class="my-0"><b>Código de descuento</b></h6> <small>EXAMPLECODE</small> </div> <span class="text-success">-$20.000</span> </li>
-            <li class="list-group-item d-flex justify-content-between"> <span>Total (COP)</span> <b>$98.700</b> </li>
+                <h6 class="my-0"><b>Código de descuento</b></h6><small>{{dicountcode}}</small> </div> <span class="text-success">{{discount}}</span>
+						</li>
+						{% endif %}
+            <li class="list-group-item d-flex justify-content-between"> <span>Total (COP)</span> <b>{{ Total }}</b> </li>
           </ul>
           <form class="card p-2 my-4">
             <div class="input-group">
@@ -97,11 +101,11 @@
 					<form action="/checkout" method="POST">
 						{% csrf_token%}
             <div class="row">
-              <div class="col-md-6 mb-3"> <label for="firstName">Nombre</label>
+              <div class="col-md-6 mb-3"><label for="firstName">Nombre</label>
                 <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                 <div class="invalid-feedback"> Se requiere un nombre válido. </div>
               </div>
-              <div class="col-md-6 mb-3"> <label for="lastName">Apellido</label>
+              <div class="col-md-6 mb-3"><label for="lastName">Apellido</label>
                 <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
                 <div class="invalid-feedback"> Se requiere un apellido válido. </div>
               </div>
@@ -113,15 +117,15 @@
                 <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
               </div>
             </div>-->
-            <div class="mb-3"> <label for="email">Email <span class="text-muted"></span></label>
+            <div class="mb-3"><label for="email">Email<span class="text-muted"></span></label>
               <input type="email" class="form-control" id="email" placeholder="tu@correo.com">
               <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
             </div>
-            <div class="mb-3"> <label for="telephone">Teléfono</label>
-              <input type="text" class="form-control bfh-phone" data-format="(ddd) ddd-dddd">
+            <div class="mb-3"><label for="telephone">Teléfono</label>
+              <input type="text" class="form-control bfh-phone" id="telephone" data-format="(ddd) ddd-dddd">
               <div class="invalid-feedback"> Please enter your shipping address. </div>
             </div>
-            <div class="mb-3"> <label for="address">Dirección</label>
+            <div class="mb-3"><label for="address">Dirección</label>
               <input type="text" class="form-control" id="address" placeholder="Cra 7 # 25-38" required="">
               <div class="invalid-feedback"> Please enter your shipping address. </div>
             </div>
@@ -154,7 +158,7 @@
             <h4 class="mb-3"><b>Metodo de Pago</b></h4>
             <div class="d-block my-3">
               <div class="custom-control custom-radio">
-                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="" value="on"> <label class="custom-control-label" for="credit">Tarjeta de crédito</label> </div>
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="" value="on"><label class="custom-control-label" for="credit">Tarjeta de crédito</label> </div>
               <div class="custom-control custom-radio">
                 <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="" value="on"> <label class="custom-control-label" for="debit">Pago contra entrega</label> </div>
 
@@ -214,16 +218,12 @@
 
 </section>
 
-
 <section class="footer">
 	<div class="container">
 
 			<div class="elem_footer text-center">
 				<p>&copy; 2018 WAYN S.A.S. Todos los derechos reservados.</p>
 			</div>
-
-
-
 	</div>
 </section>
 
