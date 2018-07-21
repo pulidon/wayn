@@ -224,7 +224,7 @@ class Suscripcion:
 		return payu_response.text
 
 	def Put():
-		data =
+		# data =
 		requests.put(url+'subscriptions/'+subscriptionId,headers=headers,data=json.dumps(data))
 		return payu_response.text
 
