@@ -229,9 +229,9 @@ def descuento(request):
 	if request.method == 'POST':
 		applydiscount = request.POST.get('applydiscount')
 		#ver validez del cupon
-		return redirect('Checkout')
+		return redirect('checkout')
 	else:
-		return redirect('Checkout')
+		return redirect('checkout')
 # vista del confirmacion
 def confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
