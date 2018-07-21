@@ -160,7 +160,6 @@ def match(request):
 		sugerencia = sugerencias(1,3,lista_puntajes)
 	elif plan.balance == '4 BLANCOS ':
 		sugerencia = sugerencias(0,4,lista_puntajes)
-	# plan.sugerencia = serializers.serialize("json",sugerencia)
 	plan.sugerencia = [ {'pk' : vino.pk} for vino in sugerencia ]
 	plan.save()
 	context = {
@@ -178,11 +177,24 @@ def perfilvino(request,pk):
 	return render(request, 'waynapp/perfil_vino.html', context)
 
 # vista del checkout
-def	checkout(request):
+def checkout(request):
+	if request.method == 'post'
+		# usuario =
+		# plan =
+		# tarjeta =
+		# suscripcion =
+		# cargos =
+
+		# realizar suscripcion en PayU
+		suscripcion = Suscripcion.Post()
+		context = {'data':suscripcion}
+		return render(request, 'waynapp/confirmacion.html',context)
+	else:
+		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
 
 # vista del confirmacion
-def	confirmacion(request):
+def confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
 
 # Vistas campaña de prelanzamiento con referidos
