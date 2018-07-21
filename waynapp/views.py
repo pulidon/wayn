@@ -209,15 +209,15 @@ def checkout(request):
 	else:
 		plan = '3 Botellas de vino'
 		planvalue = '155700'
-		discountcode = 'WAYN20'
 		shipping = '9000'
+		discountcode = 'WAYN20'
 		discount = '20000'
 		total = '98000'
 		context = {
 			"plan" : plan,
 			"planvalue" : planvalue,
-			"discountcode" : discountcode,
 			"shipping" : shipping,
+			"discountcode" : discountcode,
 			"discount" : discount,
 			"total" : total
 		}
