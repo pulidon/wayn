@@ -190,7 +190,7 @@ def checkout(request):
 		context = {'data':suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	else:
-		return render(request, 'waynapp/checkout.html',context)
+		return render(request, 'waynapp/checkout.html')
 	return render(request, 'waynapp/checkout.html')
 
 # vista del confirmacion
