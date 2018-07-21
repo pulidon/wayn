@@ -7,7 +7,7 @@ import requests
 # datos de pruebas
 url_pruebas_consultas = 'https://sandbox.api.payulatam.com/reports-api/rest/v4.9/'
 url_pruebas_pagos = 'https://sandbox.api.payulatam.com/payments-api/4.0/service.cgi'
-
+url = url_pruebas_pagos
 merchantid = ''
 APIlogin = ''
 APIKey = ''
