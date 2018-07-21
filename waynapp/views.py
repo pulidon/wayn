@@ -211,7 +211,7 @@ def checkout(request):
 		planvalue = '155700'
 		shipping = '9000'
 		discountcode = 'WAYN20'
-		discount = '20000'
+		discount = '-20000'
 		total = '98000'
 		context = {
 			"plan" : plan,
