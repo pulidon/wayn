@@ -12,7 +12,7 @@ merchantid = ''
 APIlogin = ''
 APIKey = ''
 accountId = ''
-headers = {'content-type':'application/json'}
+headers = {'content-type':'application/json', 'accept':'application/json'}
 
 jsondata={
 	"language": "es",
