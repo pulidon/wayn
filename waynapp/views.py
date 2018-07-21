@@ -180,7 +180,7 @@ def perfilvino(request,pk):
 # vista del checkout
 def checkout(request):
 	if request.method == 'POST':
-		usuario =
+		# usuario =
 		# plan =
 		# tarjeta =
 		# suscripcion =
