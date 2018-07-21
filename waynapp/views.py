@@ -187,7 +187,8 @@ def checkout(request):
 		# cargos =
 
 		# realizar suscripcion en PayU
-		suscripcion = Suscripcion.Post()
+		suscripcion = Suscripcion()
+		datasuscripcion = suscripcion.Post()
 		context = {'data':suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	else:
