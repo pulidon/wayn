@@ -228,6 +228,7 @@ class Suscripcion:
 					]
 				}
 		}
+		data=jsondata
 		payu_response = requests.post(url+'subscriptions/',headers=headers,data=json.dumps(data))
 		return payu_response.text
 
