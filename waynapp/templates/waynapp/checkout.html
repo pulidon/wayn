@@ -86,10 +86,10 @@
 						{% endif %}
             <li class="list-group-item d-flex justify-content-between"> <span>Total (COP)</span> <b>$ {{ total|intcomma }}</b> </li>
           </ul>
-          <form class="card p-2 my-4">
+          <form class="card p-2 my-4" action="/descuento" method='POST'>
 						{% csrf_token %}
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Código de descuento">
+              <input type="text" class="form-control" name="applydiscount" placeholder="Código de descuento">
               <div class="input-group-append">
                 <button type="submit" class="btn btn-secondary">Usar</button>
               </div>
