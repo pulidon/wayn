@@ -178,7 +178,7 @@ def perfilvino(request,pk):
 	return render(request, 'waynapp/perfil_vino.html', context)
 
 # vista del checkout
-def checkout(request):
+def checkout(request,*args,**kwargs):
 	if request.method == 'POST':
 		# usuario =
 		# plan =
