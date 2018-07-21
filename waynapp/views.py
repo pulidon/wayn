@@ -224,6 +224,14 @@ def checkout(request):
 		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
 
+# vista para procesar descuentos
+def descuento(request):
+	if request.method == 'POST':
+		applydiscount = request.POST.get('applydiscount')
+		#ver validez del cupon
+		return redirect('Checkout')
+	else:
+		return redirect('Checkout')
 # vista del confirmacion
 def confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
