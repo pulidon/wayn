@@ -102,11 +102,11 @@
 						{% csrf_token%}
             <div class="row">
               <div class="col-md-6 mb-3"><label for="firstName">Nombre</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="firstName" placeholder="" name="firstName" value="" required="">
                 <div class="invalid-feedback"> Se requiere un nombre válido. </div>
               </div>
               <div class="col-md-6 mb-3"><label for="lastName">Apellido</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="lastName" placeholder="" name="lastName" value="" required="">
                 <div class="invalid-feedback"> Se requiere un apellido válido. </div>
               </div>
             </div>
@@ -118,19 +118,19 @@
               </div>
             </div>-->
             <div class="mb-3"><label for="email">Email<span class="text-muted"></span></label>
-              <input type="email" class="form-control" id="email" placeholder="tu@correo.com">
+              <input type="email" class="form-control" id="email" name="email" placeholder="tu@correo.com">
               <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
             </div>
             <div class="mb-3"><label for="telephone">Teléfono</label>
-              <input type="text" class="form-control bfh-phone" id="telephone" data-format="(ddd) ddd-dddd">
+              <input type="text" class="form-control bfh-phone" id="telephone" name="telephone" data-format="(ddd) ddd-dddd">
               <div class="invalid-feedback"> Please enter your shipping address. </div>
             </div>
             <div class="mb-3"><label for="address">Dirección</label>
-              <input type="text" class="form-control" id="address" placeholder="Cra 7 # 25-38" required="">
+              <input type="text" class="form-control" id="address" name="address" placeholder="Cra 7 # 25-38" required="">
               <div class="invalid-feedback"> Please enter your shipping address. </div>
             </div>
             <div class="mb-3"> <label for="address2">Complemento dirección <span class="text-muted">(Opcional)</span></label>
-              <input type="text" class="form-control" id="address2" placeholder="Urb. Int. Ap. Cond."> </div>
+              <input type="text" class="form-control" id="address2" name="address2" placeholder="Urb. Int. Ap. Cond."> </div>
             <!--<div class="row">
               <div class="col-md-5 mb-3"> <label for="country">Country</label> <select class="custom-select d-block w-100" id="country" required="">
                   <option value="">Choose...</option>
@@ -153,33 +153,33 @@
             <!--<div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="same-address" value="on"> <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label> </div>-->
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="save-info" value="on"> <label class="custom-control-label" for="save-info">Guardar esta información para la próxima vez</label> </div>
+              <input type="checkbox" class="custom-control-input" id="save-info" name="save-info" value="on"> <label class="custom-control-label" for="save-info">Guardar esta información para la próxima vez</label> </div>
             <hr class="mb-4">
             <h4 class="mb-3"><b>Metodo de Pago</b></h4>
             <div class="d-block my-3">
               <div class="custom-control custom-radio">
-                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="" value="on"><label class="custom-control-label" for="credit">Tarjeta de crédito</label> </div>
+                <input id="credit" name="credit" type="radio" class="custom-control-input" checked="" required="" value="credit"><label class="custom-control-label" for="credit">Tarjeta de crédito</label> </div>
               <div class="custom-control custom-radio">
-                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="" value="on"> <label class="custom-control-label" for="debit">Pago contra entrega</label> </div>
+                <input id="debit" name="debit" type="radio" class="custom-control-input" required="" value="debit"><label class="custom-control-label" for="debit">Pago contra entrega</label></div>
 
             </div>
             <div class="row">
               <div class="col-md-6 mb-3"> <label for="cc-name">Nombre del titular</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required=""> <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
+                <input type="text" class="form-control" id="cc-name" name="cc-name" placeholder="" required=""> <small class="text-muted">Nombre completo como se muestra en la tarjeta</small>
                 <div class="invalid-feedback"> Campo requerido </div>
               </div>
               <div class="col-md-6 mb-3"> <label for="cc-number">Número de tarjeta de crédito</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                <input type="text" class="form-control" id="cc-number" name="cc-number" placeholder="" required="">
                 <div class="invalid-feedback"> Campo requerido </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-3 mb-3"> <label for="cc-expiration">Fecha de Vencimiento</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                <input type="text" class="form-control" id="cc-expiration" name="cc-expiration" placeholder="" required="">
                 <div class="invalid-feedback"> Campo requerido </div>
               </div>
               <div class="col-md-3 mb-3"> <label for="cc-expiration">Nro. de verificación</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                <input type="text" class="form-control" id="cc-cvv" name="cc-cvv" placeholder="" required="">
                 <div class="invalid-feedback"> Campo requerido </div>
               </div>
             </div>
