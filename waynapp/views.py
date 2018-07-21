@@ -210,7 +210,7 @@ def checkout(request):
 		plan = '3 Botellas de vino'
 		planvalue = '155700'
 		shipping = '9000'
-		discountcode = 'WAYN20'
+		# discountcode = 'WAYN20'
 		discount = '-20000'
 		total = '98000'
 		context = {
@@ -229,7 +229,7 @@ def descuento(request):
 	if request.method == 'POST':
 		applydiscount = request.POST.get('applydiscount')
 		#ver validez del cupon
-		return redirect('checkout')
+		return redirect('checkout',discountcode=applydiscount)
 	else:
 		return redirect('checkout')
 # vista del confirmacion
