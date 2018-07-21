@@ -36,7 +36,7 @@ jsondata={
 # class RealizarPago():
 
 
-class Plan():
+class Plan:
 
 	def Crear():
 		data = {
@@ -83,7 +83,7 @@ class Plan():
 		requests.delete(url+'plans'+planCode,headers=headers,data=json.dumps(data))
 		return
 
-class Customers():
+class Customers:
 
 	def Post():
 		data = {"fullName": fullName, "email": email}
@@ -103,7 +103,7 @@ class Customers():
 		requests.delete(url+'customers/'+customerId,headers=headers)
 		return payu_response.text
 
-class Tarjeta():
+class Tarjeta:
 
 	def Post():
 		data ={
@@ -155,7 +155,7 @@ class Tarjeta():
 		requests.delete(url+'customers/'+customerId+'/creditCards/'+creditCardId,headers=headers)
 		return payu_response.text
 
-class Suscripcion():
+class Suscripcion:
 
 	def Post():
 		data ={
@@ -235,7 +235,7 @@ class Suscripcion():
 		requests.delete(url+'subscriptions/'+subscriptionId,headers=headers)
 		return payu_response.text
 
-class Cargos():
+class Cargos:
 
 	def Post():
 		data ={
@@ -293,7 +293,7 @@ class Cargos():
 		requests.delete(url+'subscriptions/'+recurringBillItems,headers=headers)
 		return payu_response.text
 
-class Facturas():
+class Facturas:
 
 	def Get():
 		requests.get(url+'recurringBill?customerId='+customerId,headers=headers)
