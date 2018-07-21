@@ -189,7 +189,7 @@ def checkout(request):
 		# realizar suscripcion en PayU
 		suscripcion = Suscripcion()
 		datasuscripcion = suscripcion.Post()
-		context = {'data':suscripcion}
+		context = {'data':datasuscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	else:
 		return render(request, 'waynapp/checkout.html')
