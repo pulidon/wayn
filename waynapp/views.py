@@ -221,7 +221,7 @@ def checkout(request,discountcode=''):
 			"total" : total
 		}
 
-		if 'discountcode' in globals():
+		if 'discountcode' in locals():
 			context.update({"discountcode" : 'CODIGO REMITIDO'})
 
 		# try:
