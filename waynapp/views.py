@@ -178,7 +178,7 @@ def perfilvino(request,pk):
 	return render(request, 'waynapp/perfil_vino.html', context)
 
 # vista del checkout
-def checkout(request,*args):
+def checkout(request,discountcode=''):
 	if request.method == 'POST':
 		# usuario =
 		# plan =
@@ -246,7 +246,7 @@ def confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
 
 # Vistas campaña de prelanzamiento con referidos
-def lanzamiento(request,referral_code):
+def lanzamiento(request,referral_code=''):
 	if request.method == 'POST':
 		try:
 			direccion_ip = Direcciones_ip.Object.get(direccion=request.META.get('REMOTE_ADDR'))
