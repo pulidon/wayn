@@ -226,7 +226,7 @@ def checkout(request,*args,**kwargs):
 			context.update({"discountcode" : 'CODIGO ORIGINAL'})
 
 		if test:
-			context.update({"discountcode" : kwargs['discount']})
+			context.update({"discountcode" : kwargs['discountcode']})
 		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
 
