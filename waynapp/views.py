@@ -179,7 +179,8 @@ def perfilvino(request,pk):
 
 # vista del checkout
 def checkout(request,*args,**kwargs):
-	try: kwargs['discountcode']
+	try:
+		kwargs['discountcode']
 		context.update({"discountcode" : 'CODIGO REMITIDO'})
 	except KeyError:
 		test=False
