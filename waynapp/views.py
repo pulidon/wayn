@@ -221,8 +221,8 @@ def checkout(request,discountcode=''):
 			"total" : total
 		}
 
-		if 'discountcode' in locals():
-			context.update({"discountcode" : 'CODIGO REMITIDO'})
+		if discountcode != '':
+			context.update({"discountcode" : discountcode})
 
 		# try:
 		# 	context.update({"discountcode" : 'CODIGO REMITIDO'})
@@ -238,9 +238,9 @@ def descuento(request):
 	if request.method == 'POST':
 		discountcode = request.POST.get('applydiscount')
 		#ver validez del cupon
-		return redirect('/checkout/',discountcode=discountcode)
+		return redirect('checkout',discountcode)
 	else:
-		return redirect('/checkout')
+		return redirect('checkout')
 # vista del confirmacion
 def confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
