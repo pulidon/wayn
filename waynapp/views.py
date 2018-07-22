@@ -238,7 +238,7 @@ def descuento(request):
 	if request.method == 'POST':
 		discountcode = request.POST.get('applydiscount')
 		#ver validez del cupon
-		return redirect('/checkout',discountcode=discountcode)
+		return redirect('/checkout/',discountcode=discountcode)
 	else:
 		return redirect('/checkout')
 # vista del confirmacion
