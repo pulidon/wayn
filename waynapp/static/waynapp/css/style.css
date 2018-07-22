@@ -870,6 +870,7 @@ select::-ms-expand {
   background: linear-gradient(gold,#d39e00);
   border-radius: 5px;
   color: #fff;
+  text-shadow: 1px 1px 16px rgba(0, 0, 0, 0.78);
 	}
   .seleccion .seleccion-table-wrapper .ficha-individual .porcentaje_num{
     font-size: 2em;
