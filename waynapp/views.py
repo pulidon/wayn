@@ -231,9 +231,9 @@ def checkout(request,*args,**kwargs):
 # vista para procesar descuentos
 def descuento(request):
 	if request.method == 'POST':
-		applydiscount = request.POST.get('applydiscount')
+		discountcode = request.POST.get('applydiscount')
 		#ver validez del cupon
-		return redirect('/checkout',{'discountcode':applydiscount})
+		return redirect('/checkout',discountcode)
 	else:
 		return redirect('/checkout')
 # vista del confirmacion
