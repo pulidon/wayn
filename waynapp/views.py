@@ -204,6 +204,13 @@ def checkout(request,*args,**kwargs):
 		# realizar suscripcion en PayU
 		# suscripcion = Suscripcion()
 		# datasuscripcion = suscripcion.Post()
+		test=True
+		try: kwargs['discountcode']
+		except KeyError:
+			test=False
+			context.update({"discountcode" : 'CODIGO ORIGINAL'})
+		if test:
+			context.update({"discountcode" : kwargs['discountcode']})
 		context = {'data':data_suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	else:
