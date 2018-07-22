@@ -222,7 +222,8 @@ def checkout(request,*args,**kwargs):
 		}
 
 		try:
-			kwargs['discountcode']
+			# kwargs['discountcode']
+			plan
 			context.update({"discountcode" : 'CODIGO REMITIDO'})
 		except KeyError:
 			context.update({"discountcode" : 'CODIGO ORIGINAL'})
