@@ -178,7 +178,7 @@ def perfilvino(request,pk):
 	return render(request, 'waynapp/perfil_vino.html', context)
 
 # vista del checkout
-def checkout(request):
+def checkout(request,*args):
 	if request.method == 'POST':
 		# usuario =
 		# plan =
@@ -238,7 +238,7 @@ def descuento(request):
 	if request.method == 'POST':
 		discountcode = request.POST.get('applydiscount')
 		#ver validez del cupon
-		return redirect('/checkout',discountcode)
+		return redirect('/checkout',discountcode=discountcode)
 	else:
 		return redirect('/checkout')
 # vista del confirmacion
