@@ -13,8 +13,8 @@ urlpatterns = [
 	url(r'^balancevinos', views.balancevinos, name='balancevinos'),
 	url(r'^match', views.match, name='match'),
 	url(r'^perfilvino/(?P<pk>\d+)/$', views.perfilvino, name='perfilvino'),
-	url(r'^checkout', views.checkout, name='checkout'),
-	url(r'^descuento', views.descuento, name='descuento'),
+	url(r'^checkout/$', views.checkout, name='checkout'),
+	url(r'^descuento/$', views.descuento, name='descuento'),
 	url(r'^confirmacion', views.confirmacion, name='confirmacion'),
 	#urls para campaña de prelanzamiento
 	url(r'^lanzamiento/(?P<referral_code>\w+)/$', views.lanzamiento, name='lanzamiento'),
