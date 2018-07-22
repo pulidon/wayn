@@ -221,11 +221,13 @@ def checkout(request):
 			"total" : total
 		}
 
-		try:
-			discountcode
+		if 'discountcode' in globals():
 			context.update({"discountcode" : 'CODIGO REMITIDO'})
-		except KeyError:
-			context.update({"discountcode" : 'CODIGO ORIGINAL'})
+
+		# try:
+		# 	context.update({"discountcode" : 'CODIGO REMITIDO'})
+		# except KeyError:
+		# 	context.update({"discountcode" : 'CODIGO ORIGINAL'})
 
 
 		return render(request, 'waynapp/checkout.html',context)
