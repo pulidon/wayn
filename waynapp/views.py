@@ -222,7 +222,8 @@ def checkout(request,*args,**kwargs):
 		}
 		test=True
 		try: kwargs['discountcode']
-		except KeyError: test = False
+		except KeyError:
+			context.update({"discountcode" : 'CODIGO ORIGINAL'})
 
 		if test:
 			context.update({"discountcode" : kwargs['discount']})
