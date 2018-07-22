@@ -178,7 +178,7 @@ def perfilvino(request,pk):
 	return render(request, 'waynapp/perfil_vino.html', context)
 
 # vista del checkout
-def checkout(request,discountcode):
+def checkout(request):
 	if request.method == 'POST':
 		# usuario =
 		# plan =
@@ -222,6 +222,7 @@ def checkout(request,discountcode):
 		}
 
 		try:
+			discountcode
 			context.update({"discountcode" : 'CODIGO REMITIDO'})
 		except KeyError:
 			context.update({"discountcode" : 'CODIGO ORIGINAL'})
