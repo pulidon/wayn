@@ -179,12 +179,6 @@ def perfilvino(request,pk):
 
 # vista del checkout
 def checkout(request,*args,**kwargs):
-	try:
-		kwargs['discountcode']
-		context.update({"discountcode" : 'CODIGO REMITIDO'})
-	except KeyError:
-		test=False
-		context.update({"discountcode" : 'CODIGO ORIGINAL'})
 	if request.method == 'POST':
 		# usuario =
 		# plan =
@@ -226,14 +220,14 @@ def checkout(request,*args,**kwargs):
 			"discount" : discount,
 			"total" : total
 		}
-		test=True
-		try: kwargs['discountcode']
+
+		try:
+			kwargs['discountcode']
+			context.update({"discountcode" : 'CODIGO REMITIDO'})
 		except KeyError:
-			test=False
 			context.update({"discountcode" : 'CODIGO ORIGINAL'})
 
-		if test:
-			context.update({"discountcode" : kwargs['discountcode']})
+
 		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
 
