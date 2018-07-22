@@ -861,11 +861,19 @@ select::-ms-expand {
 	font-size: 22px;
 }
 .seleccion .seleccion-table-wrapper .ficha-individual h4{
-	margin: auto;
-	padding-top: 30px;
-	font-size: 20px;
-	color: #3D3D3D
+  margin: auto;
+  padding-top: 30px;
+  color: #3D3D3D;
+  margin: auto;
+  padding: 20px;
+  font-size: 18px;
+  background: linear-gradient(gold,#d39e00);
+  border-radius: 5px;
+  color: #fff;
 	}
+  .seleccion .seleccion-table-wrapper .ficha-individual .porcentaje_num{
+    font-size: 2em;
+    }
 .seleccion .seleccion-table-wrapper .ficha-individual p{
 	padding-bottom: 15px;
 	width: 80%;
