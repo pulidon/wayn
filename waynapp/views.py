@@ -222,7 +222,7 @@ def checkout(request,*args,**kwargs):
 		}
 		test=True
 		try: kwargs['discountcode']
-		except NameError: test = False
+		except KeyError: test = False
 
 		if test:
 			context.update({"discountcode" : kwargs['discount']})
