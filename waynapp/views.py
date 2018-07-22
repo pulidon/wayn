@@ -179,6 +179,11 @@ def perfilvino(request,pk):
 
 # vista del checkout
 def checkout(request,*args,**kwargs):
+	try: kwargs['discountcode']
+		context.update({"discountcode" : 'CODIGO REMITIDO'})
+	except KeyError:
+		test=False
+		context.update({"discountcode" : 'CODIGO ORIGINAL'})
 	if request.method == 'POST':
 		# usuario =
 		# plan =
@@ -204,13 +209,6 @@ def checkout(request,*args,**kwargs):
 		# realizar suscripcion en PayU
 		# suscripcion = Suscripcion()
 		# datasuscripcion = suscripcion.Post()
-		test=True
-		try: kwargs['discountcode']
-		except KeyError:
-			test=False
-			context.update({"discountcode" : 'CODIGO ORIGINAL'})
-		if test:
-			context.update({"discountcode" : kwargs['discountcode']})
 		context = {'data':data_suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	elif request.method == 'GET':
