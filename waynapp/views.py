@@ -220,11 +220,12 @@ def checkout(request,*args,**kwargs):
 			"discount" : discount,
 			"total" : total
 		}
-		try: discountcode
-		except NameError: discountcode = None
+		test=True
+		try: kwargs['discountcode']
+		except NameError: test = False
 
-		if discountcode is not None:
-			context.update({"discountcode" : discountcode})
+		if test:
+			context.update({"discountcode" : kwargs['discount']})
 		return render(request, 'waynapp/checkout.html',context)
 	return render(request, 'waynapp/checkout.html')
 
