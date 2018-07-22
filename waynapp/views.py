@@ -213,7 +213,7 @@ def checkout(request,*args,**kwargs):
 			context.update({"discountcode" : kwargs['discountcode']})
 		context = {'data':data_suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
-	else:
+	elif request.method == 'GET':
 		plan = '3 Botellas de vino'
 		planvalue = '155700'
 		shipping = '9000'
