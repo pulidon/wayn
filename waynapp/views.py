@@ -249,7 +249,7 @@ def confirmacion(request):
 def lanzamiento(request,referral_code=''):
 	if request.method == 'POST':
 		try:
-			direccion_ip = Direcciones_ip.Object.get(direccion=request.META.get('REMOTE_ADDR'))
+			direccion_ip = Direcciones_ip.objects.get(direccion=request.META.get('REMOTE_ADDR'))
 			if direccion_ip.conteo < 3:
 				direccion_ip.conteo += 1
 			else:
