@@ -248,7 +248,8 @@ def confirmacion(request):
 # Vistas campaña de prelanzamiento con referidos
 def lanzamiento(request,referral_code=''):
 	if request.method == 'POST':
-		ip = request.META.get('REMOTE_ADDR')
+		ip = request.META.get('HTTP_X_FORWARDED_FOR')
+		# ip = request.META.get('REMOTE_ADDR')
 		try:
 			direccion_ip = Direcciones_ip.objects.get(direccion=ip)
 			if direccion_ip.conteo < 3:
