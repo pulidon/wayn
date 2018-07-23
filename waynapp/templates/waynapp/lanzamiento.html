@@ -41,19 +41,20 @@
 						    <div class="smalltext">Seg.</div>
 						  </div>
 						</div>
-						<p>Se la primera persona en enterarte y recibe vino gratis!</p>
-							<form id="form" class="topBefore" method="post">
-								{% csrf_token %}
-							  <input id="email" type="text" placeholder="E-MAIL">
-							  <input id="submit" type="submit" value="ENTRA Y DISFRUTA">
-							</form>
-							<div class="terminos">
-					<p>Al registrar tu correo electrónico, aceptas los <a href="#">términos y condiciones</a> y la <a href="#">política de tratamiento de datos personales.</a></p>
-				</div>
-							</div>
+						<div class="texto_form">
+								<p>Se la primera persona en enterarte y recibe vino gratis!</p>
+						</div>
+						<form id="form" class="topBefore" method="post">
+	{% csrf_token %}
+  <input id="email" type="text" placeholder="E-MAIL">
+  <input id="submit" type="submit" value="ENTRA Y DISFRUTA">
+</form>
+					<div class="terminos">
+						<p>Al registrar tu correo electrónico, aceptas los <a href="#">términos y condiciones</a> y la <a href="#">política de tratamiento de datos personales.</a></p>
+					</div>
             		</div>
             		<div class="col-xm-5 col-lg-5 text-center">
-            			<img src="/static/waynapp/imagenes/botellas.png" alt="">
+            			<img src="/static/waynapp/imagenes/botellas.png" alt="vino wayn">
             			<div class="fecha">
             				<h3>1.08.18</h3>
             			<p>BOGOTA - COLOMBIA</p>
@@ -123,5 +124,8 @@
 
 });
 	</script>
+
+
+
 </body>
 </html>
