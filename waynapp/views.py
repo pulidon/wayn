@@ -283,8 +283,7 @@ def lanzamiento(request,referral_code=''):
 # Vistas campaña de prelanzamiento con referidos
 def referir_amigo(request,referrer_code):
 	try:
-		prospectos = Prospecto.objects.get(referral_code=referrer_code)
-		conteo = len(prospectos)
+		conteo = Prospecto.objects.filter(referral_code=referrer_code).count()
 	except Prospecto.DoesNotExist:
 		conteo = 0
 	referrer_code = referrer_code
