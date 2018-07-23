@@ -103,7 +103,7 @@ input {
   padding: 0px 15px 0px 15px;
   background: transparent;
   outline: none;
-  color: #ccc;
+  color: #333;
   border: solid 1px #b3aca7;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
