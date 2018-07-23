@@ -252,7 +252,7 @@ def lanzamiento(request,referral_code=''):
 		# ip = request.META.get('REMOTE_ADDR')
 		try:
 			direccion_ip = Direcciones_ip.objects.get(direccion=ip)
-			if direccion_ip.conteo < 3:
+			if direccion_ip.conteo < 5:
 				direccion_ip.conteo += 1
 			else:
 				return render(request, 'waynapp/lanzamiento.html')
