@@ -1,19 +1,154 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WAYN | La experiencia de vinos que nunca has visto.</title>
+	<meta name="description" content="Está a punto de llegar.">
+	<!-- Google Fonts (Oswald-Roboto)-->
+	<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+	<!-- Font awesome-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- Estilos-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link href="css_prelaunch.css" rel="stylesheet">
+
 </head>
 <body>
-	referir_amigo
+	<section class="segunda_pag">
+			<div class="titulo text-center">
+				<h2><span class="wayn">Wayn </span>GRACIAS POR REGISTRARTE</h2>
+			</div>
+			<div class="copy text-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<img src="wine_price.jpg" alt="Invita amigos">
+						</div>
+						<div class="col-md-5 text-center">
+						<h4>NO DEJES A TUS AMIGOS POR FUERA</h4>
+						<h3>INVITA A TUS AMIGOS Y GANA VINO!</h3>
+						<p>Este link es único para tí, puedes compartirlo en facebook, twitter o whatsapp y por cada amigo que ingrese su correo recibirás beneficios únicos.</p>
+						<input id="codigo" type="text" placeholder="">
+						<p>Haz click en cualquier icono para compartir:</p>
+						<div class="compartir">
+							<a href="https://facebook.com/sharer.php?u=https%3A%2F%2Fwayn.com.co%2Flanzamiento%2F{{referrer_code}}%2F" target="_blank"><i class="fa fa-facebook"></i></a>
+							<a href="https://twitter.com/intent/tweet?text=La%20experiencia%20de%20vinos%20que%20nunca%20has visto%20https%3A%2F%2Fwayn.com.co%2Flanzamiento%2F{{referrer_code}}%2F" target="_blank"><i class="fa fa-twitter"></i></a>
+							<a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwayn.com.co%2Flanzamiento%2F{{referrer_code}}%2F" target="_blank"><i class="fa fa-whatsapp"></i></a>
 
-	links de redes sociales
-	facebook
-	<a href="https://facebook.com/sharer.php?u=https%3A%2F%2Fwayn.com.co%2Flanzamiento%2F{{referrer_code}}%2F" target="_blank"><i class="fa fa-facebook"></i></a>
 
-	twitter
-	<a href="https://twitter.com/intent/tweet?text=La%20experiencia%20de%20vinos%20que%20nunca%20has visto%20https%3A%2F%2Fwayn.com.co%2Flanzamiento%2F{{referrer_code}}%2F" target="_blank"><i class="fa fa-twitter"></i></a>
 
-	whatsapp
-	<a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwayn.com.co%2Flanzamiento%2F{{referrer_code}}%2F" target="_blank"><i class="fa fa-whatsapp"></i></a>
+						</div>
+						</div>
+
+					</div>
+					<div class="registrados">
+						<p id="contador">0</p>
+						<p> AMIGOS REGISTRADOS</p>
+					</div>
+					<p class="text-center amor">Echo con <i class="fa fa-heart"></i> por <a href="">Wayn</a> S.A.S.</p>
+				</div>
+	      </div>
+	      <div class="funcionamiento">
+	      	<h4 class="text-center">ASÍ ES COMO FUNCIONA:</h4>
+	      	<div class="container">
+			  	<p>Amigos registrados</p>
+			  <div class="milestone--bar">
+			    <div class="stage-2"><p>5</p>
+			    </div>
+			    <div class="stage-3"><p>10</p>
+			    </div>
+			    <div class="stage-4"><p>25</p>
+			    </div>
+			    <div class="stage-5"><p>50</p>
+			    </div>
+	    	  </div>
+			<div class="texto_funcionamiento text-center">
+				<div class="beneficios1"><p>Regalo</p></div>
+				<div class="beneficios2"><p>$10.000 de crédito</p></div>
+				<div class="beneficios3"><p>$20.000 de crédito</p></div>
+				<div class="beneficios4"><p>Botella Reserva $80.000</p></div>
+				<div class="beneficios5"><p>Botella Gran Reserva $200.000</p></div>
+			</div>
+
+			<div class="footer text-center">
+				<h5>VALIDO UNICAMENTE PARA BOGOTA</h5>
+				<p><a href="#">Términos y condiciones</a> - <a href="#">política de tratamiento de datos personales.</a></p>
+			</div>
+			</div>
+	      </div>
+	    </section>
+	 <!-- END HEADER SECTION -->
+
+
+
+
+		<!-- =========================
+	     			SCRIPTS
+		============================== -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			var registrados=0;
+
+			if (registrados>=5 && registrados<10) {
+			    setTimeout(function(){
+			  $('.milestone--bar').addClass('milestone--bar--two');
+			}, 1000);
+			setTimeout(function(){
+			  $('.stage-2').addClass('progress-active');
+			}, 2500);
+			} else if (registrados>=10 && registrados<25) {
+			setTimeout(function(){
+			  $('.milestone--bar').addClass('milestone--bar--three');
+				}, 1000);
+			setTimeout(function(){
+			  $('.stage-2').addClass('progress-active');
+			}, 1500);
+			setTimeout(function(){
+			  $('.stage-3').addClass('progress-active');
+			}, 2500);
+			}else if (registrados>=25 && registrados <50) {
+			setTimeout(function(){
+			  $('.milestone--bar').addClass('milestone--bar--four');
+			}, 1000);
+			setTimeout(function(){
+	  	    $('.stage-2').addClass('progress-active');
+			}, 1400);
+			setTimeout(function(){
+			 $('.stage-3').addClass('progress-active');
+			}, 1700);
+			setTimeout(function(){
+		    $('.stage-4').addClass('progress-active');
+			}, 2500);
+			}else if (registrados>=50) {
+			setTimeout(function(){
+			$('.milestone--bar').addClass('milestone--bar--five');
+			}, 1000);
+			setTimeout(function(){
+			$('.stage-2').addClass('progress-active');
+			}, 1400);
+			setTimeout(function(){
+			$('.stage-3').addClass('progress-active');
+			}, 1500);
+			setTimeout(function(){
+		    $('.stage-4').addClass('progress-active');
+			}, 1800);
+			setTimeout(function(){
+			$('.stage-5').addClass('progress-active');
+			}, 2500);
+			}else {
+			setTimeout(function(){
+			$('.milestone--bar').addClass('milestone--bar--one');
+			}, 1000);
+			}
+		</script>
+
 
 </body>
 </html>
