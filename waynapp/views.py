@@ -282,8 +282,17 @@ def lanzamiento(request,referral_code=''):
 
 # Vistas campaña de prelanzamiento con referidos
 def referir_amigo(request,referrer_code):
+	try:
+		prospectos = Prospecto.objects.get(referral_code=referrer_code)
+		conteo = len(prospectos)
+	except Prospecto.DoesNotExist:
+		conteo = 0
 	referrer_code = referrer_code
-	return render(request, 'waynapp/referir_amigo.html',{'referrer_code':referrer_code})
+	context = {
+		'referrer_code' : referrer_code,
+		'conteo' : conteo
+	}
+	return render(request, 'waynapp/referir_amigo.html',context)
 
 # funcion para las sugerencias
 def sugerencias(tintos,blancos,lista_puntajes):
