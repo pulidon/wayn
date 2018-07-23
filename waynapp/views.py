@@ -258,8 +258,13 @@ def lanzamiento(request,referral_code=''):
 			direccion_ip = Direcciones_ip()
 			direccion_ip.direccion = request.META.get('REMOTE_ADDR')
 			direccion_ip.conteo = 0
-		prospecto = Prospecto()
-		prospecto.email = request.POST.get('email')
+		try:
+			prospecto = Prospecto.objects.get(email=request.POST.get('email'))
+			referrer_code = prospecto.referrer_code
+			return redirect('referir_amigo',referrer_code)
+		except Prospecto.DoesNotExist:
+			prospecto = Prospecto()
+			prospecto.email = request.POST.get('email')
 		if referral_code == None :
 			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
 			referrer_code = prospecto.referrer_code
