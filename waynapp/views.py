@@ -34,7 +34,7 @@ class Puntaje:
 # Create your views here.
 # Vista del Home
 def index(request):
-	send_mail('test', 'body of the message', 'contacto@wayn.com.co', ['nicolaspulido89@hotmail.com', 'georgeladino@gmail.com'])
+	# send_mail('test', 'body of the message', 'contacto@wayn.com.co', ['nicolaspulido89@hotmail.com', 'georgeladino@gmail.com'])
 	return render(request, 'waynapp/index.html')
 
 #Vistal del test
