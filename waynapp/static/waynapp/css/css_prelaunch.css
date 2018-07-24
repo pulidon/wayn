@@ -270,15 +270,15 @@ textarea:hover {
   z-index: 2;
   left: 30%;
   }
-  /*.segunda_pag .funcionamiento .texto_funcionamiento .beneficios2 img{
-  display: none;
-  position: absolute;
-  width: 100px;
-  bottom: 10px;
-  }
-  .segunda_pag .funcionamiento .texto_funcionamiento .beneficios2:hover img{
-  display: block;
-  }*/
+  .segunda_pag .funcionamiento .texto_funcionamiento .hover img{
+    display: none;
+    position: absolute;
+    width: 100px;
+    bottom: 10px;
+    }
+    .segunda_pag .funcionamiento .texto_funcionamiento .hover:hover img{
+    display: block;
+    }
   .segunda_pag .funcionamiento .texto_funcionamiento .beneficios3 {
   display: block;
   position: absolute;
