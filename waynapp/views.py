@@ -10,6 +10,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from .models import Usuario, Evaluacion, Vino, Plan, Prospecto, Direcciones_ip
 from payuconnector.connector import Suscripcion
+from django.core.mail import send_mail
 
 class Puntaje:
 	pk = ''
@@ -33,6 +34,7 @@ class Puntaje:
 # Create your views here.
 # Vista del Home
 def index(request):
+	send_mail('test', 'body of the message', 'contacto@wayn.com.co', ['nicolaspulido89@hotmail.com', 'georgeladino@gmail.com'])
 	return render(request, 'waynapp/index.html')
 
 #Vistal del test
