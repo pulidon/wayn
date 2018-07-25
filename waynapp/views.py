@@ -278,7 +278,7 @@ def lanzamiento(request,referral_code=''):
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
 			mailtemplate = get_template('correo_bienvenida.html')
-			html = mailtemplate.render(Context({'referrer_code': referrer_code}))
+			html = mailtemplate.render({'referrer_code': referrer_code})
 			send_mail('Bienvenido a Wayn!!', html, 'lanzamiento@wayn.com.co', prospecto.email)
 			return redirect('referir_amigo',referrer_code)
 		else:
@@ -287,7 +287,7 @@ def lanzamiento(request,referral_code=''):
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
 			mailtemplate = get_template('correo_bienvenida.html')
-			html = mailtemplate.render(Context({'referrer_code': referrer_code}))
+			html = mailtemplate.render({'referrer_code': referrer_code})
 			send_mail('Bienvenido a Wayn!!', html, 'lanzamiento@wayn.com.co', prospecto.email)
 			send_mail('Bienvenido a Wayn!!', 'body of the message', 'lanzamiento@wayn.com.co', prospecto.email)
 			return redirect('referir_amigo',referrer_code)
