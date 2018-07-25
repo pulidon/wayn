@@ -28,6 +28,12 @@ class ProspectoAdmin(admin.ModelAdmin):
 		'referral_code'
 	)
 
+class Direcciones_ipAdmin(admin.ModelAdmin):
+	list_display = (
+		'direccion',
+		'conteo'
+	)
+
 # Register your models here.
 admin.site.register(Usuario)
 admin.site.register(Evaluacion)
@@ -35,4 +41,4 @@ admin.site.register(Vino, VinoAdmin)
 admin.site.register(Plan, PlanAdmin)
 admin.site.register(Maridaje)
 admin.site.register(Prospecto, ProspectoAdmin)
-admin.site.register(Direcciones_ip)
+admin.site.register(Direcciones_ip, Direcciones_ipAdmin)
