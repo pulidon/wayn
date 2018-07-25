@@ -8,6 +8,7 @@ from django.core import serializers
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+from django.template import Template, Context
 from .models import Usuario, Evaluacion, Vino, Plan, Prospecto, Direcciones_ip
 from payuconnector.connector import Suscripcion
 from django.core.mail import send_mail
@@ -276,12 +277,23 @@ def lanzamiento(request,referral_code=''):
 			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
+			file = open('./templates/waynapp/correo_bienvenida.html')
+			mailtemplate = Template(fp.read())
+			fp.close()
+			html = mailtemplate.render(Context({'referrer_code': referrer_code}))
+			send_mail('Bienvenido a Wayn!!', html, 'lanzamiento@wayn.com.co', prospecto.email)
 			return redirect('referir_amigo',referrer_code)
 		else:
 			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
 			prospecto.referral_code = referral_code
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
+			file = open('./templates/waynapp/correo_bienvenida.html')
+			mailtemplate = Template(fp.read())
+			fp.close()
+			html = mailtemplate.render(Context({'referrer_code': referrer_code}))
+			send_mail('Bienvenido a Wayn!!', html, 'lanzamiento@wayn.com.co', prospecto.email)
+			send_mail('Bienvenido a Wayn!!', 'body of the message', 'lanzamiento@wayn.com.co', prospecto.email)
 			return redirect('referir_amigo',referrer_code)
 	else:
 		return render(request, 'waynapp/lanzamiento.html')
