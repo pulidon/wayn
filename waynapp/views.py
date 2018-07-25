@@ -35,9 +35,9 @@ class Puntaje:
 # Create your views here.
 # Vista del Home
 def index(request):
-	return redirect('lanzamiento')
-	# send_mail('test', 'body of the message', 'contacto@wayn.com.co', ['nicolaspulido89@hotmail.com', 'georgeladinog@gmail.com'])
-	# return render(request, 'waynapp/index.html')
+	# return redirect('lanzamiento')
+	send_mail('test', 'body of the message', 'contacto@wayn.com.co', ['nicolaspulido89@hotmail.com', 'georgeladinog@gmail.com'])
+	return render(request, 'waynapp/index.html')
 
 #Vistal del test
 def test(request):
