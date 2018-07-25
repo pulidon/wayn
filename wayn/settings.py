@@ -56,7 +56,7 @@ ROOT_URLCONF = 'wayn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/waynapp'],
+        'DIRS': ['waynapp/templates/waynapp'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
