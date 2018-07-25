@@ -254,22 +254,22 @@ def lanzamiento(request,referral_code=''):
 		ip = request.META.get('HTTP_X_FORWARDED_FOR')
 		# ip = request.META.get('REMOTE_ADDR')
 		try:
-			direccion_ip = Direcciones_ip.objects.get(direccion=ip)
-			if direccion_ip.conteo < 5:
-				direccion_ip.conteo += 1
-			else:
-				return render(request, 'waynapp/lanzamiento.html')
-			direccion_ip.save()
-		except Direcciones_ip.DoesNotExist:
-			direccion_ip = Direcciones_ip()
-			direccion_ip.direccion = ip
-			direccion_ip.conteo = 0
-			direccion_ip.save()
-		try:
 			prospecto = Prospecto.objects.get(email=request.POST.get('email'))
 			referrer_code = prospecto.referrer_code
 			return redirect('referir_amigo',referrer_code)
 		except Prospecto.DoesNotExist:
+			try:
+				direccion_ip = Direcciones_ip.objects.get(direccion=ip)
+				if direccion_ip.conteo < 5:
+					direccion_ip.conteo += 1
+				else:
+					return render(request, 'waynapp/lanzamiento.html')
+				direccion_ip.save()
+			except Direcciones_ip.DoesNotExist:
+				direccion_ip = Direcciones_ip()
+				direccion_ip.direccion = ip
+				direccion_ip.conteo = 0
+				direccion_ip.save()
 			prospecto = Prospecto()
 			prospecto.email = request.POST.get('email')
 		if referral_code == None :
