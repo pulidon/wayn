@@ -8,7 +8,7 @@ from django.core import serializers
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
-from django.template import Template, Context
+from django.template.loader import get_template
 from .models import Usuario, Evaluacion, Vino, Plan, Prospecto, Direcciones_ip
 from payuconnector.connector import Suscripcion
 from django.core.mail import send_mail
