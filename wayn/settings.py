@@ -126,9 +126,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-# Email configuration
-EMAIL_HOST = 'smtp.sendgrid.net'
+# # Email configuration SendGrid
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRIDAPIKEY')
+# EMAIL_USE_TLS = True
+
+# Email configuration SendinBlue
+EMAIL_HOST = 'smtp-relay.sendinblue.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = os.environ.get('SENDGRIDAPIKEY')
+EMAIL_HOST_USER = 'contacto@wayn.com.co'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDINBLUEAPIKEY')
 EMAIL_USE_TLS = True
