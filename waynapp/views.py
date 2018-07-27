@@ -250,7 +250,7 @@ def confirmacion(request):
 	return render(request, 'waynapp/confirmacion.html')
 
 # Vistas campaña de prelanzamiento con referidos
-def lanzamiento(request,referral_code=''):
+def lanzamiento(request,referral_code=None):
 	if request.method == 'POST':
 		ip = request.META.get('HTTP_X_FORWARDED_FOR')
 		# ip = request.META.get('REMOTE_ADDR')
