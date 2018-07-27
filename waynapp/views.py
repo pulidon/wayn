@@ -12,6 +12,7 @@ from django.template.loader import get_template
 from .models import Usuario, Evaluacion, Vino, Plan, Prospecto, Direcciones_ip
 from payuconnector.connector import Suscripcion
 from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
 
 class Puntaje:
 	pk = ''
@@ -278,8 +279,11 @@ def lanzamiento(request,referral_code=None):
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
 			mailtemplate = get_template('correo_bienvenida.html')
-			html = mailtemplate.render(content_type='text/html')
-			send_mail('Bienvenido a Wayn!!', html, 'contacto@wayn.com.co', [prospecto.email])
+			html = mailtemplate.render()
+			msg = EmailMultiAlternatives('Bienvenido a Wayn!!', '', 'contacto@wayn.com.co', [prospecto.email])
+			msg.attach_alternative(html, "text/html")
+			msg.send()
+			# send_mail('Bienvenido a Wayn!!', html, 'contacto@wayn.com.co', [prospecto.email])
 			return redirect('referir_amigo',referrer_code)
 		else:
 			prospecto.referrer_code = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
@@ -287,8 +291,11 @@ def lanzamiento(request,referral_code=None):
 			referrer_code = prospecto.referrer_code
 			prospecto.save()
 			mailtemplate = get_template('correo_bienvenida.html')
-			html = mailtemplate.render(content_type='text/html')
-			send_mail('Bienvenido a Wayn!!', html, 'contacto@wayn.com.co', [prospecto.email])
+			html = mailtemplate.render()
+			msg = EmailMultiAlternatives('Bienvenido a Wayn!!', '', 'contacto@wayn.com.co', [prospecto.email])
+			msg.attach_alternative(html, "text/html")
+			msg.send()
+			# send_mail('Bienvenido a Wayn!!', html, 'contacto@wayn.com.co', [prospecto.email])
 			return redirect('referir_amigo',referrer_code)
 	else:
 		return render(request, 'waynapp/lanzamiento.html')
