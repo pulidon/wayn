@@ -555,6 +555,7 @@ div[class*="stage-"] {
   }
   h1{
   font-size: 1.5em;
+  font-weight: 800;
   }
   h1 .wayn{
     font-size: 2em;
@@ -629,6 +630,7 @@ p{
 }
   h1{
   font-size: 1.5em;
+  font-weight: 800;
   }
   h1 .wayn{
     font-size: 2em;
