@@ -314,6 +314,13 @@ def referir_amigo(request,referrer_code):
 	}
 	return render(request, 'waynapp/referir_amigo.html',context)
 
+# Vista para mostrar el Blog
+def blog(request):
+	article = Article.objects.order_by('pk')
+	context = {'article':article}
+	return render(request, 'waynapp/blog.html',context)
+
+
 # funcion para las sugerencias
 def sugerencias(tintos,blancos,lista_puntajes):
 	sugerencias = []
