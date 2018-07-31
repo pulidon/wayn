@@ -3,7 +3,9 @@
 
 	</head>
 	<body>
+		{% for article in article_list %}
 		<h1>{{article.title}}</h1>
 		{{article.body}}
+		{% endfor %}
 	</body>
 </html>

@@ -318,8 +318,8 @@ def referir_amigo(request,referrer_code):
 
 # Vista para mostrar el Blog
 def blog(request):
-	article = Article.objects.order_by('pk')
-	context = {'article':article}
+	articles_list = Article.objects.order_by('pk')
+	context = {'articles_list':articles_list}
 	return render(request, 'waynapp/blog.html',context)
 
 
