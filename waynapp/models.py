@@ -68,5 +68,5 @@ class Direcciones_ip(models.Model):
 	conteo = models.IntegerField(max_length=5, null=False)
 
 class Article(models.Model):
-	tittle = models.CharField(max_length=100)
+	title = models.CharField(max_length=100)
 	body = models.TextField(max_length=2000)
