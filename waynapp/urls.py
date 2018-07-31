@@ -17,6 +17,7 @@ urlpatterns = [
 	url(r'^checkout/(?P<discountcode>\w+)/$', views.checkout, name='checkout'),
 	url(r'^descuento/$', views.descuento, name='descuento'),
 	url(r'^confirmacion', views.confirmacion, name='confirmacion'),
+	url(r'^blog', views.blog, name='blog'),
 	#urls para campaña de prelanzamiento
 	url(r'^lanzamiento/$', views.lanzamiento, name='lanzamiento'),
 	url(r'^lanzamiento/(?P<referral_code>\w+)/$', views.lanzamiento, name='lanzamiento'),
