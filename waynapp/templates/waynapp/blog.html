@@ -1,11 +1,123 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>WAYN BLOG</title>
 
-	</head>
-	<body>
-		{% for article in articles_list %}
-		<h1>{{article.title}}</h1>
-		{{article.body}}
-		{% endfor %}
-	</body>
+
+	<link href="/static/waynapp/css/blog_estilo.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<section>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+				<div class="container">
+				  <a class="navbar-brand" href="index.html"><img src="wayn_logo.png" alt="Logo Wayn"></a>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				  </div>
+				</div>
+		</nav>
+    </section>
+
+    <section class="blog_contenido">
+    	<div class="container">
+    		<h1>Es posible crear un negocio desde cero con menos de $50.000 pesos usando técnicas de Growth Hacking?</h1>
+    		<h2>Esta es la historia de la creación y lanzamiento de Wayn, un nuevo club de vinos.</h2>
+			<h3 class="text-center">- INTRODUCIENDO <span class="subrayado">TODO</span> EL EQUIPO DE TRABAJO -</h3>
+			<p>Somos Nicolás Pulido y Jorge Ladino, ingenieros electrónicos de la Universidad Javeriana, se podría decir que fuimos estudiantes “promedio”, no fuimos los más brillantes, pero tampoco los más vagos, durante la carrera estuvimos involucrados en una que otra actividad extracurricular y aficiones en común, no fueron muchas pero si las suficientes como para tener la confianza que necesitábamos en el momento que decidimos emprender esta aventura, como se darán cuenta la confianza fue un factor importante para que todo fluyera.</p>
+			<h3 class="text-center">- LA IDEA -</h3>
+			<p>Vivimos relativamente cerca, así que de vez en cuando coincidíamos y aprovechábamos para “adelantar cuaderno”, en algunas conversaciones hablábamos de temas laborales así que ambos teníamos claro las capacidades técnicas con las que contábamos, por lo que estando almorzando en el restaurante de la esquina, empezamos a hablar del tema. Se trata básicamente de un servicio de suscripción de vinos, creemos que muchas personas les gusta el vino pero tienen muchas dificultades al elegir un vino, en nuestra propia experiencia muchas veces sentimos que es unan lotería, hay tanta variedad de marcas, precios, regiones, sabores, cepas, estilos y al comprar muchas veces no es lo que uno esperaba. La solución?: Desarrollar un algoritmo que permita perfilar a las personas de acuerdo a sus gustos, y en base a ese perfil poder recomendar los vinos que más se ajusten a cada uno para que todos los meses puedan tener una buena experiencia de vinos entregados en la puerta de la casa y a un mismo precio.
+			Creemos que es una buena idea, nos generó el entusiasmo suficiente como para seguir considerándola, pero también sabemos que el mercado es un lugar muy impredecible, cambiante y lleno de muchas variables, lo normal es validar la idea de negocio, y aquí es donde empezaron nuestras limitaciones pues somos de un perfil más técnico que comercial. Sin embargo al analizar las diferentes opciones que habían para hacer un estudio de mercado calculamos que si trabajábamos juiciosos invirtiendo muy pocos recursos, aproximadamente en un mes podíamos tener todo listo y lanzar un producto terminado o por lo menos lo que llaman un MVP(producto mínimo viable) al mercado y analizar la respuesta con cifras certeras y no con suposiciones que muchas veces están equivocadas; pues como decía un amigo: En Excel todos somos millonarios!
+			</p>
+			<h3 class="text-center">- MANOS A LA OBRA -</h3>
+			<p>En ese momento teníamos una visión general de lo que queríamos hacer y de lo que eso conllevaría, de inmediato supimos que antes de escribir la primera línea de código era muy importante que contáramos con un proveedor que nos permitiera ofrecer vino de muy buena calidad y a un precio que nos permitiera ser rentables. Después de contactar a diferentes importadores y varias visitas en distintos sitios de la ciudad nos decidimos por uno, la decisión fue fácil: Clarita, una señora ya entrada en los 50 encargada del departamento de ventas tuvo mucho interés por la idea que teníamos, la abordamos con sinceridad y transparencia en lo que queríamos hacer y en las diferentes visitas que hicimos mostró tanta calidad humana y desinterés que entendimos rápidamente que ese era el tipo de personas con las que queríamos hacer negocios. El acuerdo fue muy sencillo, ellos nos venderían todo el vino que nosotros vendiéramos, de esa manera nos despreocupábamos de inventarios e inversiones iniciales.</p>
+			<h3 class="text-center">- MODELO DE NEGOCIO -</h3>
+			<p>Después de unas cuantas sumas y restas hicimos un primer borrador de los planes que íbamos a ofrecer, creemos que para tener clientes felices debemos ofrecerles más valor del que ellos piensan recibir y también desde un comienzo decidimos ser transparentes en todo (prueba de ello es este blog!) así que para ser coherentes nuestro modelo de precios también ha de serlo, los planes se tratan de un modelo de suscripción con una tarifa plana que sólo varía dependiendo del número de botellas que se elijan, que pueden ser 2, 3 o 4 botellas al mes y sin ninguna cláusula de permanencia, se puede cancelar la suscripción en cualquier momento y sin ninguna penalidad.. Sí a lo Netflix! Si empezamos a tener clientes que se suscriban y posteriormente empiezan a cancelar la suscripción es porque hicimos un mal trabajo y no supimos llenar las expectativas de los clientes, así que nuestro principal trabajo consiste no solo en encontrar el vino adecuado para cada persona, sino en ofrecerle la mejor experiencia y la mejor relación calidad/precio. El precio de suscripción para 2 botellas al mes es de $79.800, el de 3 botellas $118.700 y el de 4 botellas $155.700, gracias a la colaboración de Clarita vamos a poder ofrecer vinos un 25-35% más baratos que si se compraran en un supermercado, lo comprobamos! Gracias Clarita!</p>
+			<h3 class="text-center">- BRANDING -</h3>
+			<p>Inicialmente consideramos muy seriamente ponerle Vinoysefué, no es broma!, nos pareció que tenía la gran ventaja de tener muy buena recordación y facilitar el voz a voz, no teníamos restricciones ni para el dominio de la página (www.vinoysefue.com aún sigue disponible por si a alguien le interesa comprarlo) ni conflicto con marcas registradas en el país. Así que empezamos a trabajar en el logo e imagen para las cajas:</p>
+			<div class="text-center"><img src="/static/waynapp/imagenes/blog/caja_logo.jpg" alt="Primera caja"></div>
+
+			<p>Al comentarlo con familiares y amigos la primera reacción era divertida y jocosa, “si si!… esta chévere! … jajaja” – pero al cabo de un rato nos decían: en serio piensan ponerle ese nombre??.. pero si eso no les da nada de seriedad..!</p>
+			<p>Así que tuvimos que enterrar vinoysefué y empezar de nuevo con la lluvia de ideas:
+			Vain, baco, wayn, guayn, vinero.. y el ganador: Wayn, también libre de restricciones, por lo que procedimos a registrar el domino www.wayn.com.co, y aquí hicimos el primer desembolso de dinero exclusivo para la empresa que estábamos creando: $36.000 pesos en godaddy.
+			</p>
+			<p>Y vuelta a trabajar en el Logo que empezó siendo algo así:</p>
+			<div class="text-center"><img src="/static/waynapp/imagenes/blog/wayn_1st.jpg" alt="1er logo wayn"></div>
+
+			<p>Y después de muchos retoques, modificaciones, agregar, quitar y pensar que es lo que mejor reflejaba lo que queríamos proyectar como empresa y lo que más nos acercaba a nuestro usuario objetivo terminó siendo así:</p>
+			<div class="text-center"><img src="/static/waynapp/imagenes/blog/wayn_logo.png" alt="logo Wayn"></div>
+
+			<p>Cómo explicaremos más adelante los dos triangulo y el radar tienen que ver con el núcleo del negocio: la manera como hacemos el match entre el vino y el usuario.</p>
+			<h3 class="text-center">- UX & UI -</h3>
+			<p>Una vez que teníamos claro el modelo de negocio y el branding empezamos a diseñar la experiencia del usuario; para ser sinceros tampoco somos expertos en UX ni en UI, así que la manera en que abordamos el tema fue viendo y analizando la experiencia del usuario en diferentes páginas, rápidamente nos dimos cuenta que en Colombia hay mucho por mejorar en este aspecto, analizamos, recorrimos, escudriñamos y valoramos páginas de todo el mundo, y descubrimos que las páginas más efectivas ofrecen al usuario una experiencia de compra muy clara e intuitiva. Y lo más importante: el usuario siempre tiene claro cuál es el siguiente paso a seguir, aquí la mayoría de páginas inundan al usuario con una cantidad de opciones que en vez de facilitar las cosas lo confunden. Fue un proceso de dibujar y dibujar en hojas de papel la experiencia del usuario desde que entra a la página, hasta que finaliza la compra y analizarlo continuamente hasta que tuviera sentido.</p>
+			<p>Combinamos esa experiencia del usuario con el diseño de la marca, colores, tipos de letra, textos, botones e imágenes para que todo fuera coherente y lo empezamos a trabajar en Photoshop:</p>
+			<div class="imagenes_web text-center">
+			<img src="/static/waynapp/imagenes/blog/wayn_web2.jpg" alt="">
+			<img src="/static/waynapp/imagenes/blog/wayn_web1.jpg" alt="">
+			</div>
+			<p>Y a partir de ese momento empezamos a hacer una de las cosas que más estábamos esperando hacer: “echar código” como decimos los ingenieros.</p>
+			<p>Puede que a muchos les sorprenda, pero a pesar de que empezamos a escribirla desde cero, prácticamente en una mañana ya la teníamos codificada. Lo hicimos en HTML5, CSS y JavaScript puros, sin librerías ni frameworks sofisticados o de moda, la única librería que utilizamos fue Bootstrap 4.0 para que quedara responsive y se pueda visualizar correctamente en dispositivos móviles, algo totalmente indispensable hoy en día. </p>
+			<p>Inicialmente lo montamos en WordPress pensando en que sería lo mejor para gestionar el inventario y el contenido, pero resultó ser un completo dolor de cabeza. Nos fue muy difícil implementar lo que habíamos diseñado; WordPress está basado en temas prefabricados que se utilizan mucho para e-commerce y blogs, pero lo nuestro partió desde scratch y es algo muy personalizado entonces no nos sirvió y perdimos mucho tiempo. </p>
+			<p>Finalmente la solución que implementamos y que hasta ahora nos ha funcionado de maravilla fue utilizar el framework Django para la aplicación y el código lo escribimos en Pyton. </p>
+			<h3 class="text-center">- ALGORITMO -</h3>
+			<p>El emparejamiento o “match” como lo llamamos nosotros, consiste en crear un algoritmo el cual permite recomendar vino de acuerdo a los gustos de cada persona, para lograr eso teníamos que: i) Hacer un perfil del usuario ii) Hacer un perfil del vino iii) Ingeniarnos una manera de poder correlacionar ambos elementos. La idea suena bastante sencilla, pero requirió un demorado trabajo investigativo acerca del mundo del vino: entrevistas con expertos, blogs, libros, documentos, pdf´s y hasta pines de Pinterest. Fue de las cosas que más nos tomó tiempo, alrededor de una semana, pero valió la pena, fue un deleite para nuestros sentidos y supimos porque a veces el vino es tan complicado de entender, pero por lo menos ya teníamos un dibujo más claro y profundo de los diferentes aspectos del vino: dulzura, acidez, taninos, alcohol, cuerpo, perfil, aromas, viscosidad, color, matiz y balance.</p>
+			<p>Durante nuestra investigación descubrimos un par de sitios en Estados Unidos que ofrecen una propuesta de valor similar a la nuestra, nos llamó mucho la atención que para perfilar a los clientes hacían preguntas que no estaban relacionadas con el vino, por ejemplo, no preguntaban que tan tanino prefieren un vino, preguntaban más bien por sabores y aromas conocidos, y eso nos pareció brillante, tenía mucho sentido, así que no pudimos resistirnos la tentación y replicamos esa idea para el test pero basados en nuestra propia investigación y en los gustos locales.</p>
+			<p>Finalmente cuando teniamos consolidada gran parte de la información, empezamos a analizar cuál era la mejor manera para analizarla, correlacionarla y presentarsela al usuario, para esto utilizamos Excel, que en un momento dado no parecia una hoja de calculo sino un tablero de mandos de una nave espacial:</p>
+			<div class="text-center">
+				<img src="/static/waynapp/imagenes/blog/match.jpg" alt="wayn match">
+			</div>
+			<p>Decidimos que las gráficas de radares era una buena opción para mostrar datos de una manera clara. El concepto es sencillo: un radar muestra el perfil de la persona, el otro radar muestra el perfil del vino, y entre más parecidas sean estas dos gráficas, mayor es la probabilidad que un vino se ajuste a los gustos de la persona.</p>
+			<p>Por suerte encontramos una buena librería javascript que nos ahorró mil horas de programación: www.chartjs.org y gracias a que utilizamos Django y Pyton el desarrollo e implementación fue mucho más rápido de lo que nos lo imaginamos (1 sábado entero).</p>
+			<h3 class="text-center">- UX (II) -</h3>
+			<p>Repetimos que no somos diseñadores UI ni UX, por lo que la manera de probar que todo tuviera sentido, era haciendo el recorrido del usuario una, y otra, y otra, y otra vez, siempre poniéndonos en la posición del usuario, lo que no nos cuadraba, lo arreglábamos y repetíamos el proceso. Y a partir de ahí, empezamos a compartir la página con nuestros familiares y amigos para recibir recomendaciones, al parecer habíamos hecho un buen trabajo porque para todos fue muy claro e intuitiva la experiencia de compra.</p>
+			<h3 class="text-center">- LANZAMIENTO -</h3>
+			<p>El momento álgido de todo emprendimiento es cuando tiene el primer contacto con el mercado, pues a pesar de que hayas cuidado hasta el más mínimo detalle el resultado es completamente impredecible, por lo  menos eso es cierto cuando no has hecho algo por el estilo y ese es nuestro caso. No sabemos si vayamos a tener 1 cliente o 10 o 100 o ninguno, supongo que esa incertidumbre es algo con lo que tiene que vivir todo emprendedor. Por suerte la manera como planteamos todo desde el principio, nos permitía encarar ese riesgo con pocas preocupaciones, pues hasta ese momento llevábamos sólo dos meses de trabajo y la inversión total había sido de $36.000 pesos que fue lo que pagamos por el hosting (Evidentemente sin contar los transportes, almuerzos, comidas, cervezas y por supuesto... vino :-).</p>
+			<p>Sin embargo eso no quitaba que debíamos despreocuparnos por hacer un lanzamiento que fuese medianamente decente, una cosa es segura y es que si hacíamos un lanzamiento sin que nadie lo supiera sería un completo suicidio empresarial. </p>
+			<p>La opción más obvia y la que cualquier agencia de marketing digital sugiere es crear las cuentas de redes sociales y empezar a inyectarle dinero a borbotones a Facebook y Google con el fin de “atraer” clientes. Nosotros mismos también consideramos esa opción, solo que teníamos un pequeño inconveniente: no teníamos dinero a borbotones, además así contáramos con los recursos no teníamos ninguna experiencia previa en campañas de marketing, por lo que tampoco sabíamos que ROI esperar, mucho menos cuando se trata de un modelo de negocio que no ha sido validado, eso hacía muy difícil definir un presupuesto para el lanzamiento. Eso nos hizo caer en cuenta que necesitábamos ideas mucho más creativas.</p>
+			<p>El marketing digital es algo muy extenso y abrumador para los que somos de perfil técnico: SEO, SEM, content marketing, redes sociales, email marketing, diseño, branding, analytics, inbound, outbound, influencers, buyer persona, customer jurney, funnel… etc, etc, etc.</p>
+			<p>A pesar de tener conocimientos básicos en estos aspectos hubo un libro que nos ayudó mucho a ver el cuadro completo y a entender bien como se relacionaba todo con todo: Marketing Digital para Dummies  ¯\_(ツ)_/¯ </p>
+			<p>Fue escrito por Ryan Denis CEO de Digital Marketer una de las principales agencias de marketing digital a nivel mundial. La principal lección que deja ese libro es que el marketing digital es menos acerca de marketing digital y más de marketing, pues los principios de marketing son duraderos, pero la tecnología está en constante evolución.. lo que hoy es ‘hot’, mañana será anticuado.</p>
+			<p>Dadas nuestra preocupación para encontrar la estrategia adecuada para el lanzamiento, nos encontramos con un blog excepcional: <a href="https://tim.blog/2014/07/21/harrys-prelaunchr-email/" target="_blank">https://tim.blog/2014/07/21/harrys-prelaunchr-email/</a></p>
+			<p>Para todo aquel que esté pensando en hacer una campaña de lanzamiento viral es un ‘must read’. En el explican la historia del tremendamente exitoso lanzamiento de Harry´s una nueva marca de productos de afeitar para hombres, fue emocionante que explicaron al detalle toda su estrategia y no solo eso; también incluyeron plantillas, su código fuente y básicamente todo lo que uno pudiera necesitar para replicar lo que hicieron, algo de ver y no creer, mucho menos en la cultura empresarial colombiana carente de colaboración y marcada por secretismos. Algo que pretendemos cambiar con el presente blog.. nuestro granito de arena.</p>
+			<p>La historia de ellos es similar a la nuestra, solo que a gran escala, habían hecho inversiones sustanciales en la creación de esa compañía y contaban con un equipo humano de 10 empleados, pero sin embargo también estaban preocupados de lanzar y sólo escuchar el eco del sonido de los grillos.</p>
+			<p>El éxito de la campaña fue tan rotundo y el hecho que los autores autorizan a los lectores a replicar lo que hicieron que para nosotros fue obvio usar una milenaria técnica del mundo digital conocida como Ctrl C + Ctrl V. ;-) El código completo de la campaña de lanzamiento de Harrys listo para ser implementado está <a href="https://github.com/harrystech/prelaunchr" target="_blank">aquí.</a></p>
+			<p>Los detalles de la estrategia está muy bien detallada en el artículo, aquí nos limitamos a explicar el funcionamiento básico: Consiste en una campaña de referidos basada en hitos, las personas reciben beneficios proporcionales a la cantidad de referidos que consigan. Hay 5 puntos clave que influyen en el éxito de la estrategia:</p>
+			<ol>
+				<li>Las metas tienen que ser fáciles de cumplir.</li>
+				<li>Cuando cumples una meta, la siguiente es más difícil pero igualmente alcanzable.</li>
+				<li>La recompensa tiene que ser atractiva y acorde a la meta alcanzada.</li>
+				<li>Facilitar la difusión incluyendo botones de compartir.</li>
+				<li>Tiempo limitado para dar sensación de inmediatez.</li>
+			</ol>
+			<p>Intentamos ceñirnos al libreto establecido por los creadores de la campaña de Harrys, pues nos pareció que todo tenía sentido, no hablamos sobre la oferta de valor, solo nos limitamos a comunicar que se trata de vinos para crear expectativa. La parte visual es muy sencilla, se trata de un micrositio de dos páginas, la primera página está pensada en crear expectativa e incentivar el ingreso, y en la segunda se explica la dinámica y logros, aquí pueden ver la versión de Harry´s y la nuestra:</p>
+			<div class="text-center">
+				<img src="/static/waynapp/imagenes/blog/prelaunch_harry1.jpg" alt="">
+				<img src="/static/waynapp/imagenes/blog/prelaunch_harry2.jpg" alt="">
+			</div>
+			<div class="text-center">
+				<img src="/static/waynapp/imagenes/blog/prelaunch_wayn1.jpg" alt="">
+				<img src="/static/waynapp/imagenes/blog/prelaunch_wayn2.jpg" alt="">
+			</div>
+			<p>Como pueden ver son prácticamente idénticas, solo hicimos dos cambios, el primero fue un conteo regresivo en la primera página para incentivar la sensación de inmediatez y el segundo fue agregar un botón de whatsapp y aprovechar el poderoso alcance y poder de viralidad que tiene ese medio.</p>
+			<p>La parte técnica fue un poco más complicada que copiar y pegar, pues tuvimos que hacer muchos ajustes, por una parte cuando Harry´s lanzó la campaña en el 2014 por alguna razón que aún no entendemos no la hicieron responsive, no podía ser visualizada correctamente en dispositivos móviles, y por otro lado estaba hecha en Ruby on rails, un lenguaje de programación del que no estamos familiarizados, por lo que prácticamente lo escribimos desde cero en Pyton. Para replicar esta campaña es recomendable que contacten alguien con conocimientos en Ruby on rails para que la pueda integrar a sus necesidades, o también  viral-loops.com integra este tipo de soluciones para no desarrolladores, esta última no solo integra la estrategia de Harrys, sino también otras estrategias exitosas como las usadas por Dropbox, AirbnB, Gilt, Jet, MailChimp, Robinhood entre otros, es todo lo que sabemos, no podemos decir más porque no la hemos probado, lo que si podemos hacer con gusto es brindarles una asesoría en lo que hemos hecho, nos pueden contactar en <a href="mailto:contacto@wayn.com.co?Subject=Hola" target="_top">contacto@wayn.com.co</a></p>
+			<h3 class="text-center">- EMAIL MARKETING -</h3>
+			<p>Algo que no explicaron en el artículo de Harry’s es si usaron o no email durante la campaña, nosotros decidimos implementar un servicio automatizado para: a.) darles la bienvenida a los usuarios y aprovechar para explicar con más detalles la dinámica con fotos de los premios, ya que en la versión móvil no las pudimos incluimos por motivos estéticos. b.) Enviar un recordatorio faltando poco tiempo para acabar la campaña c.) Informar cuando se llega a una meta e incentivar alcanzar la próxima meta.
+			La plataforma que escogimos para el envió de los correos fue sendgrid, a priori nos pareció muy buena pero lastimosamente tuvimos problemas de entregabilidad con Hotmail, sencillamente los bloqueaba y nunca llegaban al destinatario, según soporte técnico eso se debe a que en la versión gratuita uno comparte la IP con otras empresas, si alguna empresa exhibe prácticas fraudulentas como spam, bloquean dicha IP y todos los que la estén compartiendo quedan afectados, la solución que nos proponían era usar una IP dedicada (mínimo US $ 80/mes). Es una lástima, si no nos hubiera pasado eso, recomendaríamos mucho el servicio de ellos, nos pareció muy bueno. Investigamos servicios similares, hay muchísimos y es tremendamente competido, una búsqueda en google arroja en la primera vista (antes de hacer scroll) 5 resultados, 4 son anuncios pagos y el 5to es el de Wikipedia. Analizamos varios, finalmente nos decidimos por sendinblue mas que todo porque tenían una oferta y el plan de US $40/mes estaba a $1,34/mes durante tres meses, de todos los resultados que comparamos sendinblue era el único que ofrecía dicho descuento, un curioso tip: ese descuento nos salía solo cuando accedíamos a la página de ellos mediante un computador portátil, ni en celular, ni en un PC de escritorio nos mostraban ese descuento, así que por US $1,34 decidimos probarlo. Nos gustó que no activaron la cuenta hasta que no nos hicieron unas preguntas y corroboraron de dónde íbamos a sacar los contactos, cuidan mucho su reputación para garantizar una buena entregabilidad, aunque también es una cuestión cultural y legal, en Colombia aún es una práctica normal comprar bases de datos de correos, en Estados Unidos y Europa es un delito grave.
+			</p>
+			<h3 class="text-center">- LA HORA DE LA VERDAD -</h3>
+			<p>La fecha inicialmente planeada para el lanzamiento de la campaña era para el 25 de Julio, pero debido a las dificultades que tuvimos para configurar adecuadamente el servicio de Email tuvimos que mover la fecha para el 1ro de Agosto, la campaña tiene una duración de una semana, en el momento de escribir las presentes líneas falta un par de días para el pre-lanzamiento. Actualmente estamos configurando las diferentes herramientas de análisis de datos cuyos informes nos darán un panorama claro de lo logrado.</p>
+			<p>Esperamos que hayan disfrutado nuestra historia, sin importar el resultado nosotros nos divertimos y disfrutamos haciéndolo! si les gustó agradecemos de todo corazón que entren a <a href="https://wayn.com.co/" target="_blank">www.wayn.com.co</a> y nos ayuden a difundir la voz, es muy fácil :-) durante la campaña la página principal estará redirigida a la página de pre-lanzamiento.
+			En cuanto se termine la campaña publicaremos los resultados aquí mismo y si tenemos suerte y todo marcha bien, esperamos poder seguir compartiendo nuestros aprendizajes y resultados.
+			</p>
+			<h5>Con toda sinceridad:<br>
+			Nico y George</h5>
+		</div>
+    </section>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
 </html>
