@@ -360,7 +360,7 @@ def correos_hitos(request):
 				lista_correos.append([item.email,item.referrer_code,conteo_referidos])
 		response = {
 			'success': True,
-			'msg': 'Correos enviados',
+			'msg': json.dumps(lista_correos),
 		}
 		return JsonResponse( response )
 	except Exception as e:
