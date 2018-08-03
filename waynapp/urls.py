@@ -18,6 +18,7 @@ urlpatterns = [
 	url(r'^descuento/$', views.descuento, name='descuento'),
 	url(r'^confirmacion', views.confirmacion, name='confirmacion'),
 	url(r'^blog', views.blog, name='blog'),
+	url(r'^correos_hitos', views.correos_hitos, name='correos_hitos'),
 	#urls para campaña de prelanzamiento
 	url(r'^lanzamiento/$', views.lanzamiento, name='lanzamiento'),
 	url(r'^lanzamiento/(?P<referral_code>\w+)/$', views.lanzamiento, name='lanzamiento'),
