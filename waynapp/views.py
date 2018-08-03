@@ -358,11 +358,11 @@ def correos_hitos(request):
 				msg.attach_alternative(html,'text/html')
 				# msg.send()
 				lista_correos.append([item.email,item.referrer_code,conteo_referidos])
-		# response = {
-		# 	'success': True,
-		# 	'msg': 'Correos enviados',
-		# }
-		return JsonResponse( json.dumps(lista_correos) )
+		response = {
+			'success': True,
+			'msg': 'Correos enviados',
+		}
+		return JsonResponse( response )
 	except Exception as e:
 		print (str(e))
 
