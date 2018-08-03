@@ -6,6 +6,7 @@ import string
 import json
 from django.core import serializers
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.template.loader import get_template
@@ -322,6 +323,45 @@ def blog(request):
 	context = {'articles_list':articles_list}
 	return render(request, 'waynapp/blog.html',context)
 
+# Vista para calcular y enviar correos de hitos
+def correos_hitos(request):
+	lista_correos = []
+	lista_prospectos = Prospecto.objects.order_by('pk')
+	for item in lista_prospectos:
+		conteo_referidos = len(Prospecto.objects.filter(referral_code=item.referrer_code))
+		if 5 <= conteo_referidos < 10:
+			mailtemplate = get_template('correo_1er_hito.html')
+			html = mailtemplate.render()
+			msg = EmailMultiAlternatives('Alcanzaste tu primera meta!!', '', 'Wayn <contacto@wayn.com.co>', [prospecto.email])
+			msg.attach_alternative(html,'text/html')
+			# msg.send()
+			lista_correos.append([item.email,item.referrer_code,conteo_referidos])
+		if 10 <= conteo_referidos < 25:
+			mailtemplate = get_template('correo_2do_hito.html')
+			html = mailtemplate.render()
+			msg = EmailMultiAlternatives('Alcanzaste tu segunda meta!!', '', 'Wayn <contacto@wayn.com.co>', [prospecto.email])
+			msg.attach_alternative(html,'text/html')
+			# msg.send()
+			lista_correos.append([item.email,item.referrer_code,conteo_referidos])
+		if 25 <= conteo_referidos < 50:
+			mailtemplate = get_template('correo_3er_hito.html')
+			html = mailtemplate.render()
+			msg = EmailMultiAlternatives('Alcanzaste tu tercera meta!!', '', 'Wayn <contacto@wayn.com.co>', [prospecto.email])
+			msg.attach_alternative(html,'text/html')
+			# msg.send()
+			lista_correos.append([item.email,item.referrer_code,conteo_referidos])
+		if 50 <= conteo_referidos:
+			mailtemplate = get_template('correo_4to_hito.html')
+			html = mailtemplate.render()
+			msg = EmailMultiAlternatives('Alcanzaste tu cuarta meta!!', '', 'Wayn <contacto@wayn.com.co>', [prospecto.email])
+			msg.attach_alternative(html,'text/html')
+			# msg.send()
+			lista_correos.append([item.email,item.referrer_code,conteo_referidos])
+	# response = {
+	# 	'success': True,
+	# 	'msg': 'Correos enviados',
+	# }
+	return JsonResponse( json.dumps(lista_correos) )
 
 # funcion para las sugerencias
 def sugerencias(tintos,blancos,lista_puntajes):
