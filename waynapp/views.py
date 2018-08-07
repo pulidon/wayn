@@ -210,8 +210,8 @@ def checkout(request,discountcode=''):
 			"cc-cvv" : request.POST.get('cc-cvv')
 		}
 		# realizar suscripcion en PayU
-		# suscripcion = Suscripcion()
-		# datasuscripcion = suscripcion.Post()
+		suscripcion = Suscripcion()
+		datasuscripcion = suscripcion.Post()
 		context = {'data':data_suscripcion}
 		return render(request, 'waynapp/confirmacion.html',context)
 	elif request.method == 'GET':

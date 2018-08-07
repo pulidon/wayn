@@ -17,9 +17,10 @@ headers = {
 	'Host':'sandbox.api.payulatam.com',
 	'Content-Type':'application/json; charset=utf-8',
 	'Accept':'application/json',
-	# 'Accept-language':'es',
+	'Accept-language':'es',
 	'Content-Length':'length'
-	# 'Authorization': 'Basic ZDdBQWt4MThYTzg2RTAwOjg1TmU5RW80cjZDM1A5NzN1WWQ3OWk1TzZP'
+	'Authorization':'Basic cFJSWEtPbDhpa01tdDl1OjRWajhlSzRybG9VZDI3Mkw0OGhzcmFyblVB' #Token de Prueba
+	# 'Authorization': 'Basic ZDdBQWt4MThYTzg2RTAwOjg1TmU5RW80cjZDM1A5NzN1WWQ3OWk1TzZP' #Token de Produccion
 }
 
 jsondata = {
@@ -27,23 +28,12 @@ jsondata = {
 	"language": "es",
 	"command": "SUBMIT_TRANSACTION",
 	"merchant": {
-		"apiLogin": "d7AAkx18XO86E00",
-		"apiKey": "85Ne9Eo4r6C3P973uYd79i5O6O"
+		"apiLogin": "pRRXKOl8ikMmt9u", #Token Pruebas
+		"apiKey": "4Vj8eK4rloUd272L48hsrarnUA" #Token Pruebas
+		# "apiLogin": "d7AAkx18XO86E00", #Token Produccion
+		# "apiKey": "85Ne9Eo4r6C3P973uYd79i5O6O" #Token Produccion
 	}
 }
-
-
-# datos de produccion
-# url_produccion_consultas = 'https://api.payulatam.com/reports-api/4.0/service.cgi'
-# url_produccion_pagos = 'https://api.payulatam.com/reports-api/4.0/service.cgi'
-# merchantid
-# APIlogin
-# APIKey
-# accountId
-# headers
-
-# class RealizarPago():
-
 
 class Plan:
 
@@ -166,67 +156,70 @@ class Tarjeta:
 
 class Suscripcion:
 
-	def Post(self):
+	def Post(self,*args,**kwargs):
 		data ={
 				"quantity": "1",
 				"installments": "1",
 				"immediatePayment": 'true',
-				"extra1": "Extra 1",
-				"extra2": "Extra 2",
+				"extra1": "Extra 1", # Campo para revisar
+				"extra2": "Extra 2", # Campo para revisar
 				"customer": {
-					"fullName": "Pedro Perez",
-					"email": "pperez@payulatam.com",
+					"fullName": firstName + ' ' + lastName,
+					"email": email,
 					"creditCards": [{
-						"name": "Pedro Perez",
-						"document": "101010123",
-						"number": "4242424242424242",
-						"expMonth": "01",
-						"expYear": "2018",
-						"type": "VISA",
+						"name": firstName + ' ' + lastName,
+						"document": document,
+						"number": cc_number,
+						"expMonth": cc_month,
+						"expYear": cc_year,
+						"type": "VISA", #campo calculado
 						"address": {
-							"line1": "Address Name",
-							"line2": "17 25",
-							"line3": "Of 301",
-							"postalCode": "00000",
-							"city": "City Name",
-							"state": "State Name",
-							"country": "CO",
-							"phone": "300300300"
+							"line1": invoiceAddress,
+							"line2": invoiceAddress2,
+							"line3": "", # No utilizamos la tercera linea
+							"postalCode": postalCode, #campo a ser calculado
+							"city": invoicecity, #campo a dejar fijo
+							"state": invoicestate, #campo a dejar fijo
+							"country": "CO", #campo a dejar fijo
+							"phone": telephone
 						}
 					}]
 				},
 				"plan": {
-					"planCode": "sample-plan-code-001",
+					"planCode": planCode,
 				} ,
+				#Agregar las variables para direccion de entrega
 				"deliveryAddress": {
-					"line1": "Address Name",
-					"line2": "17 25",
-					"line3": "Of 301",
-					"postalCode": "00000",
-					"city": "City Name",
-					"state": "State Name",
-					"country": "CO",
-					"phone": "300300300"
-				},
-				"recurringBillItems":{
-					"description": "Cargo extra de prueba",
-					"additionalValues": [{
-						"name": "ITEM_VALUE",
-						"value": "20000",
-						"currency": "COP"
-					},
-					{
-						"name": "ITEM_TAX",
-						"value": "3193",
-						"currency": "COP"
-					},
-					{
-						"name": "ITEM_TAX_RETURN_BASE",
-						"value": "16806",
-						"currency": "COP"
-					}
-					]
+					"line1": deliveryAddress,
+					"line2": deliveryAddress2,
+					"line3": "", # No utilizamos la tercera linea
+					"postalCode": deliverypostalCode,
+					"city": deliverycity,
+					"state": deliverystate,
+					"country": "CO", #deliverycountry
+					"phone": deliveryphone
 				}
+				#Seccion comentada de momento, esta funcionalidad no se va a usar de momento
+				# },
+				# "recurringBillItems":{
+				# 	"description": "Cargo extra de prueba",
+				# 	"additionalValues": [{
+				# 		"name": "ITEM_VALUE",
+				# 		"value": "20000",
+				# 		"currency": "COP"
+				# 	},
+				# 	{
+				# 		"name": "ITEM_TAX",
+				# 		"value": "3193",
+				# 		"currency": "COP"
+				# 	},
+				# 	{
+				# 		"name": "ITEM_TAX_RETURN_BASE",
+				# 		"value": "16806",
+				# 		"currency": "COP"
+				# 	}
+				# 	]
+				# }
 		}
 		data=jsondata
 		payu_response = requests.post(url+'subscriptions/',headers=headers,data=json.dumps(data))
